@@ -2,6 +2,12 @@
 
 A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visible hands, physical weapon handling, two-handed aiming, physical melee and a stable, comfortable camera.
 
+## IMPORTANT!
+
+- GAMEPASS ONLY
+- My custom UEVR backend is required - see releases to download this
+- Performance is not great, nothing I can do about that
+
 ## Features
 
 ### Hands and weapons
