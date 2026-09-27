@@ -1,0 +1,48 @@
+{
+    "_profileLabels": {
+        "default": "Default"
+    },
+    "_profileState": {
+        "currentEditingProfile": "default"
+    },
+    "default": {
+        "adjustForAnimation": false,
+        "adjustForEyeOffset": false,
+        "aimCamera": "None",
+        "aimMethod": 2,
+        "cameraResetAction": 1,
+        "eyeOffset": 0,
+        "fixSpatialAudio": true,
+        "headBoneName": "",
+        "headOffset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -32.0
+        },
+        "isDisabledOverride": false,
+        "optimizeBodyLocationCalculations": false,
+        "optimizeBodyRotationCalculations": false,
+        "orientRotationToMovement": 1,
+        "pawnPositionAnimationScale": 0.2,
+        "pawnPositionMode": 1,
+        "pawnPositionSweepMovement": false,
+        "pawnRotationLockedSmoothTime": 0.36,
+        "pawnRotationMode": 4,
+        "pawnRotationModeDisableRotation": false,
+        "rootBoneName": "",
+        "rootOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "smoothTurnSpeed": 50,
+        "snapAngle": 30,
+        "useControllerDesiredRotation": 1,
+        "useControllerRotationPitch": 1,
+        "useControllerRotationRoll": 1,
+        "useControllerRotationYaw": 1,
+        "useMeshHeightForHeadOffset": false,
+        "usePawnControlRotation": 1,
+        "useSnapTurn": false
+    }
+}

@@ -1,0 +1,3184 @@
+{
+    "animations": {
+        "Shared": {
+            "poses": {
+                "grip_left_weapon": [
+                    [
+                        "left_grip_weapon",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_assault_riflr": [
+                    [
+                        "left_grip_weapon_assault_riflr",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_assault_riflr",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_baton": [
+                    [
+                        "left_grip_weapon_baton",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_baton",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_machine_pistol": [
+                    [
+                        "left_grip_weapon_machine_pistol",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_machine_pistol",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_pistol": [
+                    [
+                        "left_grip_weapon_pistol",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_pistol",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_revolver": [
+                    [
+                        "left_grip_weapon_revolver",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_revolver",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_rifle": [
+                    [
+                        "left_grip_weapon_rifle",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_rifle",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_shock_rifle": [
+                    [
+                        "left_grip_weapon_shock_rifle",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_shock_rifle",
+                        "off"
+                    ]
+                ],
+                "grip_left_weapon_smg": [
+                    [
+                        "left_grip_weapon_smg",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_smg",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon": [
+                    [
+                        "right_grip_weapon",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_assault_riflr": [
+                    [
+                        "right_grip_weapon_assault_riflr",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_assault_riflr",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_baton": [
+                    [
+                        "right_grip_weapon_baton",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_baton",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_machine_pistol": [
+                    [
+                        "right_grip_weapon_machine_pistol",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_machine_pistol",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_pistol": [
+                    [
+                        "right_grip_weapon_pistol",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_pistol",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_revolver": [
+                    [
+                        "right_grip_weapon_revolver",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_revolver",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_rifle": [
+                    [
+                        "right_grip_weapon_rifle",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_rifle",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_shock_rifle": [
+                    [
+                        "right_grip_weapon_shock_rifle",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_shock_rifle",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_smg": [
+                    [
+                        "right_grip_weapon_smg",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_smg",
+                        "off"
+                    ]
+                ],
+                "open_left": [
+                    [
+                        "left_grip",
+                        "off"
+                    ],
+                    [
+                        "left_trigger",
+                        "off"
+                    ],
+                    [
+                        "left_thumb",
+                        "off"
+                    ]
+                ],
+                "open_right": [
+                    [
+                        "right_grip",
+                        "off"
+                    ],
+                    [
+                        "right_trigger",
+                        "off"
+                    ],
+                    [
+                        "right_thumb",
+                        "off"
+                    ]
+                ]
+            },
+            "positions": {
+                "left_grip": {
+                    "off": {
+                        "LeftHandMiddle1_JNT": [
+                            0.0,
+                            22.2654,
+                            0.0
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            35.0836,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0,
+                            12.097,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            0.0,
+                            11.8181,
+                            0.0
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            28.5003,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0,
+                            20.2246,
+                            0.0
+                        ],
+                        "LeftHandRing1_JNT": [
+                            0.0,
+                            18.1084,
+                            0.0
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0,
+                            27.4037,
+                            0.0
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0,
+                            18.0554,
+                            0.0
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            7.2236,
+                            27.7155,
+                            121.4171
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            19.8779,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            0.0,
+                            6.7842,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandMiddle1_JNT": [
+                            -3.9257,
+                            66.375,
+                            -14.0359
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            43.2526,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0003,
+                            37.8812,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            12.0148,
+                            54.0572,
+                            -0.0515
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            52.739,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0001,
+                            12.0801,
+                            -0.0002
+                        ],
+                        "LeftHandRing1_JNT": [
+                            2.9512,
+                            61.1012,
+                            -4.5182
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0004,
+                            44.4984,
+                            -0.0002
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0002,
+                            34.1168,
+                            -0.0002
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            18.5149,
+                            15.4209,
+                            103.5
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            76.7249,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            -0.0006,
+                            38.59,
+                            0.0
+                        ]
+                    }
+                },
+                "left_grip_weapon": {
+                    "off": {
+                        "LeftHandMiddle1_JNT": [
+                            0.0,
+                            22.2654,
+                            0.0
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            35.0836,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0,
+                            12.097,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            0.0,
+                            11.8181,
+                            0.0
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            28.5003,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0,
+                            20.2246,
+                            0.0
+                        ],
+                        "LeftHandRing1_JNT": [
+                            0.0,
+                            18.1084,
+                            0.0
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0,
+                            27.4037,
+                            0.0
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0,
+                            18.0554,
+                            0.0
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            7.2236,
+                            27.7155,
+                            121.4171
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            19.8779,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            0.0,
+                            6.7842,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandMiddle1_JNT": [
+                            0.0,
+                            22.2654,
+                            0.0
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            35.0836,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0,
+                            12.097,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            0.0,
+                            11.8181,
+                            0.0
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            28.5003,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0,
+                            20.2246,
+                            0.0
+                        ],
+                        "LeftHandRing1_JNT": [
+                            0.0,
+                            18.1084,
+                            0.0
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0,
+                            27.4037,
+                            0.0
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0,
+                            18.0554,
+                            0.0
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            7.2236,
+                            27.7155,
+                            121.4171
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            19.8779,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            0.0,
+                            6.7842,
+                            0.0
+                        ]
+                    }
+                },
+                "left_grip_weapon_assault_riflr": {
+                    "off": {
+                        "LeftHandMiddle1_JNT": [
+                            -3.9257,
+                            71.0654,
+                            -14.0359
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            43.2526,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0003,
+                            37.8812,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            12.0148,
+                            54.0572,
+                            -0.0515
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            52.739,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0001,
+                            12.0801,
+                            -0.0002
+                        ],
+                        "LeftHandRing1_JNT": [
+                            2.9512,
+                            61.1012,
+                            -4.5182
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0,
+                            44.4986,
+                            0.0
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0002,
+                            34.1168,
+                            -0.0002
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            32.0147,
+                            35.6715,
+                            114.5137
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            45.2248,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            -0.0006,
+                            10.4645,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandMiddle1_JNT": [
+                            -3.9257,
+                            71.0654,
+                            -14.0359
+                        ],
+                        "LeftHandMiddle2_JNT": [
+                            0.0,
+                            43.2526,
+                            0.0
+                        ],
+                        "LeftHandMiddle3_JNT": [
+                            0.0003,
+                            37.8812,
+                            0.0
+                        ],
+                        "LeftHandPinky1_JNT": [
+                            12.0148,
+                            54.0572,
+                            -0.0515
+                        ],
+                        "LeftHandPinky2_JNT": [
+                            0.0,
+                            52.739,
+                            0.0
+                        ],
+                        "LeftHandPinky3_JNT": [
+                            0.0001,
+                            12.0801,
+                            -0.0002
+                        ],
+                        "LeftHandRing1_JNT": [
+                            2.9512,
+                            61.1012,
+                            -4.5182
+                        ],
+                        "LeftHandRing2_JNT": [
+                            0.0,
+                            44.4986,
+                            0.0
+                        ],
+                        "LeftHandRing3_JNT": [
+                            0.0002,
+                            34.1168,
+                            -0.0002
+                        ],
+                        "LeftHandThumb1_JNT": [
+                            32.0147,
+                            35.6715,
+                            114.5137
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            45.2248,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            -0.0006,
+                            10.4645,
+                            0.0
+                        ]
+                    }
+                },
+                "left_thumb": {
+                    "off": {
+                        "LeftHandThumb1_JNT": [
+                            7.2236,
+                            27.7155,
+                            121.4171
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            19.8779,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            0.0,
+                            6.7842,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandThumb1_JNT": [
+                            7.2236,
+                            27.7155,
+                            121.4171
+                        ],
+                        "LeftHandThumb2_JNT": [
+                            0.0,
+                            19.8779,
+                            0.0
+                        ],
+                        "LeftHandThumb3_JNT": [
+                            0.0,
+                            6.7842,
+                            0.0
+                        ]
+                    }
+                },
+                "left_trigger": {
+                    "off": {
+                        "LeftHandIndex1_JNT": [
+                            0.0,
+                            21.2618,
+                            0.0
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            27.7553,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0,
+                            23.5757,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandIndex1_JNT": [
+                            0.0,
+                            56.137,
+                            0.0
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            49.13,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0,
+                            23.5757,
+                            0.0
+                        ]
+                    }
+                },
+                "left_trigger_weapon": {
+                    "off": {
+                        "LeftHandIndex1_JNT": [
+                            0.0,
+                            21.2618,
+                            0.0
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            27.7554,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0,
+                            23.5758,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "LeftHandIndex1_JNT": [
+                            0.0,
+                            21.2618,
+                            0.0
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            27.7554,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0,
+                            23.5758,
+                            0.0
+                        ]
+                    }
+                },
+                "left_trigger_weapon_assault_riflr": {
+                    "off": {
+                        "LeftHandIndex1_JNT": [
+                            -11.0414,
+                            66.4078,
+                            -20.3855
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            30.7055,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0002,
+                            28.2812,
+                            -0.0003
+                        ]
+                    },
+                    "on": {
+                        "LeftHandIndex1_JNT": [
+                            -11.0414,
+                            66.4078,
+                            -20.3855
+                        ],
+                        "LeftHandIndex2_JNT": [
+                            0.0,
+                            30.7055,
+                            0.0
+                        ],
+                        "LeftHandIndex3_JNT": [
+                            0.0002,
+                            28.2812,
+                            -0.0003
+                        ]
+                    }
+                },
+                "right_grip": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -0.0223,
+                            -157.6764,
+                            -179.9669
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -35.0837,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -12.0971,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            0.0,
+                            -11.8182,
+                            0.0
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -28.5004,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            14.0428,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            0.0,
+                            -18.1085,
+                            0.0
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -27.4038,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -18.0555,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            7.2225,
+                            -27.7157,
+                            -121.4181
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -19.878,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -6.7843,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -4.9241,
+                            -113.3059,
+                            -158.8499
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -103.3696,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -30.0399,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            19.5056,
+                            -51.9613,
+                            9.5082
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -84.4715,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            -16.1754,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            11.0918,
+                            -65.4004,
+                            17.5746
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -98.1088,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -28.6428,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -8.2407,
+                            -25.6289,
+                            -135.9947
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -38.4815,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -25.3878,
+                            0.0
+                        ]
+                    }
+                },
+                "right_grip_weapon": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -0.0223,
+                            -157.6764,
+                            -179.9669
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -35.0837,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -12.0971,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            0.0,
+                            -11.8182,
+                            0.0
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -28.5004,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            14.0428,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            0.0,
+                            -18.1085,
+                            0.0
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -27.4038,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -18.0555,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            7.2225,
+                            -27.7157,
+                            -121.4181
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -19.878,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -6.7843,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -0.0223,
+                            -157.6764,
+                            -179.9669
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -35.0837,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -12.0971,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            0.0,
+                            -11.8182,
+                            0.0
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -28.5004,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            14.0428,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            0.0,
+                            -18.1085,
+                            0.0
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -27.4038,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -18.0555,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            7.2225,
+                            -27.7157,
+                            -121.4181
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -19.878,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -6.7843,
+                            0.0
+                        ]
+                    }
+                },
+                "right_grip_weapon_assault_riflr": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -4.9242,
+                            -113.3059,
+                            -158.8499
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -92.9046,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0004,
+                            -30.0401,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            19.5056,
+                            -51.9613,
+                            9.5082
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -74.0064,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0004,
+                            -16.1756,
+                            0.0002
+                        ],
+                        "RightHandRing1_JNT": [
+                            11.0918,
+                            -65.4004,
+                            17.5746
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -87.6438,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0004,
+                            -28.643,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -8.2407,
+                            -25.6289,
+                            -135.9947
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -38.4815,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0004,
+                            -25.3881,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -4.9242,
+                            -113.3059,
+                            -158.8499
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -92.9046,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0004,
+                            -30.0401,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            19.5056,
+                            -51.9613,
+                            9.5082
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -74.0064,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0004,
+                            -16.1756,
+                            0.0002
+                        ],
+                        "RightHandRing1_JNT": [
+                            11.0918,
+                            -65.4004,
+                            17.5746
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -87.6438,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0004,
+                            -28.643,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -8.2407,
+                            -25.6289,
+                            -135.9947
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -38.4815,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0004,
+                            -25.3881,
+                            0.0
+                        ]
+                    }
+                },
+                "right_grip_weapon_baton": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -7.4988,
+                            -103.777,
+                            -162.5075
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -3.1446,
+                            -85.4519,
+                            4.0947
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.7164,
+                            -39.642,
+                            -2.4591
+                        ],
+                        "RightHandPinky1_JNT": [
+                            23.7017,
+                            -71.0201,
+                            7.7641
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.6793,
+                            -82.9624,
+                            -1.9298
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.2094,
+                            3.4243,
+                            2.205
+                        ],
+                        "RightHandRing1_JNT": [
+                            13.0652,
+                            -78.8457,
+                            14.3558
+                        ],
+                        "RightHandRing2_JNT": [
+                            -0.0428,
+                            -73.646,
+                            -1.5802
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.4966,
+                            -43.7122,
+                            -1.2333
+                        ],
+                        "RightHandThumb1_JNT": [
+                            14.8272,
+                            -30.6736,
+                            -113.9652
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -50.6649,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -31.1648,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -7.4988,
+                            -103.777,
+                            -162.5075
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -3.1446,
+                            -85.4519,
+                            4.0947
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.7164,
+                            -39.642,
+                            -2.4591
+                        ],
+                        "RightHandPinky1_JNT": [
+                            23.7017,
+                            -71.0201,
+                            7.7641
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.6793,
+                            -82.9624,
+                            -1.9298
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.2094,
+                            3.4243,
+                            2.205
+                        ],
+                        "RightHandRing1_JNT": [
+                            13.0652,
+                            -78.8457,
+                            14.3558
+                        ],
+                        "RightHandRing2_JNT": [
+                            -0.0428,
+                            -73.646,
+                            -1.5802
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.4966,
+                            -43.7122,
+                            -1.2333
+                        ],
+                        "RightHandThumb1_JNT": [
+                            14.8272,
+                            -30.6736,
+                            -113.9652
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -50.6649,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -31.1648,
+                            0.0
+                        ]
+                    }
+                },
+                "right_grip_weapon_machine_pistol": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            5.9144,
+                            -110.8657,
+                            -163.5576
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.3246,
+                            -66.0675,
+                            2.8234
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.1065,
+                            -72.5002,
+                            -2.9997
+                        ],
+                        "RightHandPinky1_JNT": [
+                            10.8768,
+                            -41.7931,
+                            2.3522
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -76.1591,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0002,
+                            14.0426,
+                            0.0003
+                        ],
+                        "RightHandRing1_JNT": [
+                            1.9174,
+                            -63.9746,
+                            13.4672
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.5901,
+                            -61.7572,
+                            -0.5973
+                        ],
+                        "RightHandRing3_JNT": [
+                            1.6353,
+                            -67.7843,
+                            -2.7113
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -1.2388,
+                            -34.8126,
+                            -128.1144
+                        ],
+                        "RightHandThumb2_JNT": [
+                            -3.8348,
+                            -53.0833,
+                            6.6463
+                        ],
+                        "RightHandThumb3_JNT": [
+                            7.0759,
+                            -26.3396,
+                            11.4898
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            5.9144,
+                            -110.8657,
+                            -163.5576
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.3246,
+                            -66.0675,
+                            2.8234
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.1065,
+                            -72.5002,
+                            -2.9997
+                        ],
+                        "RightHandPinky1_JNT": [
+                            10.8768,
+                            -41.7931,
+                            2.3522
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -76.1591,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0002,
+                            14.0426,
+                            0.0003
+                        ],
+                        "RightHandRing1_JNT": [
+                            1.9174,
+                            -63.9746,
+                            13.4672
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.5901,
+                            -61.7572,
+                            -0.5973
+                        ],
+                        "RightHandRing3_JNT": [
+                            1.6353,
+                            -67.7843,
+                            -2.7113
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -1.2388,
+                            -34.8126,
+                            -128.1144
+                        ],
+                        "RightHandThumb2_JNT": [
+                            -3.8348,
+                            -53.0833,
+                            6.6463
+                        ],
+                        "RightHandThumb3_JNT": [
+                            7.0759,
+                            -26.3396,
+                            11.4898
+                        ]
+                    }
+                },
+                "right_grip_weapon_pistol": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -6.7177,
+                            -100.2105,
+                            -167.5516
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -3.4606,
+                            -80.891,
+                            3.8325
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.9925,
+                            -32.9546,
+                            -2.2418
+                        ],
+                        "RightHandPinky1_JNT": [
+                            10.9789,
+                            -70.6755,
+                            11.5669
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0602,
+                            -61.8764,
+                            -2.0423
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.0488,
+                            -0.7355,
+                            2.2142
+                        ],
+                        "RightHandRing1_JNT": [
+                            12.3678,
+                            -79.7537,
+                            9.9244
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.1936,
+                            -65.1395,
+                            -1.5679
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.6032,
+                            -37.8265,
+                            -0.8689
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -4.0289,
+                            -40.7944,
+                            -136.4879
+                        ],
+                        "RightHandThumb2_JNT": [
+                            3.5968,
+                            -50.2888,
+                            0.0156
+                        ],
+                        "RightHandThumb3_JNT": [
+                            10.5875,
+                            -46.4433,
+                            8.3701
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -6.7177,
+                            -100.2105,
+                            -167.5516
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -3.4606,
+                            -80.891,
+                            3.8325
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.9925,
+                            -32.9546,
+                            -2.2418
+                        ],
+                        "RightHandPinky1_JNT": [
+                            10.9789,
+                            -70.6755,
+                            11.5669
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0602,
+                            -61.8764,
+                            -2.0423
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.0488,
+                            -0.7355,
+                            2.2142
+                        ],
+                        "RightHandRing1_JNT": [
+                            12.3678,
+                            -79.7537,
+                            9.9244
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.1936,
+                            -65.1395,
+                            -1.5679
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.6032,
+                            -37.8265,
+                            -0.8689
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -4.0289,
+                            -40.7944,
+                            -136.4879
+                        ],
+                        "RightHandThumb2_JNT": [
+                            3.5968,
+                            -50.2888,
+                            0.0156
+                        ],
+                        "RightHandThumb3_JNT": [
+                            10.5875,
+                            -46.4433,
+                            8.3701
+                        ]
+                    }
+                },
+                "right_grip_weapon_revolver": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -10.7234,
+                            -92.9526,
+                            -164.2463
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -2.8346,
+                            -89.651,
+                            4.3163
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.9214,
+                            -34.7423,
+                            -2.3053
+                        ],
+                        "RightHandPinky1_JNT": [
+                            20.9769,
+                            -55.5459,
+                            13.6806
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.6793,
+                            -82.9624,
+                            -1.9298
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.2094,
+                            3.4243,
+                            2.205
+                        ],
+                        "RightHandRing1_JNT": [
+                            13.4217,
+                            -86.4402,
+                            8.4294
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.3331,
+                            -59.9119,
+                            -1.5443
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.2125,
+                            -54.2517,
+                            -1.8466
+                        ],
+                        "RightHandThumb1_JNT": [
+                            7.9588,
+                            -24.1304,
+                            -127.7828
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -39.7509,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            5.0032,
+                            -19.198,
+                            9.0526
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -10.7234,
+                            -92.9526,
+                            -164.2463
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -2.8346,
+                            -89.651,
+                            4.3163
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            1.9214,
+                            -34.7423,
+                            -2.3053
+                        ],
+                        "RightHandPinky1_JNT": [
+                            20.9769,
+                            -55.5459,
+                            13.6806
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.6793,
+                            -82.9624,
+                            -1.9298
+                        ],
+                        "RightHandPinky3_JNT": [
+                            -0.2094,
+                            3.4243,
+                            2.205
+                        ],
+                        "RightHandRing1_JNT": [
+                            13.4217,
+                            -86.4402,
+                            8.4294
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.3331,
+                            -59.9119,
+                            -1.5443
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.2125,
+                            -54.2517,
+                            -1.8466
+                        ],
+                        "RightHandThumb1_JNT": [
+                            7.9588,
+                            -24.1304,
+                            -127.7828
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -39.7509,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            5.0032,
+                            -19.198,
+                            9.0526
+                        ]
+                    }
+                },
+                "right_grip_weapon_rifle": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -4.9241,
+                            -113.3059,
+                            -158.8499
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -103.3696,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -30.0399,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            19.5056,
+                            -51.9613,
+                            9.5082
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -84.4715,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            -16.1754,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            11.0918,
+                            -65.4004,
+                            17.5746
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -98.1088,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -28.6428,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -8.2407,
+                            -25.6289,
+                            -135.9947
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -38.4815,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -25.3878,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -4.9241,
+                            -113.3059,
+                            -158.8499
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -103.3696,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.0,
+                            -30.0399,
+                            0.0
+                        ],
+                        "RightHandPinky1_JNT": [
+                            19.5056,
+                            -51.9613,
+                            9.5082
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -84.4715,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0,
+                            -16.1754,
+                            0.0
+                        ],
+                        "RightHandRing1_JNT": [
+                            11.0918,
+                            -65.4004,
+                            17.5746
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -98.1088,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0,
+                            -28.6428,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -8.2407,
+                            -25.6289,
+                            -135.9947
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -38.4815,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -25.3878,
+                            0.0
+                        ]
+                    }
+                },
+                "right_grip_weapon_shock_rifle": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            23.256,
+                            -135.797,
+                            -147.9138
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.5172,
+                            -61.9166,
+                            2.5033
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.6185,
+                            -62.6521,
+                            -2.9368
+                        ],
+                        "RightHandPinky1_JNT": [
+                            -2.0491,
+                            -53.8594,
+                            20.448
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -41.8111,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0001,
+                            -17.9659,
+                            0.0004
+                        ],
+                        "RightHandRing1_JNT": [
+                            -8.4874,
+                            -63.0573,
+                            38.4473
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.765,
+                            -40.745,
+                            -0.3459
+                        ],
+                        "RightHandRing3_JNT": [
+                            1.9062,
+                            -61.8652,
+                            -2.5278
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -2.1371,
+                            -30.1531,
+                            -124.0382
+                        ],
+                        "RightHandThumb2_JNT": [
+                            -6.2098,
+                            -29.031,
+                            4.509
+                        ],
+                        "RightHandThumb3_JNT": [
+                            3.0774,
+                            -8.0952,
+                            13.119
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            23.256,
+                            -135.797,
+                            -147.9138
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.5172,
+                            -61.9166,
+                            2.5033
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.6185,
+                            -62.6521,
+                            -2.9368
+                        ],
+                        "RightHandPinky1_JNT": [
+                            -2.0491,
+                            -53.8594,
+                            20.448
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -41.8111,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0001,
+                            -17.9659,
+                            0.0004
+                        ],
+                        "RightHandRing1_JNT": [
+                            -8.4874,
+                            -63.0573,
+                            38.4473
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.765,
+                            -40.745,
+                            -0.3459
+                        ],
+                        "RightHandRing3_JNT": [
+                            1.9062,
+                            -61.8652,
+                            -2.5278
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -2.1371,
+                            -30.1531,
+                            -124.0382
+                        ],
+                        "RightHandThumb2_JNT": [
+                            -6.2098,
+                            -29.031,
+                            4.509
+                        ],
+                        "RightHandThumb3_JNT": [
+                            3.0774,
+                            -8.0952,
+                            13.119
+                        ]
+                    }
+                },
+                "right_grip_weapon_smg": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            11.1469,
+                            -122.6046,
+                            -171.9596
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -76.3704,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            16.9183,
+                            -62.0451,
+                            -1.2411
+                        ],
+                        "RightHandPinky1_JNT": [
+                            2.9504,
+                            -64.3871,
+                            14.8462
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -61.3647,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0004,
+                            -17.6479,
+                            0.0003
+                        ],
+                        "RightHandRing1_JNT": [
+                            -4.8336,
+                            -67.2539,
+                            18.7374
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -75.4043,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0004,
+                            -56.4593,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -11.839,
+                            -56.1511,
+                            -152.1343
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -49.5665,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0003,
+                            -36.4724,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            11.1469,
+                            -122.6046,
+                            -171.9596
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            0.0,
+                            -76.3704,
+                            0.0
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            16.9183,
+                            -62.0451,
+                            -1.2411
+                        ],
+                        "RightHandPinky1_JNT": [
+                            2.9504,
+                            -64.3871,
+                            14.8462
+                        ],
+                        "RightHandPinky2_JNT": [
+                            0.0,
+                            -61.3647,
+                            0.0
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.0004,
+                            -17.6479,
+                            0.0003
+                        ],
+                        "RightHandRing1_JNT": [
+                            -4.8336,
+                            -67.2539,
+                            18.7374
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0,
+                            -75.4043,
+                            0.0
+                        ],
+                        "RightHandRing3_JNT": [
+                            0.0004,
+                            -56.4593,
+                            0.0
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -11.839,
+                            -56.1511,
+                            -152.1343
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -49.5665,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0003,
+                            -36.4724,
+                            0.0
+                        ]
+                    }
+                },
+                "right_thumb": {
+                    "off": {
+                        "RightHandThumb1_JNT": [
+                            7.2224,
+                            -27.7158,
+                            -121.4181
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -19.878,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -6.7843,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandThumb1_JNT": [
+                            7.2224,
+                            -27.7158,
+                            -121.4181
+                        ],
+                        "RightHandThumb2_JNT": [
+                            0.0,
+                            -80.628,
+                            0.0
+                        ],
+                        "RightHandThumb3_JNT": [
+                            0.0,
+                            -6.7843,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -6.9267,
+                            -170.8739,
+                            -166.1821
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -36.5182,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -33.3584,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -4.6771,
+                            -131.499,
+                            -166.1821
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -100.643,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -33.3584,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -0.0279,
+                            -158.6934,
+                            -179.9532
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -27.7555,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5759,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -0.0279,
+                            -158.6934,
+                            -179.9532
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -27.7555,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5759,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon_assault_riflr": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -11.3476,
+                            -171.9822,
+                            -166.0059
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -36.5182,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5762,
+                            0.0004
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -11.3476,
+                            -171.9822,
+                            -166.006
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -83.768,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5763,
+                            0.0003
+                        ]
+                    }
+                },
+                "right_trigger_weapon_baton": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            2.5177,
+                            -118.9896,
+                            -163.0101
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -79.4796,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -67.7679,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            2.5177,
+                            -118.9896,
+                            -163.0101
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -79.4796,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -67.7679,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon_machine_pistol": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -0.0191,
+                            -165.2626,
+                            -179.9499
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -21.1862,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            -0.0032,
+                            -17.007,
+                            0.0036
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -0.0191,
+                            -165.2627,
+                            -179.95
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -69.561,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            -0.0032,
+                            -36.0,
+                            0.0035
+                        ]
+                    }
+                },
+                "right_trigger_weapon_pistol": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -6.75,
+                            -134.4941,
+                            -180.0
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -38.355,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -35.3041,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -6.75,
+                            -134.4941,
+                            -180.0
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -47.355,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -40.9291,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon_revolver": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            1.2933,
+                            -144.8764,
+                            -179.5907
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -8.8286,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -8.3096,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            1.2933,
+                            -144.8764,
+                            -179.5907
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -38.079,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -63.4351,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon_rifle": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -6.9267,
+                            -170.8739,
+                            -166.1821
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -36.5182,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -33.3584,
+                            0.0
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -6.9268,
+                            -169.749,
+                            -166.1821
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -65.768,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -33.3584,
+                            0.0
+                        ]
+                    }
+                },
+                "right_trigger_weapon_shock_rifle": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            13.2309,
+                            -151.7313,
+                            179.5273
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            5.8382,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -47.546,
+                            0.0003
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            13.2309,
+                            -151.7313,
+                            179.5273
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -41.625,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -47.546,
+                            0.0003
+                        ]
+                    }
+                },
+                "right_trigger_weapon_smg": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -4.5956,
+                            -143.2932,
+                            -169.1581
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -27.7555,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5761,
+                            0.0004
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -4.5956,
+                            -143.2932,
+                            -169.1581
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -66.005,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            0.0,
+                            -23.5761,
+                            0.0004
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "attachments": {
+        "assault_riflr": {
+            "label": "Assault Riflr"
+        },
+        "baton": {
+            "label": "Baton"
+        },
+        "machine_pistol": {
+            "label": "Machine Pistol"
+        },
+        "pistol": {
+            "label": "Pistol"
+        },
+        "revolver": {
+            "label": "Revolver"
+        },
+        "rifle": {
+            "label": "Rifle"
+        },
+        "shock_rifle": {
+            "label": "Shock Rifle"
+        },
+        "smg": {
+            "label": "SMG"
+        }
+    },
+    "profiles": {
+        "Main": {
+            "Arms": {
+                "FOV": "",
+                "IgnoreRelativeOffset": false,
+                "InitialTransform": {
+                    "left_hand": {
+                        "LeftHandIndex1_JNT": {
+                            "location": [
+                                6.610188028149423,
+                                -6.096706783864647e-08,
+                                6.359141480061226e-08
+                            ],
+                            "rotation": [
+                                -6.597768170521333e-15,
+                                21.26183292879964,
+                                -1.2261387034459039e-14
+                            ]
+                        },
+                        "LeftHandIndex2_JNT": {
+                            "location": [
+                                4.702274341971133,
+                                5.536151093110675e-08,
+                                4.4837634050054476e-08
+                            ],
+                            "rotation": [
+                                6.2388867486014e-14,
+                                27.755411858988616,
+                                9.373453973223382e-15
+                            ]
+                        },
+                        "LeftHandIndex3_JNT": {
+                            "location": [
+                                3.003035144576643,
+                                8.557344699511304e-08,
+                                2.25090843741782e-08
+                            ],
+                            "rotation": [
+                                9.416626319761998e-15,
+                                23.575886562616734,
+                                1.3260784999393182e-14
+                            ]
+                        },
+                        "LeftHandIndexRoot_JNT": {
+                            "location": [
+                                -0.3238073941174662,
+                                0.6536611212961816,
+                                1.1085883232090055
+                            ],
+                            "rotation": [
+                                -4.872743302266058,
+                                -13.686232352548105,
+                                43.59525011294807
+                            ]
+                        },
+                        "LeftHandMiddle1_JNT": {
+                            "location": [
+                                6.981755266613618,
+                                -5.749370757257566e-08,
+                                2.7211626729695126e-08
+                            ],
+                            "rotation": [
+                                -5.063014111610611e-14,
+                                22.265490228133846,
+                                1.946392886000697e-14
+                            ]
+                        },
+                        "LeftHandMiddle2_JNT": {
+                            "location": [
+                                5.174630184952548,
+                                7.307050964300288e-08,
+                                1.974558472284116e-08
+                            ],
+                            "rotation": [
+                                2.767094700269402e-15,
+                                35.08361011396893,
+                                5.096392295717454e-15
+                            ]
+                        },
+                        "LeftHandMiddle3_JNT": {
+                            "location": [
+                                3.1507052073684463,
+                                9.244104148820043e-08,
+                                8.089955372270197e-09
+                            ],
+                            "rotation": [
+                                3.770279184199913e-16,
+                                12.097000418010568,
+                                -3.558204804003565e-15
+                            ]
+                        },
+                        "LeftHandMiddleRoot_JNT": {
+                            "location": [
+                                -0.9078785312558466,
+                                -0.5669704179026667,
+                                0.10566942501600352
+                            ],
+                            "rotation": [
+                                -9.890075935878828,
+                                -17.047018681544937,
+                                43.253222252536865
+                            ]
+                        },
+                        "LeftHandPinky1_JNT": {
+                            "location": [
+                                6.959976212483525,
+                                1.9195340428268537e-08,
+                                -7.802373147569597e-08
+                            ],
+                            "rotation": [
+                                -4.691151094243312e-15,
+                                11.818119592488946,
+                                -2.973807061274274e-14
+                            ]
+                        },
+                        "LeftHandPinky2_JNT": {
+                            "location": [
+                                3.767599604634597,
+                                5.267958158583497e-08,
+                                -4.092362360097468e-08
+                            ],
+                            "rotation": [
+                                3.723397286297842e-15,
+                                28.500358594619538,
+                                -2.9511782304808055e-15
+                            ]
+                        },
+                        "LeftHandPinky3_JNT": {
+                            "location": [
+                                2.1630705029583623,
+                                6.194932211656123e-08,
+                                -1.7733327695168555e-08
+                            ],
+                            "rotation": [
+                                -2.189028358904863e-14,
+                                20.22462940615687,
+                                5.990306186131112e-14
+                            ]
+                        },
+                        "LeftHandPinkyRoot_JNT": {
+                            "location": [
+                                -2.536050383823749,
+                                -1.8284478398684314,
+                                -1.1276386077743155
+                            ],
+                            "rotation": [
+                                -28.373342709612213,
+                                -19.13941833569521,
+                                41.2752232075522
+                            ]
+                        },
+                        "LeftHandRing1_JNT": {
+                            "location": [
+                                7.1151666664627555,
+                                -2.175283952965401e-08,
+                                -2.2656422515865415e-08
+                            ],
+                            "rotation": [
+                                1.281730028730587e-14,
+                                18.108400827239272,
+                                2.621208591870264e-15
+                            ]
+                        },
+                        "LeftHandRing2_JNT": {
+                            "location": [
+                                4.785143872491972,
+                                7.176834060373949e-08,
+                                -1.4726538211107254e-08
+                            ],
+                            "rotation": [
+                                -7.041608558002361e-15,
+                                27.40377291649596,
+                                3.705294718527256e-15
+                            ]
+                        },
+                        "LeftHandRing3_JNT": {
+                            "location": [
+                                2.9289847221643868,
+                                8.672486728755757e-08,
+                                -6.877598934806883e-09
+                            ],
+                            "rotation": [
+                                2.1588095457643743e-14,
+                                18.05540360339617,
+                                1.1078481897195267e-14
+                            ]
+                        },
+                        "LeftHandRingRoot_JNT": {
+                            "location": [
+                                -1.7982376039053634,
+                                -1.4295108477158465,
+                                -0.4845420343021942
+                            ],
+                            "rotation": [
+                                -18.56457945388106,
+                                -18.104912275342215,
+                                41.34372709651853
+                            ]
+                        },
+                        "LeftHandThumb1_JNT": {
+                            "location": [
+                                -0.40576535048421647,
+                                2.7690372325978387,
+                                0.19624590402122521
+                            ],
+                            "rotation": [
+                                7.223640489521409,
+                                27.715576137260793,
+                                121.41715347499317
+                            ]
+                        },
+                        "LeftHandThumb2_JNT": {
+                            "location": [
+                                4.222576757423667,
+                                -1.1231168173253536e-07,
+                                5.51640368939843e-08
+                            ],
+                            "rotation": [
+                                3.056963716517171e-14,
+                                19.877947536901505,
+                                -4.140116714661584e-13
+                            ]
+                        },
+                        "LeftHandThumb3_JNT": {
+                            "location": [
+                                3.295437865435815,
+                                -6.731397661496885e-08,
+                                5.510673872777261e-08
+                            ],
+                            "rotation": [
+                                1.5871830626747149e-15,
+                                6.784230661973406,
+                                -2.4851171895394834e-13
+                            ]
+                        },
+                        "VB Root_NSK_l_wrist_IKgoal_JNT": {
+                            "location": [
+                                16.868753012482557,
+                                80.76673115644098,
+                                -91.74661411743409
+                            ],
+                            "rotation": [
+                                7.838754587674346,
+                                -47.26670001862228,
+                                50.889367795627145
+                            ]
+                        },
+                        "VB l_hand_Socket_Container": {
+                            "location": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                -3.9756933518293955e-16,
+                                1.1034765745125397e-32,
+                                -3.1805546814635164e-15
+                            ]
+                        },
+                        "l_hand_Att_JNT": {
+                            "location": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                -3.9756933518293955e-16,
+                                -1.5902773407317582e-15,
+                                3.9756933518293955e-16
+                            ]
+                        },
+                        "l_hand_IKgoal_JNT": {
+                            "location": [
+                                5.963772305767634,
+                                1.3383669502104567,
+                                -3.4985281251613287
+                            ],
+                            "rotation": [
+                                -19.715104770250054,
+                                -7.154040063767342,
+                                41.08958114845742
+                            ]
+                        },
+                        "l_hand_JNT": {
+                            "location": [
+                                3.1031417960039107,
+                                -7.3932592385972384e-06,
+                                -1.3241260376162245e-05
+                            ],
+                            "rotation": [
+                                11.269622562135835,
+                                -1.3123633810271353,
+                                -9.646731728815878
+                            ]
+                        },
+                        "l_shield_Att_JNT": {
+                            "location": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                -2.385416011097637e-15,
+                                -1.5902773407317574e-15,
+                                -2.981770013872046e-14
+                            ]
+                        },
+                        "l_weapon_NSK": {
+                            "location": [
+                                5.963772305767634,
+                                1.3383669502104567,
+                                -3.4985281251613287
+                            ],
+                            "rotation": [
+                                -19.715222866633724,
+                                -7.153882067113376,
+                                41.08937574583288
+                            ]
+                        },
+                        "l_weapon_lhand_L_IKtarget_NSK": {
+                            "location": [
+                                -86.90748089860426,
+                                82.6115111224018,
+                                14.168954427052995
+                            ],
+                            "rotation": [
+                                0.1552542582900973,
+                                -51.04178619456496,
+                                -27.06664308190074
+                            ]
+                        },
+                        "l_wristOffset_bot_JNT": {
+                            "location": [
+                                -0.005838462353494833,
+                                0.813383637820607,
+                                -0.4424440869314594
+                            ],
+                            "rotation": [
+                                0.1350895777535394,
+                                -0.19544914178230327,
+                                29.245779667544507
+                            ]
+                        },
+                        "l_wristOffset_top_JNT": {
+                            "location": [
+                                0.04733796305117721,
+                                -0.8400796040675687,
+                                0.4655907464593838
+                            ],
+                            "rotation": [
+                                0.045564075895811774,
+                                -0.10975954573865368,
+                                28.15185737170057
+                            ]
+                        }
+                    },
+                    "right_hand": {
+                        "RightHandIndex1_JNT": {
+                            "location": [
+                                -6.625749136084778,
+                                -0.07694254269472367,
+                                0.0005434797067209729
+                            ],
+                            "rotation": [
+                                -0.027885729904173706,
+                                -158.69335187833494,
+                                -179.95318425281943
+                            ]
+                        },
+                        "RightHandIndex2_JNT": {
+                            "location": [
+                                4.702274327797568,
+                                -3.338936949148774e-08,
+                                -1.8394530343357474e-08
+                            ],
+                            "rotation": [
+                                4.125177071998909e-14,
+                                -27.75541185898863,
+                                -1.0857223967401792e-14
+                            ]
+                        },
+                        "RightHandIndex3_JNT": {
+                            "location": [
+                                3.0030351269879247,
+                                -8.338611223734915e-08,
+                                -9.731593308970332e-09
+                            ],
+                            "rotation": [
+                                1.673161445652665e-14,
+                                -23.575886562616763,
+                                3.407570389923355e-14
+                            ]
+                        },
+                        "RightHandIndexRoot_JNT": {
+                            "location": [
+                                -0.3471782373417227,
+                                -0.6069695351025359,
+                                1.1604835916400589
+                            ],
+                            "rotation": [
+                                4.848569153422858,
+                                -166.27482755839134,
+                                -136.34631237161528
+                            ]
+                        },
+                        "RightHandMiddle1_JNT": {
+                            "location": [
+                                -6.998393091307662,
+                                -0.07943711054804226,
+                                -0.0018622550269355997
+                            ],
+                            "rotation": [
+                                -0.02223985623544217,
+                                -157.67632866231176,
+                                -179.9668586934774
+                            ]
+                        },
+                        "RightHandMiddle2_JNT": {
+                            "location": [
+                                5.174630180152235,
+                                -4.4904481910634786e-08,
+                                -4.898993211099878e-08
+                            ],
+                            "rotation": [
+                                -1.1754887048508214e-14,
+                                -35.083610113968966,
+                                -8.167599982670437e-15
+                            ]
+                        },
+                        "RightHandMiddle3_JNT": {
+                            "location": [
+                                3.1507051916223645,
+                                -9.132600098382682e-08,
+                                -2.1783307602163404e-08
+                            ],
+                            "rotation": [
+                                -1.3567783010153472e-14,
+                                -12.097000418010587,
+                                2.3825942380766855e-16
+                            ]
+                        },
+                        "RightHandMiddleRoot_JNT": {
+                            "location": [
+                                -0.9316100485248171,
+                                0.6155117754183834,
+                                0.15687604595632365
+                            ],
+                            "rotation": [
+                                9.85617702079517,
+                                -162.90413603751017,
+                                -136.6979127176875
+                            ]
+                        },
+                        "RightHandPinky1_JNT": {
+                            "location": [
+                                6.959976265507066,
+                                2.420665623503737e-08,
+                                -1.527660060673952e-07
+                            ],
+                            "rotation": [
+                                -1.294389985208583e-13,
+                                -11.818119592488957,
+                                -5.684915400100185e-14
+                            ]
+                        },
+                        "RightHandPinky2_JNT": {
+                            "location": [
+                                3.767599622697162,
+                                -2.5317604013253003e-08,
+                                -8.212737157009542e-08
+                            ],
+                            "rotation": [
+                                -6.1042055202374825e-15,
+                                -28.500358594619563,
+                                5.036913272708031e-15
+                            ]
+                        },
+                        "RightHandPinky3_JNT": {
+                            "location": [
+                                2.1615191103428515,
+                                0.00620231309949304,
+                                -0.06182158421142958
+                            ],
+                            "rotation": [
+                                -2.7084308664501395e-14,
+                                14.042877418951804,
+                                -3.377940418096177e-14
+                            ]
+                        },
+                        "RightHandPinkyRoot_JNT": {
+                            "location": [
+                                -2.5364804472883407,
+                                1.8284678468747018,
+                                -1.1274880443302209
+                            ],
+                            "rotation": [
+                                -28.373455735155375,
+                                19.14021551152505,
+                                -41.27683789397261
+                            ]
+                        },
+                        "RightHandRing1_JNT": {
+                            "location": [
+                                7.115166706171294,
+                                6.23588221060345e-08,
+                                -1.1034535418730229e-07
+                            ],
+                            "rotation": [
+                                -5.557720504370173e-15,
+                                -18.108400827239294,
+                                -1.1191920951952083e-14
+                            ]
+                        },
+                        "RightHandRing2_JNT": {
+                            "location": [
+                                4.785143879895259,
+                                -4.004778020316735e-08,
+                                -7.43002601666376e-08
+                            ],
+                            "rotation": [
+                                -8.184004967335947e-15,
+                                -27.403772916496003,
+                                -2.0968197156805626e-15
+                            ]
+                        },
+                        "RightHandRing3_JNT": {
+                            "location": [
+                                2.928984711580597,
+                                -7.699054549448192e-08,
+                                -3.712193574756384e-08
+                            ],
+                            "rotation": [
+                                1.3151769067712087e-14,
+                                -18.05540360339619,
+                                6.766676817910935e-15
+                            ]
+                        },
+                        "RightHandRingRoot_JNT": {
+                            "location": [
+                                -1.7986612428339868,
+                                1.429516673794467,
+                                -0.48440783244996055
+                            ],
+                            "rotation": [
+                                -18.56471632070282,
+                                18.105418085949324,
+                                -41.34522358634401
+                            ]
+                        },
+                        "RightHandThumb1_JNT": {
+                            "location": [
+                                -0.4061801408715837,
+                                -2.769046306414907,
+                                0.19627075830840113
+                            ],
+                            "rotation": [
+                                7.22253080887436,
+                                -27.71566114294846,
+                                -121.41804613108006
+                            ]
+                        },
+                        "RightHandThumb2_JNT": {
+                            "location": [
+                                4.222576696174656,
+                                1.0581061360426247e-07,
+                                4.8472429625689983e-08
+                            ],
+                            "rotation": [
+                                -1.0321092470377345e-13,
+                                -19.87794753690152,
+                                -2.2045795930787282e-13
+                            ]
+                        },
+                        "RightHandThumb3_JNT": {
+                            "location": [
+                                3.2954378307094885,
+                                3.622153599280864e-08,
+                                4.341200110502541e-08
+                            ],
+                            "rotation": [
+                                -6.467916448371776e-13,
+                                -6.7842306619734085,
+                                9.397012005433625e-14
+                            ]
+                        },
+                        "VB Root_NSK_r_wrist_IKgoal_JNT": {
+                            "location": [
+                                16.939868539675444,
+                                -80.60074863013527,
+                                -91.76879939379478
+                            ],
+                            "rotation": [
+                                -7.897114830400737,
+                                -132.70255160435852,
+                                50.912669140809754
+                            ]
+                        },
+                        "VB VB r_wrist_JNT_r_weapon_NKS_IKChain": {
+                            "location": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                3.821873038369639e-15,
+                                -1.0359207627910346e-34,
+                                -3.1060104311167156e-18
+                            ]
+                        },
+                        "VB r_hand_Socket_Container": {
+                            "location": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                3.975693351829397e-16,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        "VB r_wrist_JNT_r_weapon_NSK": {
+                            "location": [
+                                -4.849148148408858,
+                                8.483611450854369,
+                                -1.972337569629417
+                            ],
+                            "rotation": [
+                                -9.351492188241751,
+                                134.5044194486662,
+                                -30.183863107222642
+                            ]
+                        },
+                        "r_hand_IKgoal_JNT": {
+                            "location": [
+                                5.970264885780125,
+                                -1.275144699034513,
+                                -3.4635919728730187
+                            ],
+                            "rotation": [
+                                -19.682467008078877,
+                                7.209579581037899,
+                                -41.14339434518312
+                            ]
+                        },
+                        "r_hand_JNT": {
+                            "location": [
+                                -1.9825953251256578,
+                                2.3877712252178753,
+                                4.444130354386289e-06
+                            ],
+                            "rotation": [
+                                11.270526942913358,
+                                131.0154580670074,
+                                9.647569262483932
+                            ]
+                        },
+                        "r_weapon_NSK": {
+                            "location": [
+                                5.970264885780125,
+                                -1.275144699034513,
+                                -3.4635919728730187
+                            ],
+                            "rotation": [
+                                -19.6823176504849,
+                                7.209336471276546,
+                                -41.14304120093283
+                            ]
+                        },
+                        "r_weapon_rhand_L_IKtarget_NSK": {
+                            "location": [
+                                -87.01225397828966,
+                                -82.57790424960558,
+                                14.173902154880125
+                            ],
+                            "rotation": [
+                                20.38153365342793,
+                                -82.05456957341305,
+                                -18.167946638510426
+                            ]
+                        },
+                        "r_wristOffset_bot_JNT": {
+                            "location": [
+                                0.5863258588669851,
+                                0.46696156305370096,
+                                -0.4152713418043277
+                            ],
+                            "rotation": [
+                                -0.1253726913634887,
+                                -50.036883931275334,
+                                -150.71545450461383
+                            ]
+                        },
+                        "r_wristOffset_top_JNT": {
+                            "location": [
+                                -0.7177577435904823,
+                                -0.5498167289333651,
+                                0.49409723283042695
+                            ],
+                            "rotation": [
+                                -0.06279431580495264,
+                                -50.13617133742382,
+                                -151.79816396386207
+                            ]
+                        }
+                    }
+                },
+                "Left": {
+                    "AnimationID": "left_arms",
+                    "Location": [
+                        0.20000000298023224,
+                        -2.200000047683716,
+                        -9.300000190734863
+                    ],
+                    "Name": "l_wrist_JNT",
+                    "OptimizeAnimationsRootBone": "Root_NSK",
+                    "Rotation": [
+                        90.0,
+                        110.0,
+                        0.0
+                    ],
+                    "Scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "UseDefaultPose": true
+                },
+                "Mesh": "Pawn.FPVMesh",
+                "Offset": {
+                    "Pitch": 0.0,
+                    "Roll": 0.0,
+                    "X": 0,
+                    "Y": 0,
+                    "Yaw": 0.0,
+                    "Z": 0
+                },
+                "OptimizeAnimations": true,
+                "Right": {
+                    "AnimationID": "right_arms",
+                    "Location": [
+                        -0.8999999761581421,
+                        -0.800000011920929,
+                        -11.199999809265137
+                    ],
+                    "Name": "r_wrist_JNT",
+                    "OptimizeAnimationsRootBone": "Root_NSK",
+                    "Rotation": [
+                        -30.0,
+                        -20.0,
+                        -95.0
+                    ],
+                    "Scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "UseDefaultPose": true
+                }
+            }
+        }
+    }
+}

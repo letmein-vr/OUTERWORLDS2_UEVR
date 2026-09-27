@@ -1,0 +1,75 @@
+{
+    "cutscene": {
+        "autoAdjustUIWhenInGameState": 1,
+        "autoAdjustUIWhenInGameStatePriority": "0",
+        "decouplePitchWhenInGameState": 1,
+        "decouplePitchWhenInGameStatePriority": "0",
+        "handsWhenInGameState": 1,
+        "handsWhenInGameStatePriority": "0",
+        "inputWhenInGameState": 1,
+        "inputWhenInGameStatePriority": "0",
+        "lockedUIWhenInGameState": 1,
+        "lockedUIWhenInGameStatePriority": "0",
+        "remapWhenInGameState": 1,
+        "remapWhenInGameStatePriority": "0",
+        "screen2DWhenInGameState": 1,
+        "screen2DWhenInGameStatePriority": "0"
+    },
+    "paused": {
+        "autoAdjustUIWhenInGameState": 1,
+        "autoAdjustUIWhenInGameStatePriority": "0",
+        "decouplePitchWhenInGameState": 1,
+        "decouplePitchWhenInGameStatePriority": "0",
+        "handsWhenInGameState": 1,
+        "handsWhenInGameStatePriority": "0",
+        "inputWhenInGameState": 1,
+        "inputWhenInGameStatePriority": "0",
+        "lockedUIWhenInGameState": 1,
+        "lockedUIWhenInGameStatePriority": "0",
+        "remapWhenInGameState": 1,
+        "remapWhenInGameStatePriority": "0",
+        "screen2DWhenInGameState": 1,
+        "screen2DWhenInGameStatePriority": "0"
+    },
+    "widgetlist": {
+        "WidgetBlueprintGeneratedClass /Game/UI/Conversation/ConversationWidget_BP.ConversationWidget_BP_C": {
+            "label": "ConversationWidget_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Dialogs/DialogBox1_BP.DialogBox1_BP_C": {
+            "label": "DialogBox1_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/HUD/General/DamageText/DamageTextContainerWidget_BP.DamageTextContainerWidget_BP_C": {
+            "label": "DamageTextContainerWidget_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C": {
+            "label": "HUD_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Ledger/Ledger_BP.Ledger_BP_C": {
+            "label": "Ledger_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/DownedMenu.DownedMenu_C": {
+            "label": "DownedMenu_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/MainMenu/MainMenu_Conversational.MainMenu_Conversational_C": {
+            "label": "MainMenu_Conversational_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/PauseMenu.PauseMenu_C": {
+            "label": "PauseMenu_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/SaveLoadMenu/SaveLoadMenu_BP.SaveLoadMenu_BP_C": {
+            "label": "SaveLoadMenu_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/SettingsMenu/SettingsMenu_BP.SettingsMenu_BP_C": {
+            "label": "SettingsMenu_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/NewWorkbench/UpdatedWorkbenchWidget_BP.UpdatedWorkbenchWidget_BP_C": {
+            "label": "UpdatedWorkbenchWidget_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Subtitles/ConversationSubtitleWidget_BP.ConversationSubtitleWidget_BP_C": {
+            "label": "ConversationSubtitleWidget_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Tutorial/TutorialPopupWidget_BP.TutorialPopupWidget_BP_C": {
+            "label": "TutorialPopupWidget_BP_C"
+        }
+    }
+}

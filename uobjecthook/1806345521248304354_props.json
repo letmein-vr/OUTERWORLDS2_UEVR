@@ -1,0 +1,17 @@
+{
+    "hide": false,
+    "hide_legacy": false,
+    "path": [
+        "Acknowledged Pawn",
+        "Properties",
+        "FPVMesh",
+        "Properties",
+        "AttachChildren",
+        "SkeletalMeshComponent SkeletalMeshComponent_2147410726",
+        "Properties",
+        "AttachChildren",
+        "StaticMeshComponent StaticMeshComponent_2147410716"
+    ],
+    "properties": [],
+    "type": "properties"
+}

@@ -1,0 +1,8 @@
+{
+    "cs_camera_anim": true,
+    "cs_hard_lock": false,
+    "cs_headbob": true,
+    "cs_pawn_rot": true,
+    "cs_shake": true,
+    "cs_weapon_kick": true
+}

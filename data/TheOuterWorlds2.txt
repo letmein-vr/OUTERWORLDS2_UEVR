@@ -1,0 +1,16 @@
+normal_depth=0.56300002336502
+normal_size=0.4370000064373
+aiming_depth=10
+aiming_size=4.938000202179
+conversation_depth=0.4
+conversation_size=0.35
+forward_offset_multiplier=3.6
+up_offset_multiplier=0.2
+enable_fov_zoom=true
+fov_max_trigger=50
+aim_method=1
+enable_conv_fix=false
+enable_aim_distances=false
+enable_conv_shadows=true
+conv_shadows_true_percentage=40
+conv_shadows_false_percentage=50

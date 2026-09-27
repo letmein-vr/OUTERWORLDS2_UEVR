@@ -1,0 +1,70 @@
+{
+  "entries": {
+    "frhitexture_get_native_resource": {
+      "module": {
+        "engine_version": "",
+        "file_size": 172131408,
+        "image_size": 176627712,
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.OE-Arkansas_1.299.4920.0_x64__8wekyb3d8bbwe\\Arkansas\\Binaries\\WinGDK\\TheOuterWorlds2-WinGDK-Shipping.exe",
+        "time_date_stamp": 3808714990,
+        "version_ls": 262144,
+        "version_ms": 327684,
+        "write_time": 134328598651126082
+      },
+      "payload": {
+        "vtable_index": 4
+      }
+    },
+    "fscene_offsets": {
+      "module": {
+        "engine_version": "",
+        "file_size": 172131408,
+        "image_size": 176627712,
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.OE-Arkansas_1.299.4920.0_x64__8wekyb3d8bbwe\\Arkansas\\Binaries\\WinGDK\\TheOuterWorlds2-WinGDK-Shipping.exe",
+        "time_date_stamp": 3808714990,
+        "version_ls": 262144,
+        "version_ms": 327684,
+        "write_time": 134328598651126082
+      },
+      "payload": {
+        "frame_count_offset": 18508,
+        "get_frame_count_vtable_index": 35,
+        "increment_frame_count_vtable_index": 34,
+        "start_frame_vtable_index": 33
+      }
+    },
+    "fsceneview_constructor": {
+      "module": {
+        "engine_version": "",
+        "file_size": 172131408,
+        "image_size": 176627712,
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.OE-Arkansas_1.299.4920.0_x64__8wekyb3d8bbwe\\Arkansas\\Binaries\\WinGDK\\TheOuterWorlds2-WinGDK-Shipping.exe",
+        "time_date_stamp": 3808714990,
+        "version_ls": 262144,
+        "version_ms": 327684,
+        "write_time": 134328598651126082
+      },
+      "payload": {
+        "rva": 18463608
+      }
+    },
+    "fsceneviewfamily_offsets": {
+      "module": {
+        "engine_version": "",
+        "file_size": 172131408,
+        "image_size": 176627712,
+        "path": "C:\\Program Files\\WindowsApps\\Microsoft.OE-Arkansas_1.299.4920.0_x64__8wekyb3d8bbwe\\Arkansas\\Binaries\\WinGDK\\TheOuterWorlds2-WinGDK-Shipping.exe",
+        "time_date_stamp": 3808714990,
+        "version_ls": 262144,
+        "version_ms": 327684,
+        "write_time": 134328598651126082
+      },
+      "payload": {
+        "render_target_offset": 48,
+        "scene_interface_offset": 56,
+        "views_offset": 8
+      }
+    }
+  },
+  "schema_version": 1
+}

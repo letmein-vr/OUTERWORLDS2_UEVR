@@ -1,0 +1,14 @@
+# OW2AimFix configuration (The Outer Worlds 2 VR weapon aim fix)
+# Enabled=1            master switch
+# Debug=1              log muzzle/hook stats to UEVR log.txt every 2s
+# UseSocketRotation=0  0 = use weapon mesh forward vector, 1 = use MuzzleFlashSocket rotation
+# PitchOffset=0        degrees, + aims up
+# YawOffset=0          degrees, + aims right
+# StaleSeconds=0.5     ignore cached muzzle older than this
+# SocketName=MuzzleFlashSocket
+Enabled=1
+Debug=0
+UseSocketRotation=0
+PitchOffset=0
+YawOffset=0
+StaleSeconds=0.5

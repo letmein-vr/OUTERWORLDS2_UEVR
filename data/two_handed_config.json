@@ -1,0 +1,21 @@
+{
+    "th_apply_pose": true,
+    "th_enabled": true,
+    "th_force": false,
+    "th_fraction": 0.55,
+    "th_grab_button": 2,
+    "th_grab_radius": 16.29800033569336,
+    "th_lh_off_x": 0.37400001287460327,
+    "th_lh_off_y": -3.563999891281128,
+    "th_lh_off_z": 0.7509999871253967,
+    "th_lh_rot_pitch": -64.125,
+    "th_lh_rot_roll": 0,
+    "th_lh_rot_yaw": -23.625,
+    "th_off_x": 0,
+    "th_off_y": 0,
+    "th_off_z": 0,
+    "th_release_radius": 35.0,
+    "th_show_marker": false,
+    "th_snap_left_hand": true,
+    "th_suppress_left_grip": true
+}
