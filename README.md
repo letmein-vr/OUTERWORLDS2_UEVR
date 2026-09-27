@@ -1,6 +1,6 @@
 # The Outer Worlds 2 – UEVR VR Profile
 
-A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visible hands, physical weapon handling, two-handed aiming, physical melee and a stable, comfortable camera.
+A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visible hands, physical weapon handling, two-handed aiming, physical melee and a stable, comfortable camera. Special thanks to praydog, jbusfield (for his libs framework), and joeyhodge!
 
 ## IMPORTANT!
 
