@@ -4,9 +4,7 @@ A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visi
 
 ## IMPORTANT!
 
-- GAMEPASS ONLY
 - My custom UEVR backend is required - see releases to download this
-- Performance is not great, nothing I can do about that
 
 ## Features
 
@@ -17,7 +15,7 @@ A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visi
 - **Per-weapon grip poses.** The hands wrap around each weapon type correctly, with separate grip and trigger poses for pistol, revolver, SMG, machine pistol, rifle, assault rifle, shock rifle and baton. One pose set drives both glove hands and IK arms.
 - **Weapon in hand.** The equipped weapon is attached to your right controller and aims where you point it, with a per-weapon position and rotation offset. Bullets go where the barrel points via a small native aim-fix plugin.
 - **Two-handed aiming.** On rifles and other long guns, reach your left hand to the fore-grip and hold the left trigger to grab it. The weapon then pivots between both hands. The left hand takes a grip pose captured from the game's own animation for that weapon and holds it for the whole grab, with the left trigger ignored for finger animation while you're gripping. Works in both hand modes; in IK mode the whole left arm is solved onto the fore-grip and follows the gun as it pivots.
-- **Physical melee.** With a melee weapon out, a fast swing left, right or down attacks, and the game's swing animation is sped up to keep pace with your arm.
+- **Physical melee.** With a melee weapon out, a fast swing left, right or down attacks when overlapping with an enemy.
 - **Reload fix.** Reloads always refill the magazine, which the game otherwise skips in VR.
 - **Clean weapon swaps.** The game's own arm mesh no longer flashes on screen when switching weapons, and weapon mods such as magazines render with their proper textures.
 
@@ -49,9 +47,9 @@ A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visi
 
 ## Installation
 
-1. Install UEVR and confirm the game launches in VR with the stock injector.
-2. Copy the contents of this folder into `%APPDATA%\UnrealVRMod\TheOuterWorlds2-WinGDK-Shipping\`.
-3. Inject UEVR as usual. The profile loads automatically, and the hands appear a few seconds after the level loads.
+1. Install my custom UEVR.
+2. Import the relevant profile you want to use (GDK=Gamepass, AFW=AFW rendering method).
+3. Inject UEVR at the main menu.
 
 ## Tuning
 
