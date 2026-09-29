@@ -16,6 +16,7 @@ A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visi
 - **Weapon in hand.** The equipped weapon is attached to your right controller and aims where you point it, with a per-weapon position and rotation offset. Bullets go where the barrel points via a small native aim-fix plugin.
 - **Two-handed aiming.** On rifles and other long guns, reach your left hand to the fore-grip and hold the left trigger to grab it. The weapon then pivots between both hands. The left hand takes a grip pose captured from the game's own animation for that weapon and holds it for the whole grab, with the left trigger ignored for finger animation while you're gripping. Works in both hand modes; in IK mode the whole left arm is solved onto the fore-grip and follows the gun as it pivots.
 - **Physical melee.** With a melee weapon out, a fast swing left, right or down attacks when overlapping with an enemy.
+- **Reticule.** Dynamic reticule on by default, can be toggled off/on and change brightness.
 - **Reload fix.** Reloads always refill the magazine, which the game otherwise skips in VR.
 - **Clean weapon swaps.** The game's own arm mesh no longer flashes on screen when switching weapons, and weapon mods such as magazines render with their proper textures.
 
@@ -31,7 +32,6 @@ A full motion-controller VR conversion of The Outer Worlds 2 for UEVR, with visi
 
 - **UI that moves with context.** The HUD and menus sit at a comfortable distance normally and pull in close during conversations and terminal use, driven by the game's zoom.
 - **Conversation and cutscene handling.** Camera offsets, UI placement and hands adjust automatically in dialogue and cutscenes.
-- **Laser pointer menu interaction.** A pointer from the right hand for clicking menus and terminals.
 - **Controller face-button swap.** X and B are swapped on the gamepad mapping for a more natural VR layout.
 
 ## Controls
