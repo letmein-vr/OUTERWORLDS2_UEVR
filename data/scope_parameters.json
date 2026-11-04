@@ -1,0 +1,85 @@
+{
+    "scopes": {
+        "SightData_AR_Longburst_Prism": {
+            "zoom": 1.0
+        },
+        "SightData_LMG_Slowbeam_Telescopic": {
+            "deactivate_distance": 27.812000274658203,
+            "ocular_lens_location": [
+                -8.800000190734863,
+                0.0,
+                19.100000381469727
+            ],
+            "ocular_lens_scale": 0.5950000286102295,
+            "zoom": 1.0,
+            "zoom_speed": 1.319000005722046
+        },
+        "SightData_MR_Frontline_Telescopic": {
+            "brightness": 1.3787341938253577,
+            "deactivate_distance": 29.375,
+            "ocular_lens_location": [
+                19.75,
+                0.0,
+                14.25
+            ],
+            "zoom": 0.8220043517735576
+        },
+        "SightData_MR_Standard_Telescopic": {
+            "deactivate_distance": 35.0,
+            "ocular_lens_location": [
+                10.0,
+                0.0,
+                16.649999618530273
+            ],
+            "ocular_lens_scale": 0.47200000286102295,
+            "zoom": 1.0
+        },
+        "SightData_MR_Tactical_Prism": {
+            "deactivate_distance": 33.4379997253418,
+            "max_fov": 4.507999897003174,
+            "ocular_lens_location": [
+                30.450000762939453,
+                0.0,
+                17.5
+            ],
+            "zoom": 0.7616936582173821
+        },
+        "SightData_SR_Accurate": {
+            "brightness": 0.8494681909880684,
+            "deactivate_distance": 30.625,
+            "max_fov": 2.634000062942505,
+            "objective_lens_location": [
+                24.350000381469727,
+                0.0,
+                20.299999237060547
+            ],
+            "objective_lens_rotation": [
+                89.19999694824219,
+                0.0,
+                0.0
+            ],
+            "ocular_lens_location": [
+                19.25,
+                0.05000000074505806,
+                18.200000762939453
+            ],
+            "ocular_lens_rotation": [
+                90.0,
+                0.0,
+                0.0
+            ],
+            "ocular_lens_scale": 0.6269999742507935,
+            "zoom": 0.5431738292872978
+        },
+        "SightData_SR_Damage": {
+            "max_fov": 3.384000062942505,
+            "ocular_lens_location": [
+                7.449999809265137,
+                0.0,
+                15.149999618530273
+            ],
+            "zoom": 1.0,
+            "zoom_speed": 1.475000023841858
+        }
+    }
+}

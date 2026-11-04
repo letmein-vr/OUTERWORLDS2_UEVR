@@ -4,9 +4,9 @@
         "autoAdjustUIWhenInGameStatePriority": "0",
         "decouplePitchWhenInGameState": 1,
         "decouplePitchWhenInGameStatePriority": "0",
-        "handsWhenInGameState": 1,
+        "handsWhenInGameState": 3,
         "handsWhenInGameStatePriority": "0",
-        "inputWhenInGameState": 1,
+        "inputWhenInGameState": 3,
         "inputWhenInGameStatePriority": "0",
         "lockedUIWhenInGameState": 1,
         "lockedUIWhenInGameStatePriority": "0",
@@ -32,6 +32,12 @@
         "screen2DWhenInGameStatePriority": "0"
     },
     "widgetlist": {
+        "WidgetBlueprintGeneratedClass /Game/UI/AR_CC/ARCC_MasterWidget.ARCC_MasterWidget_C": {
+            "label": "ARCC_MasterWidget_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/CinematicPlayer/CinematicPlayer_BP.CinematicPlayer_BP_C": {
+            "label": "CinematicPlayer_BP_C"
+        },
         "WidgetBlueprintGeneratedClass /Game/UI/Conversation/ConversationWidget_BP.ConversationWidget_BP_C": {
             "label": "ConversationWidget_BP_C"
         },
@@ -44,11 +50,26 @@
         "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C": {
             "label": "HUD_BP_C"
         },
+        "WidgetBlueprintGeneratedClass /Game/UI/HUD/Interaction/SkipInteractionAnimationWidget_HUD_BP.SkipInteractionAnimationWidget_HUD_BP_C": {
+            "label": "SkipInteractionAnimationWidget_HUD_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/HUD/RPGExaminable/RPGExaminable_BP.RPGExaminable_BP_C": {
+            "label": "RPGExaminable_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/HUD/Reticle/Reticle_BP.Reticle_BP_C": {
+            "label": "Reticle_BP_C"
+        },
         "WidgetBlueprintGeneratedClass /Game/UI/Ledger/Ledger_BP.Ledger_BP_C": {
             "label": "Ledger_BP_C"
         },
+        "WidgetBlueprintGeneratedClass /Game/UI/Map/SystemMap/SystemMapInterface_BP.SystemMapInterface_BP_C": {
+            "label": "SystemMapInterface_BP_C"
+        },
         "WidgetBlueprintGeneratedClass /Game/UI/Menus/DownedMenu.DownedMenu_C": {
             "label": "DownedMenu_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Menus/MainMenu/DifficultySelect/DifficultySelect_BP.DifficultySelect_BP_C": {
+            "label": "DifficultySelect_BP_C"
         },
         "WidgetBlueprintGeneratedClass /Game/UI/Menus/MainMenu/MainMenu_Conversational.MainMenu_Conversational_C": {
             "label": "MainMenu_Conversational_C"
@@ -62,14 +83,23 @@
         "WidgetBlueprintGeneratedClass /Game/UI/Menus/SettingsMenu/SettingsMenu_BP.SettingsMenu_BP_C": {
             "label": "SettingsMenu_BP_C"
         },
+        "WidgetBlueprintGeneratedClass /Game/UI/MoviePlayer/FullscreenMoviePlayer/MoviePlayer_BP.MoviePlayer_BP_C": {
+            "label": "MoviePlayer_BP_C"
+        },
         "WidgetBlueprintGeneratedClass /Game/UI/NewWorkbench/UpdatedWorkbenchWidget_BP.UpdatedWorkbenchWidget_BP_C": {
             "label": "UpdatedWorkbenchWidget_BP_C"
         },
         "WidgetBlueprintGeneratedClass /Game/UI/Subtitles/ConversationSubtitleWidget_BP.ConversationSubtitleWidget_BP_C": {
             "label": "ConversationSubtitleWidget_BP_C"
         },
+        "WidgetBlueprintGeneratedClass /Game/UI/Tutorial/TutorialCenterScreenWidget_BP.TutorialCenterScreenWidget_BP_C": {
+            "label": "TutorialCenterScreenWidget_BP_C"
+        },
         "WidgetBlueprintGeneratedClass /Game/UI/Tutorial/TutorialPopupWidget_BP.TutorialPopupWidget_BP_C": {
             "label": "TutorialPopupWidget_BP_C"
+        },
+        "WidgetBlueprintGeneratedClass /Game/UI/Vendor/VendorWidget_BP.VendorWidget_BP_C": {
+            "label": "VendorWidget_BP_C"
         }
     }
 }

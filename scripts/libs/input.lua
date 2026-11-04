@@ -180,6 +180,17 @@ end
 getBodyMesh = uevrUtils.profiler:wrap("getBodyMesh", getBodyMesh)
 
 local function getPawn()
+	-- After a level load the previous pawn can keep passing getValid() for several seconds, so the cache
+	-- held onto it (no root component -> no body yaw / camera override -> raw game camera, then a snap
+	-- when GC finally dropped it). Drop the cache as soon as the engine's local pawn is a different object.
+	if status.pawn ~= nil and pawn ~= nil then
+		local changed = false
+		pcall(function() changed = status.pawn:get_address() ~= pawn:get_address() end)
+		if changed then
+			status.pawn = nil
+			status.rootComponent = nil
+		end
+	end
 	if uevrUtils.getValid(status.pawn) == nil then
 		status.pawn = uevrUtils.getValid(pawnModule.getPawn() or pawn)
 	end
@@ -791,6 +802,11 @@ function M.isDisabled()
 	return getParameter("isDisabledOverride") or isDisabled
 end
 
+-- the manual "Disabled" override alone (not the callback path); ported from the Stalker 2 profile for the ladder fix
+function M.isDisabledOverride()
+	return getParameter("isDisabledOverride") == true
+end
+
 local function executeIsDisabledCallback(...)
 	local result, priority = uevrUtils.executeUEVRCallbacksWithPriorityBooleanResult("is_input_disabled", table.unpack({...}))
 	return result
@@ -843,6 +859,11 @@ end
 
 function M.getPawnRotationMode()
 	return getParameter("pawnRotationMode")
+end
+
+-- Includes setOverridePawnRotationMode; use this when reacting to live body yaw behavior. (from upstream uevrlib, used by libs/ik.lua)
+function M.getEffectivePawnRotationMode()
+	return pawnRotationModeOverride ~= nil and pawnRotationModeOverride or getParameter("pawnRotationMode")
 end
 
 function M.setOverridePawnRotationMode(val)
@@ -903,15 +924,32 @@ end
 --This function sets the global rootComponent variable 
 local function getRootComponent()
 	local pawn = getPawn()
+	-- Deferred UObject adoption (joeyhodge/AFW backend): after a level load UObjectHook.exists() can reject the
+	-- fresh pawn's RootComponent for 0-20+ s even though it is live and readable. While input.lua has no root
+	-- it neither turns the body nor overrides the camera, so the raw game camera shows (wrong facing, a snap
+	-- when the root is finally accepted, and sometimes a spin). The pawn is validated and getPawn() drops this
+	-- cache when the local pawn changes, so its current RootComponent is trusted directly when exists() refuses it.
+	local trustedViaPawn = false
 	if pawn ~= nil and status.rootComponent == nil then
 		local component = uevrUtils.getValid(pawn,{"RootComponent"})
+		if component == nil then
+			pcall(function() component = pawn.RootComponent end)
+			trustedViaPawn = component ~= nil
+		end
 		if component ~= nil and component.K2_GetComponentLocation ~= nil and component.K2_GetComponentRotation ~= nil and component.K2_SetWorldRotation ~= nil then
 			status.rootComponent = component
+			status.rootViaPawn = trustedViaPawn
 		end
 	end
-	rootComponent = uevrUtils.getValid(status.rootComponent)
+	if status.rootComponent ~= nil and status.rootViaPawn == true and pawn ~= nil then
+		rootComponent = status.rootComponent
+		if uevrUtils.getValid(rootComponent) ~= nil then status.rootViaPawn = false end -- adopted now; normal checks from here on
+	else
+		rootComponent = uevrUtils.getValid(status.rootComponent)
+	end
 	if rootComponent == nil then
 		status.rootComponent = nil
+		status.rootViaPawn = nil
 	end
 	return rootComponent
 	
@@ -924,10 +962,26 @@ local function getRootComponent()
 end
 getRootComponent = uevrUtils.profiler:wrap("getRootComponent", getRootComponent)
 
+-- Body yaw freeze (Hellraiser 2026-10-08): fn() -> true while the pawn must keep the yaw the game gave it (seated
+-- sequences). Then the body does not follow the head (no body-yaw updates) and the stick does not turn; on entering,
+-- decoupledYaw takes the pawn's current yaw with a zero body offset, so nothing snaps and the head looks around
+-- freely on top of the pawn's facing.
+local bodyYawFrozenCallback = nil
+local bodyYawWasFrozen = false
+function M.setBodyYawFrozenCallback(fn)
+	bodyYawFrozenCallback = fn
+end
+local function isBodyYawFrozen()
+	if bodyYawFrozenCallback == nil then return false end
+	local ok, frozen = pcall(bodyYawFrozenCallback)
+	return ok and frozen == true
+end
+
 --VR_SwapControllerInputs check this to see if user has chosen left hand full input swap in the UEVR UI
 local function updateDecoupledYaw(state, rotationHand)
 	if rotationHand == nil then rotationHand = Handed.Right end
 	local yawChange = 0
+	if decoupledYaw ~= nil and isBodyYawFrozen() then return 0 end
 	if decoupledYaw ~= nil then
 		local thumbLX = state.Gamepad.sThumbLX
 		local thumbLY = state.Gamepad.sThumbLY
@@ -1075,6 +1129,17 @@ local lateYaw = false
 --this is called from both on_pre_engine_tick and on_early_calculate_stereo_view_offset but K2_SetWorldRotation can only be called once per tick
 --because of the currentOffset ~= bodyRotationOffset check
 local function updateBodyYaw(delta)
+	if isBodyYawFrozen() then
+		if not bodyYawWasFrozen and rootComponent ~= nil and rootComponent.K2_GetComponentRotation ~= nil then
+			pcall(function()
+				decoupledYaw = rootComponent:K2_GetComponentRotation().Yaw
+				bodyRotationOffset = 0
+			end)
+		end
+		bodyYawWasFrozen = true
+		return
+	end
+	bodyYawWasFrozen = false
 	local pawnRotationMode = getPawnRotationMode() -- getParameter("pawnRotationMode")
 	if pawnRotationMode ~= M.PawnRotationMode.NONE then
 		if decoupledYaw~= nil and rootComponent ~= nil then
@@ -1357,11 +1422,26 @@ uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 
 end)
 
+-- View position override (Hellraiser 2026-10-08): fn() -> x, y, z (world) or nil. While it returns a position the VR
+-- view is placed there instead of root + capsule half-height + head offset (standing eye height) - e.g. seated
+-- sequences where the game's camera sits much lower / elsewhere. Rotation handling is unchanged.
+local viewPositionOverride = nil
+function M.setViewPositionOverride(fn)
+	viewPositionOverride = fn
+end
+
 local function getVRCameraOffsets()
 	--if bodyRotationOffset ~= nil and rootComponent ~= nil and uevrUtils.getValid(rootComponent) ~= nil and rootComponent.K2_GetComponentLocation ~= nil then
+	if viewPositionOverride ~= nil then
+		local ok, ox, oy, oz = pcall(viewPositionOverride)
+		if ok and ox ~= nil and status.rootComponent ~= nil and status.rootComponent.K2_GetComponentRotation ~= nil then
+			local pawnRot = status.rootComponent:K2_GetComponentRotation()
+			return ox, oy, oz, 0, pawnRot.Yaw - (bodyRotationOffset or 0), 0
+		end
+	end
 	local rootOffset = getParameter("rootOffset")
 	if rootOffset ~= nil then
-		if status.rootComponent ~= nil and uevrUtils.getValid(rootComponent) ~= nil and status.rootComponent.K2_GetComponentLocation ~= nil then
+		if status.rootComponent ~= nil and (status.rootViaPawn == true or uevrUtils.getValid(rootComponent) ~= nil) and status.rootComponent.K2_GetComponentLocation ~= nil then
 			local pawnPos = status.rootComponent:K2_GetComponentLocation()
 			local pawnRot = status.rootComponent:K2_GetComponentRotation()
 

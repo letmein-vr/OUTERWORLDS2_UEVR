@@ -4,6 +4,120 @@
         0.0,
         0.0
     ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_end_time": 0.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_existing_guid": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_activation_distance": 0.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_activation_hand": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_attach_type": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_grip_animation": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_grip_priority": "1",
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_id": "",
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_label": "",
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_location": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_socket_list": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_socket_name": "",
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_test_left_hand": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_item_test_right_hand": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_marker_picker": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_picker": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_accessory_start_time": 0.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_any_child": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_any_parent": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_delete_accessory_override": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_grip_animation": 1,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_is_melee": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_is_scoped": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_is_two_handed": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_melee_rotation_offset": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_position": [
+        5.5,
+        -0.30000001192092896,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_rotation": [
+        -180.0,
+        112.9000015258789,
+        0.4000000059604645
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scale": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_brightness": 2.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_deactivate_distance": 50.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_hide_ocular_lens_on_disable": true,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_max_fov": 20.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_min_fov": 2.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_objective_lens_location": [
+        0.0,
+        0.0,
+        20.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_objective_lens_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_ocular_lens_location": [
+        0.0,
+        0.0,
+        20.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_ocular_lens_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_ocular_lens_scale": 1.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_show_debug": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_zoom_exponential": 0.5,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_scope_zoom_speed": 1.0,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_sights_position_offset": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_sights_rotation_offset": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_strip_child_suffix_length": false,
+    "uevr_attachments_IndianaPlayerCharacter_BP_C_SK_Dematerializer_001_use_laser": false,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_accessory_end_time": 0.0,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_accessory_existing_guid": 1,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_accessory_item_activation_distance": 0.0,
@@ -31,9 +145,29 @@
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_accessory_picker": 1,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_any_child": false,
-    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_any_parent": false,
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_any_parent": true,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_grip_animation": 9,
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_grip_animation": 10,
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_ShockBaton_Base_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_is_melee": true,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_is_scoped": false,
     "uevr_attachments_Wpn_ME_ShockBaton_Base_001_is_two_handed": false,
@@ -127,7 +261,27 @@
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_any_child": false,
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_any_parent": false,
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_ME_Tripblade_Base_001_grip_animation": 9,
+    "uevr_attachments_Wpn_ME_Tripblade_Base_001_grip_animation": 10,
+    "uevr_attachments_Wpn_ME_Tripblade_Base_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_Tripblade_Base_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_Tripblade_Base_001_ik_hand_position": [
+        0.0,
+        -0.30000001192092896,
+        0.0
+    ],
+    "uevr_attachments_Wpn_ME_Tripblade_Base_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_is_melee": true,
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_is_scoped": false,
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_is_two_handed": false,
@@ -138,7 +292,7 @@
     ],
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_position": [
         -1.7000000476837158,
-        -0.699999988079071,
+        -46.400001525878906,
         -3.299999952316284
     ],
     "uevr_attachments_Wpn_ME_Tripblade_Base_001_rotation": [
@@ -221,7 +375,27 @@
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_any_child": false,
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_any_parent": false,
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_grip_animation": 9,
+    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_grip_animation": 10,
+    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_ik_hand_position": [
+        0.0,
+        -1.600000023841858,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_ED_SentryKnife_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_is_melee": true,
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_is_scoped": false,
     "uevr_attachments_Wpn_SK_ED_SentryKnife_01_is_two_handed": false,
@@ -315,7 +489,27 @@
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_any_child": false,
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_any_parent": false,
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_delete_accessory_override": false,
-    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_grip_animation": 7,
+    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_grip_animation": 6,
+    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_is_melee": false,
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_is_scoped": false,
     "uevr_attachments_Wpn_SK_MOD_ARS_ADD_AGG_is_two_handed": true,
@@ -409,7 +603,27 @@
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_any_child": false,
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_any_parent": false,
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_delete_accessory_override": false,
-    "uevr_attachments_Wpn_W_OA_Unique_Oracle_grip_animation": 7,
+    "uevr_attachments_Wpn_W_OA_Unique_Oracle_grip_animation": 6,
+    "uevr_attachments_Wpn_W_OA_Unique_Oracle_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_OA_Unique_Oracle_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_OA_Unique_Oracle_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_OA_Unique_Oracle_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_is_melee": false,
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_is_scoped": false,
     "uevr_attachments_Wpn_W_OA_Unique_Oracle_is_two_handed": true,
@@ -503,7 +717,27 @@
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_any_child": false,
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_any_parent": false,
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_grip_animation": 9,
+    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_grip_animation": 10,
+    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_ik_hand_position": [
+        0.0,
+        -0.800000011920929,
+        0.0
+    ],
+    "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_is_melee": true,
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_is_scoped": false,
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_is_two_handed": false,
@@ -514,7 +748,7 @@
     ],
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_position": [
         -0.699999988079071,
-        -24.100000381469727,
+        -34.0,
         -2.5999999046325684
     ],
     "uevr_attachments_Wpn_W_TL_TremorCleaver_FP_01_rotation": [
@@ -597,7 +831,27 @@
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_any_child": false,
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_any_parent": false,
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_grip_animation": 9,
+    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_grip_animation": 10,
+    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_ik_hand_position": [
+        0.0,
+        -1.2000000476837158,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_is_melee": true,
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_is_scoped": false,
     "uevr_attachments_Wpn_w_AB_PlasmaCutter_FP_is_two_handed": false,
@@ -691,7 +945,27 @@
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_any_child": false,
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_any_parent": false,
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_is_melee": false,
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AB_PulseHammer_FP_01_is_two_handed": false,
@@ -783,12 +1057,32 @@
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_accessory_picker": 1,
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_any_child": false,
-    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_any_parent": false,
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_any_parent": true,
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_grip_animation": 7,
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_grip_animation": 6,
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        -0.6000000238418579
+    ],
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_is_melee": false,
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_is_scoped": false,
-    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_is_two_handed": false,
+    "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_is_two_handed": true,
     "uevr_attachments_Wpn_w_AC_ARM_BulletBlender_melee_rotation_offset": [
         0.0,
         0.0,
@@ -879,7 +1173,27 @@
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_any_child": false,
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_any_parent": false,
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_grip_animation": 7,
+    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_grip_animation": 6,
+    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.699999988079071
+    ],
+    "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_is_melee": false,
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_AR_Mobility_Base_is_two_handed": true,
@@ -974,6 +1288,26 @@
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_any_parent": false,
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_AutoPistol_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_AutoPistol_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_AutoPistol_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_AutoPistol_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_AutoPistol_01_is_two_handed": false,
@@ -1065,12 +1399,32 @@
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_any_child": false,
-    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_any_parent": false,
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_any_parent": true,
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_ik_hand_position": [
+        0.4000000059604645,
+        0.0,
+        -3.0
+    ],
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_ik_hand_rotation": [
+        6.400000095367432,
+        -3.200000047683716,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_is_scoped": false,
-    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_is_two_handed": false,
+    "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_is_two_handed": true,
     "uevr_attachments_Wpn_w_AC_Boarst_Blaster_01_melee_rotation_offset": [
         0.0,
         0.0,
@@ -1161,7 +1515,27 @@
     "uevr_attachments_Wpn_w_AC_GooPistol_01_any_child": false,
     "uevr_attachments_Wpn_w_AC_GooPistol_01_any_parent": false,
     "uevr_attachments_Wpn_w_AC_GooPistol_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_GooPistol_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_GooPistol_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_AC_GooPistol_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_GooPistol_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_GooPistol_01_ik_hand_position": [
+        0.0,
+        -1.2000000476837158,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_GooPistol_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_GooPistol_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_GooPistol_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_GooPistol_01_is_two_handed": false,
@@ -1255,10 +1629,30 @@
     "uevr_attachments_Wpn_w_AC_IceBreaker_any_child": false,
     "uevr_attachments_Wpn_w_AC_IceBreaker_any_parent": false,
     "uevr_attachments_Wpn_w_AC_IceBreaker_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_IceBreaker_grip_animation": 3,
+    "uevr_attachments_Wpn_w_AC_IceBreaker_grip_animation": 8,
+    "uevr_attachments_Wpn_w_AC_IceBreaker_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_IceBreaker_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_IceBreaker_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_IceBreaker_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_IceBreaker_is_melee": false,
     "uevr_attachments_Wpn_w_AC_IceBreaker_is_scoped": false,
-    "uevr_attachments_Wpn_w_AC_IceBreaker_is_two_handed": false,
+    "uevr_attachments_Wpn_w_AC_IceBreaker_is_two_handed": true,
     "uevr_attachments_Wpn_w_AC_IceBreaker_melee_rotation_offset": [
         0.0,
         0.0,
@@ -1347,9 +1741,29 @@
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_any_child": false,
-    "uevr_attachments_Wpn_w_AC_MachinePistol_01_any_parent": false,
+    "uevr_attachments_Wpn_w_AC_MachinePistol_01_any_parent": true,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_MachinePistol_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_MachinePistol_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_MachinePistol_01_ik_hand_position": [
+        1.100000023841858,
+        -2.0,
+        -3.9000000953674316
+    ],
+    "uevr_attachments_Wpn_w_AC_MachinePistol_01_ik_hand_rotation": [
+        30.600000381469727,
+        -2.700000047683716,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_is_two_handed": false,
@@ -1364,7 +1778,7 @@
         -4.0
     ],
     "uevr_attachments_Wpn_w_AC_MachinePistol_01_rotation": [
-        22.299999237060547,
+        0.0,
         -90.19999694824219,
         -5.699999809265137
     ],
@@ -1441,9 +1855,29 @@
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_any_child": false,
-    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_any_parent": false,
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_any_parent": true,
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_ik_hand_position": [
+        0.0,
+        -0.6000000238418579,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_ik_hand_rotation": [
+        0.0,
+        -10.800000190734863,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_is_two_handed": true,
@@ -1458,7 +1892,7 @@
         -0.800000011920929
     ],
     "uevr_attachments_Wpn_w_AC_TBS_TheHunt_01_rotation": [
-        -19.5,
+        -0.5,
         -90.0,
         0.0
     ],
@@ -1537,7 +1971,27 @@
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_any_child": false,
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_any_parent": false,
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_TeleStaff_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_AC_TeleStaff_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_AC_TeleStaff_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TeleStaff_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TeleStaff_01_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_TeleStaff_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_is_melee": true,
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_is_two_handed": false,
@@ -1548,7 +2002,7 @@
     ],
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_position": [
         -1.100000023841858,
-        0.10000000149011612,
+        -33.400001525878906,
         -3.799999952316284
     ],
     "uevr_attachments_Wpn_w_AC_TeleStaff_01_rotation": [
@@ -1631,7 +2085,27 @@
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_any_child": false,
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_any_parent": false,
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_grip_animation": 3,
+    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_grip_animation": 8,
+    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_ik_hand_position": [
+        -0.20000000298023224,
+        0.30000001192092896,
+        -0.800000011920929
+    ],
+    "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_ik_hand_rotation": [
+        0.0,
+        -9.100000381469727,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_is_melee": false,
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_is_two_handed": true,
@@ -1646,7 +2120,7 @@
         -1.100000023841858
     ],
     "uevr_attachments_Wpn_w_AC_Triple_Shotgun_01_base_rotation": [
-        -18.799999237060547,
+        0.20000000298023224,
         -90.0,
         0.4000000059604645
     ],
@@ -1726,6 +2200,26 @@
     "uevr_attachments_Wpn_w_AC_WildSpray_01_any_parent": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_WildSpray_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_WildSpray_01_is_melee": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_01_is_two_handed": false,
@@ -1817,9 +2311,29 @@
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_accessory_picker": 1,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_any_child": false,
-    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_any_parent": false,
+    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_any_parent": true,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_grip_animation": 5,
+    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_ik_hand_position": [
+        1.399999976158142,
+        -0.699999988079071,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_is_melee": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_is_scoped": false,
     "uevr_attachments_Wpn_w_AC_WildSpray_AH50000_is_two_handed": false,
@@ -1913,7 +2427,27 @@
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_any_child": false,
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_any_parent": false,
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_AR_Standard_Base_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_AR_Standard_Base_01_grip_animation": 6,
+    "uevr_attachments_Wpn_w_AR_Standard_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AR_Standard_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AR_Standard_Base_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_AR_Standard_Base_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_is_scoped": false,
     "uevr_attachments_Wpn_w_AR_Standard_Base_01_is_two_handed": true,
@@ -2005,9 +2539,29 @@
     "uevr_attachments_Wpn_w_ED_LightPistol_accessory_picker": 1,
     "uevr_attachments_Wpn_w_ED_LightPistol_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_ED_LightPistol_any_child": false,
-    "uevr_attachments_Wpn_w_ED_LightPistol_any_parent": false,
+    "uevr_attachments_Wpn_w_ED_LightPistol_any_parent": true,
     "uevr_attachments_Wpn_w_ED_LightPistol_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_ED_LightPistol_grip_animation": 5,
+    "uevr_attachments_Wpn_w_ED_LightPistol_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_ED_LightPistol_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_ED_LightPistol_ik_hand_position": [
+        0.0,
+        -0.800000011920929,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_ED_LightPistol_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_ED_LightPistol_is_melee": false,
     "uevr_attachments_Wpn_w_ED_LightPistol_is_scoped": false,
     "uevr_attachments_Wpn_w_ED_LightPistol_is_two_handed": false,
@@ -2019,7 +2573,7 @@
     "uevr_attachments_Wpn_w_ED_LightPistol_position": [
         0.0,
         1.7999999523162842,
-        -3.799999952316284
+        -4.699999809265137
     ],
     "uevr_attachments_Wpn_w_ED_LightPistol_rotation": [
         0.0,
@@ -2101,7 +2655,27 @@
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_any_child": false,
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_any_parent": false,
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_ik_hand_position": [
+        0.0,
+        -0.800000011920929,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_Kaur_GooPistol_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_is_melee": false,
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_is_scoped": false,
     "uevr_attachments_Wpn_w_Kaur_GooPistol_01_is_two_handed": false,
@@ -2195,7 +2769,27 @@
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_any_child": false,
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_any_parent": false,
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_LMG_FastHeat_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_LMG_FastHeat_01_grip_animation": 4,
+    "uevr_attachments_Wpn_w_LMG_FastHeat_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LMG_FastHeat_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LMG_FastHeat_01_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LMG_FastHeat_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_is_melee": false,
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_is_scoped": false,
     "uevr_attachments_Wpn_w_LMG_FastHeat_01_is_two_handed": true,
@@ -2289,10 +2883,30 @@
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_any_child": false,
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_any_parent": false,
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_grip_animation": 6,
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_ik_hand_position": [
+        0.6000000238418579,
+        -0.10000000149011612,
+        1.600000023841858
+    ],
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_ik_hand_rotation": [
+        -15.5,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_is_scoped": false,
-    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_is_two_handed": false,
+    "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_is_two_handed": true,
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_melee_rotation_offset": [
         0.0,
         0.0,
@@ -2304,7 +2918,7 @@
         -1.5
     ],
     "uevr_attachments_Wpn_w_LMG_LightBurst_Base_01_rotation": [
-        -27.200000762939453,
+        -0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -2383,7 +2997,27 @@
     "uevr_attachments_Wpn_w_LNCH_BigB_001_any_child": false,
     "uevr_attachments_Wpn_w_LNCH_BigB_001_any_parent": false,
     "uevr_attachments_Wpn_w_LNCH_BigB_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_LNCH_BigB_001_grip_animation": 9,
+    "uevr_attachments_Wpn_w_LNCH_BigB_001_grip_animation": 10,
+    "uevr_attachments_Wpn_w_LNCH_BigB_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_BigB_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_BigB_001_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_BigB_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_LNCH_BigB_001_is_melee": false,
     "uevr_attachments_Wpn_w_LNCH_BigB_001_is_scoped": false,
     "uevr_attachments_Wpn_w_LNCH_BigB_001_is_two_handed": false,
@@ -2477,7 +3111,27 @@
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_any_child": false,
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_any_parent": false,
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_grip_animation": 9,
+    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_grip_animation": 10,
+    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_LNCH_PitchBall_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_is_melee": false,
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_is_scoped": false,
     "uevr_attachments_Wpn_w_LNCH_PitchBall_001_is_two_handed": true,
@@ -2571,7 +3225,27 @@
     "uevr_attachments_Wpn_w_MR_CC_any_child": false,
     "uevr_attachments_Wpn_w_MR_CC_any_parent": false,
     "uevr_attachments_Wpn_w_MR_CC_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_MR_CC_grip_animation": 7,
+    "uevr_attachments_Wpn_w_MR_CC_grip_animation": 6,
+    "uevr_attachments_Wpn_w_MR_CC_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_CC_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_CC_ik_hand_position": [
+        0.0,
+        -0.800000011920929,
+        1.100000023841858
+    ],
+    "uevr_attachments_Wpn_w_MR_CC_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_MR_CC_is_melee": false,
     "uevr_attachments_Wpn_w_MR_CC_is_scoped": false,
     "uevr_attachments_Wpn_w_MR_CC_is_two_handed": true,
@@ -2665,7 +3339,27 @@
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_any_child": false,
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_any_parent": false,
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Frontline_Base_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_is_scoped": false,
     "uevr_attachments_Wpn_w_MR_Frontline_Base_01_is_two_handed": true,
@@ -2759,7 +3453,27 @@
     "uevr_attachments_Wpn_w_MR_Standard_001_any_child": false,
     "uevr_attachments_Wpn_w_MR_Standard_001_any_parent": false,
     "uevr_attachments_Wpn_w_MR_Standard_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_MR_Standard_001_grip_animation": 3,
+    "uevr_attachments_Wpn_w_MR_Standard_001_grip_animation": 8,
+    "uevr_attachments_Wpn_w_MR_Standard_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Standard_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Standard_001_ik_hand_position": [
+        2.0,
+        0.4000000059604645,
+        1.0
+    ],
+    "uevr_attachments_Wpn_w_MR_Standard_001_ik_hand_rotation": [
+        -13.699999809265137,
+        -11.800000190734863,
+        -19.0
+    ],
     "uevr_attachments_Wpn_w_MR_Standard_001_is_melee": false,
     "uevr_attachments_Wpn_w_MR_Standard_001_is_scoped": false,
     "uevr_attachments_Wpn_w_MR_Standard_001_is_two_handed": true,
@@ -2774,7 +3488,7 @@
         0.4000000059604645
     ],
     "uevr_attachments_Wpn_w_MR_Standard_001_rotation": [
-        -20.799999237060547,
+        -0.30000001192092896,
         -90.30000305175781,
         0.0
     ],
@@ -2853,10 +3567,30 @@
     "uevr_attachments_Wpn_w_MR_T_DS_any_child": false,
     "uevr_attachments_Wpn_w_MR_T_DS_any_parent": false,
     "uevr_attachments_Wpn_w_MR_T_DS_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_MR_T_DS_grip_animation": 3,
+    "uevr_attachments_Wpn_w_MR_T_DS_grip_animation": 8,
+    "uevr_attachments_Wpn_w_MR_T_DS_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_T_DS_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_MR_T_DS_ik_hand_position": [
+        -0.20000000298023224,
+        0.6000000238418579,
+        -0.20000000298023224
+    ],
+    "uevr_attachments_Wpn_w_MR_T_DS_ik_hand_rotation": [
+        0.0,
+        -11.800000190734863,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_MR_T_DS_is_melee": false,
     "uevr_attachments_Wpn_w_MR_T_DS_is_scoped": false,
-    "uevr_attachments_Wpn_w_MR_T_DS_is_two_handed": false,
+    "uevr_attachments_Wpn_w_MR_T_DS_is_two_handed": true,
     "uevr_attachments_Wpn_w_MR_T_DS_melee_rotation_offset": [
         0.0,
         0.0,
@@ -2868,7 +3602,7 @@
         -1.100000023841858
     ],
     "uevr_attachments_Wpn_w_MR_T_DS_rotation": [
-        -24.100000381469727,
+        0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -2948,6 +3682,26 @@
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_any_parent": false,
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_is_melee": false,
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_is_scoped": false,
     "uevr_attachments_Wpn_w_OA_Bolter_Pistol_01_is_two_handed": false,
@@ -3041,7 +3795,27 @@
     "uevr_attachments_Wpn_w_OA_LongBurst_01_any_child": false,
     "uevr_attachments_Wpn_w_OA_LongBurst_01_any_parent": false,
     "uevr_attachments_Wpn_w_OA_LongBurst_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_OA_LongBurst_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_OA_LongBurst_01_grip_animation": 6,
+    "uevr_attachments_Wpn_w_OA_LongBurst_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_LongBurst_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_LongBurst_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_LongBurst_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_OA_LongBurst_01_is_melee": false,
     "uevr_attachments_Wpn_w_OA_LongBurst_01_is_scoped": false,
     "uevr_attachments_Wpn_w_OA_LongBurst_01_is_two_handed": true,
@@ -3135,7 +3909,27 @@
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_any_child": false,
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_any_parent": false,
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_grip_animation": 9,
+    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_grip_animation": 10,
+    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_ME_PulseHammer_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_is_melee": true,
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_is_scoped": false,
     "uevr_attachments_Wpn_w_OA_ME_PulseHammer_is_two_handed": false,
@@ -3229,7 +4023,27 @@
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_any_child": false,
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_any_parent": false,
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_grip_animation": 9,
+    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_grip_animation": 10,
+    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_ik_hand_position": [
+        0.0,
+        -0.699999988079071,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_is_melee": true,
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_is_scoped": false,
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_is_two_handed": false,
@@ -3240,7 +4054,7 @@
     ],
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_position": [
         -0.6000000238418579,
-        0.0,
+        -22.799999237060547,
         -3.9000000953674316
     ],
     "uevr_attachments_Wpn_w_OA_NRadiated_Scythe_001_rotation": [
@@ -3323,7 +4137,27 @@
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_any_child": false,
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_any_parent": false,
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_OA_SpinBeam_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_OA_SpinBeam_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_OA_SpinBeam_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_SpinBeam_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_SpinBeam_01_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_OA_SpinBeam_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_is_melee": false,
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_is_scoped": false,
     "uevr_attachments_Wpn_w_OA_SpinBeam_01_is_two_handed": true,
@@ -3415,9 +4249,29 @@
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_any_child": false,
-    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_any_parent": false,
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_any_parent": true,
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_grip_animation": 11,
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_ik_hand_position": [
+        1.5,
+        0.0,
+        -0.20000000298023224
+    ],
+    "uevr_attachments_Wpn_w_PI_LongShot_Base_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_is_scoped": false,
     "uevr_attachments_Wpn_w_PI_LongShot_Base_01_is_two_handed": false,
@@ -3512,6 +4366,26 @@
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_any_parent": false,
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_PI_Rocket_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_Base_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_Base_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_is_scoped": false,
     "uevr_attachments_Wpn_w_PI_Rocket_Base_01_is_two_handed": false,
@@ -3606,6 +4480,26 @@
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_any_parent": false,
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_PI_Rocket_LR_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_LR_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_LR_01_ik_hand_position": [
+        0.0,
+        -0.6000000238418579,
+        -0.20000000298023224
+    ],
+    "uevr_attachments_Wpn_w_PI_Rocket_LR_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_is_melee": false,
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_is_scoped": false,
     "uevr_attachments_Wpn_w_PI_Rocket_LR_01_is_two_handed": false,
@@ -3697,9 +4591,29 @@
     "uevr_attachments_Wpn_w_P_ChainSpark_accessory_picker": 1,
     "uevr_attachments_Wpn_w_P_ChainSpark_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_P_ChainSpark_any_child": false,
-    "uevr_attachments_Wpn_w_P_ChainSpark_any_parent": false,
+    "uevr_attachments_Wpn_w_P_ChainSpark_any_parent": true,
     "uevr_attachments_Wpn_w_P_ChainSpark_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_ChainSpark_grip_animation": 3,
+    "uevr_attachments_Wpn_w_P_ChainSpark_grip_animation": 8,
+    "uevr_attachments_Wpn_w_P_ChainSpark_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_ChainSpark_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_ChainSpark_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_ChainSpark_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_ChainSpark_is_melee": false,
     "uevr_attachments_Wpn_w_P_ChainSpark_is_scoped": false,
     "uevr_attachments_Wpn_w_P_ChainSpark_is_two_handed": false,
@@ -3714,7 +4628,7 @@
         9.199999809265137
     ],
     "uevr_attachments_Wpn_w_P_ChainSpark_rotation": [
-        -20.700000762939453,
+        0.0,
         -90.0,
         0.0
     ],
@@ -3793,7 +4707,27 @@
     "uevr_attachments_Wpn_w_P_HRifle_01_any_child": false,
     "uevr_attachments_Wpn_w_P_HRifle_01_any_parent": false,
     "uevr_attachments_Wpn_w_P_HRifle_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_HRifle_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_P_HRifle_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_P_HRifle_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_01_ik_hand_position": [
+        0.0,
+        -0.20000000298023224,
+        2.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_01_ik_hand_rotation": [
+        -11.100000381469727,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_HRifle_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_HRifle_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_HRifle_01_is_two_handed": true,
@@ -3808,7 +4742,7 @@
         -2.5999999046325684
     ],
     "uevr_attachments_Wpn_w_P_HRifle_01_rotation": [
-        -29.600000381469727,
+        0.20000000298023224,
         -93.0999984741211,
         -7.0
     ],
@@ -3887,7 +4821,27 @@
     "uevr_attachments_Wpn_w_P_HRifle_RD_any_child": false,
     "uevr_attachments_Wpn_w_P_HRifle_RD_any_parent": false,
     "uevr_attachments_Wpn_w_P_HRifle_RD_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_HRifle_RD_grip_animation": 3,
+    "uevr_attachments_Wpn_w_P_HRifle_RD_grip_animation": 8,
+    "uevr_attachments_Wpn_w_P_HRifle_RD_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_RD_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_RD_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_HRifle_RD_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_HRifle_RD_is_melee": false,
     "uevr_attachments_Wpn_w_P_HRifle_RD_is_scoped": false,
     "uevr_attachments_Wpn_w_P_HRifle_RD_is_two_handed": true,
@@ -3981,7 +4935,27 @@
     "uevr_attachments_Wpn_w_P_LMG_01_any_child": false,
     "uevr_attachments_Wpn_w_P_LMG_01_any_parent": false,
     "uevr_attachments_Wpn_w_P_LMG_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_LMG_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_P_LMG_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_P_LMG_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_LMG_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_LMG_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_LMG_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_LMG_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_LMG_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_LMG_01_is_two_handed": true,
@@ -4073,9 +5047,29 @@
     "uevr_attachments_Wpn_w_P_LightRevolver_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_P_LightRevolver_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_P_LightRevolver_01_any_child": false,
-    "uevr_attachments_Wpn_w_P_LightRevolver_01_any_parent": false,
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_any_parent": true,
     "uevr_attachments_Wpn_w_P_LightRevolver_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_LightRevolver_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_grip_animation": 11,
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_ik_hand_position": [
+        0.4000000059604645,
+        -1.2000000476837158,
+        -1.100000023841858
+    ],
+    "uevr_attachments_Wpn_w_P_LightRevolver_01_ik_hand_rotation": [
+        5.5,
+        -3.299999952316284,
+        7.400000095367432
+    ],
     "uevr_attachments_Wpn_w_P_LightRevolver_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_LightRevolver_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_LightRevolver_01_is_two_handed": false,
@@ -4085,7 +5079,7 @@
         0.0
     ],
     "uevr_attachments_Wpn_w_P_LightRevolver_01_position": [
-        -0.8999999761581421,
+        -0.10000000149011612,
         2.9000000953674316,
         -2.799999952316284
     ],
@@ -4169,7 +5163,27 @@
     "uevr_attachments_Wpn_w_P_MiniGun_01_any_child": false,
     "uevr_attachments_Wpn_w_P_MiniGun_01_any_parent": false,
     "uevr_attachments_Wpn_w_P_MiniGun_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_MiniGun_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_P_MiniGun_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_P_MiniGun_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_MiniGun_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_MiniGun_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_MiniGun_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_MiniGun_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_MiniGun_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_MiniGun_01_is_two_handed": true,
@@ -4261,9 +5275,29 @@
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_any_child": false,
-    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_any_parent": false,
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_any_parent": true,
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_ik_hand_position": [
+        0.0,
+        1.0,
+        1.5
+    ],
+    "uevr_attachments_Wpn_w_P_RepeatingRifle_01_ik_hand_rotation": [
+        -7.5,
+        -8.800000190734863,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_is_two_handed": true,
@@ -4278,7 +5312,7 @@
         -1.0
     ],
     "uevr_attachments_Wpn_w_P_RepeatingRifle_01_rotation": [
-        -19.799999237060547,
+        0.6000000238418579,
         -90.0,
         0.0
     ],
@@ -4357,10 +5391,30 @@
     "uevr_attachments_Wpn_w_P_Slowbeam_01_any_child": false,
     "uevr_attachments_Wpn_w_P_Slowbeam_01_any_parent": false,
     "uevr_attachments_Wpn_w_P_Slowbeam_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_Slowbeam_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_Slowbeam_01_is_melee": false,
     "uevr_attachments_Wpn_w_P_Slowbeam_01_is_scoped": false,
-    "uevr_attachments_Wpn_w_P_Slowbeam_01_is_two_handed": true,
+    "uevr_attachments_Wpn_w_P_Slowbeam_01_is_two_handed": false,
     "uevr_attachments_Wpn_w_P_Slowbeam_01_melee_rotation_offset": [
         0.0,
         0.0,
@@ -4372,7 +5426,7 @@
         9.899999618530273
     ],
     "uevr_attachments_Wpn_w_P_Slowbeam_01_rotation": [
-        -12.5,
+        0.20000000298023224,
         -90.0,
         0.0
     ],
@@ -4451,7 +5505,27 @@
     "uevr_attachments_Wpn_w_P_TeleStaff_01_any_child": false,
     "uevr_attachments_Wpn_w_P_TeleStaff_01_any_parent": false,
     "uevr_attachments_Wpn_w_P_TeleStaff_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_P_TeleStaff_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_P_TeleStaff_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_P_TeleStaff_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_TeleStaff_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_TeleStaff_01_ik_hand_position": [
+        0.0,
+        -1.2999999523162842,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_P_TeleStaff_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_P_TeleStaff_01_is_melee": true,
     "uevr_attachments_Wpn_w_P_TeleStaff_01_is_scoped": false,
     "uevr_attachments_Wpn_w_P_TeleStaff_01_is_two_handed": false,
@@ -4462,7 +5536,7 @@
     ],
     "uevr_attachments_Wpn_w_P_TeleStaff_01_position": [
         -0.699999988079071,
-        0.0,
+        -17.200000762939453,
         -4.199999809265137
     ],
     "uevr_attachments_Wpn_w_P_TeleStaff_01_rotation": [
@@ -4543,12 +5617,32 @@
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_any_child": false,
-    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_any_parent": false,
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_any_parent": true,
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_grip_animation": 5,
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_ik_hand_position": [
+        0.800000011920929,
+        0.4000000059604645,
+        -1.2999999523162842
+    ],
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_ik_hand_rotation": [
+        5.300000190734863,
+        0.10000000149011612,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_is_melee": false,
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_is_scoped": false,
-    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_is_two_handed": false,
+    "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_is_two_handed": true,
     "uevr_attachments_Wpn_w_SCI_LNCH_Armaggedon_01_melee_rotation_offset": [
         0.0,
         0.0,
@@ -4639,7 +5733,27 @@
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_any_child": false,
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_any_parent": false,
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_is_melee": true,
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_is_scoped": false,
     "uevr_attachments_Wpn_w_SC_ImpactHammer_FP_01_is_two_handed": false,
@@ -4733,7 +5847,27 @@
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_any_child": false,
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_any_parent": false,
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_grip_animation": 10,
+    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_ik_hand_position": [
+        0.0,
+        -0.699999988079071,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_is_melee": false,
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_is_scoped": false,
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_is_two_handed": false,
@@ -4744,7 +5878,7 @@
     ],
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_position": [
         -0.8999999761581421,
-        -20.299999237060547,
+        -22.399999618530273,
         -3.200000047683716
     ],
     "uevr_attachments_Wpn_w_SC_Unique_Jackpot_001_rotation": [
@@ -4825,9 +5959,29 @@
     "uevr_attachments_Wpn_w_SDS_001_accessory_picker": 1,
     "uevr_attachments_Wpn_w_SDS_001_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_SDS_001_any_child": false,
-    "uevr_attachments_Wpn_w_SDS_001_any_parent": false,
+    "uevr_attachments_Wpn_w_SDS_001_any_parent": true,
     "uevr_attachments_Wpn_w_SDS_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SDS_001_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SDS_001_grip_animation": 10,
+    "uevr_attachments_Wpn_w_SDS_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SDS_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SDS_001_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SDS_001_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SDS_001_is_melee": true,
     "uevr_attachments_Wpn_w_SDS_001_is_scoped": false,
     "uevr_attachments_Wpn_w_SDS_001_is_two_handed": false,
@@ -4921,7 +6075,27 @@
     "uevr_attachments_Wpn_w_SG_FullAuto_01_any_child": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_01_any_parent": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SG_FullAuto_01_grip_animation": 7,
+    "uevr_attachments_Wpn_w_SG_FullAuto_01_grip_animation": 6,
+    "uevr_attachments_Wpn_w_SG_FullAuto_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SG_FullAuto_01_is_melee": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_01_is_scoped": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_01_is_two_handed": true,
@@ -5015,7 +6189,27 @@
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_any_child": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_any_parent": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_grip_animation": 7,
+    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_grip_animation": 6,
+    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_FullAuto_JJ_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_is_melee": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_is_scoped": false,
     "uevr_attachments_Wpn_w_SG_FullAuto_JJ_is_two_handed": false,
@@ -5109,7 +6303,27 @@
     "uevr_attachments_Wpn_w_SG_Pump_01_any_child": false,
     "uevr_attachments_Wpn_w_SG_Pump_01_any_parent": false,
     "uevr_attachments_Wpn_w_SG_Pump_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SG_Pump_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_SG_Pump_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_SG_Pump_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SG_Pump_01_is_melee": false,
     "uevr_attachments_Wpn_w_SG_Pump_01_is_scoped": false,
     "uevr_attachments_Wpn_w_SG_Pump_01_is_two_handed": true,
@@ -5124,7 +6338,7 @@
         -0.10000000149011612
     ],
     "uevr_attachments_Wpn_w_SG_Pump_01_rotation": [
-        -15.199999809265137,
+        -0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -5203,7 +6417,27 @@
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_any_child": false,
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_any_parent": false,
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SG_Pump_Whisper_grip_animation": 3,
+    "uevr_attachments_Wpn_w_SG_Pump_Whisper_grip_animation": 8,
+    "uevr_attachments_Wpn_w_SG_Pump_Whisper_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_Whisper_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_Whisper_ik_hand_position": [
+        -0.30000001192092896,
+        0.699999988079071,
+        0.30000001192092896
+    ],
+    "uevr_attachments_Wpn_w_SG_Pump_Whisper_ik_hand_rotation": [
+        -7.5,
+        -8.300000190734863,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_is_melee": false,
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_is_scoped": false,
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_is_two_handed": true,
@@ -5218,7 +6452,7 @@
         -1.600000023841858
     ],
     "uevr_attachments_Wpn_w_SG_Pump_Whisper_rotation": [
-        -19.899999618530273,
+        -0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -5297,7 +6531,27 @@
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_any_child": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_any_parent": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_grip_animation": 4,
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_is_melee": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_is_scoped": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_Premium_is_two_handed": true,
@@ -5391,7 +6645,27 @@
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_any_child": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_any_parent": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_grip_animation": 7,
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_grip_animation": 6,
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_is_melee": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_is_scoped": false,
     "uevr_attachments_Wpn_w_SMG_HB_Trainging_Gun_is_two_handed": true,
@@ -5485,7 +6759,27 @@
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_any_child": false,
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_any_parent": false,
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_grip_animation": 4,
+    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_ik_hand_position": [
+        0.0,
+        -0.8999999761581421,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_is_melee": false,
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_is_scoped": false,
     "uevr_attachments_Wpn_w_SMG_HeavyBurst_01_is_two_handed": true,
@@ -5577,9 +6871,29 @@
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_accessory_picker": 1,
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_any_child": false,
-    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_any_parent": false,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_any_parent": true,
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_grip_animation": 4,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_ik_hand_position": [
+        0.8999999761581421,
+        -0.6000000238418579,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_is_scoped": false,
     "uevr_attachments_Wpn_w_SMG_Tribolt_Base_01_is_two_handed": false,
@@ -5671,9 +6985,29 @@
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_accessory_picker": 1,
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_any_child": false,
-    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_any_parent": false,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_any_parent": true,
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_grip_animation": 4,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_grip_animation": 9,
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_ik_hand_position": [
+        1.5,
+        -0.699999988079071,
+        0.6000000238418579
+    ],
+    "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_is_melee": false,
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_is_scoped": false,
     "uevr_attachments_Wpn_w_SMG_Tribolt_NRAge_is_two_handed": false,
@@ -5767,7 +7101,27 @@
     "uevr_attachments_Wpn_w_SR_A_DeVries_any_child": false,
     "uevr_attachments_Wpn_w_SR_A_DeVries_any_parent": false,
     "uevr_attachments_Wpn_w_SR_A_DeVries_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SR_A_DeVries_grip_animation": 3,
+    "uevr_attachments_Wpn_w_SR_A_DeVries_grip_animation": 8,
+    "uevr_attachments_Wpn_w_SR_A_DeVries_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_A_DeVries_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_A_DeVries_ik_hand_position": [
+        1.899999976158142,
+        0.6000000238418579,
+        -1.0
+    ],
+    "uevr_attachments_Wpn_w_SR_A_DeVries_ik_hand_rotation": [
+        -6.699999809265137,
+        -14.600000381469727,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SR_A_DeVries_is_melee": false,
     "uevr_attachments_Wpn_w_SR_A_DeVries_is_scoped": false,
     "uevr_attachments_Wpn_w_SR_A_DeVries_is_two_handed": true,
@@ -5782,7 +7136,7 @@
         -0.5
     ],
     "uevr_attachments_Wpn_w_SR_A_DeVries_rotation": [
-        -22.700000762939453,
+        0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -5861,10 +7215,30 @@
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_any_child": false,
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_any_parent": false,
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SR_Damage_Base_01_grip_animation": 3,
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_grip_animation": 8,
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_ik_hand_position": [
+        0.30000001192092896,
+        0.5,
+        -1.899999976158142
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_ik_hand_rotation": [
+        0.0,
+        -11.899999618530273,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_is_melee": false,
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_is_scoped": false,
-    "uevr_attachments_Wpn_w_SR_Damage_Base_01_is_two_handed": false,
+    "uevr_attachments_Wpn_w_SR_Damage_Base_01_is_two_handed": true,
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_melee_rotation_offset": [
         0.0,
         0.0,
@@ -5876,7 +7250,7 @@
         -2.299999952316284
     ],
     "uevr_attachments_Wpn_w_SR_Damage_Base_01_rotation": [
-        -22.299999237060547,
+        -0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -5955,7 +7329,27 @@
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_any_child": false,
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_any_parent": false,
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_grip_animation": 3,
+    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_grip_animation": 8,
+    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_is_melee": false,
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_is_scoped": false,
     "uevr_attachments_Wpn_w_SR_Damage_PlanetKiller_is_two_handed": false,
@@ -6049,7 +7443,27 @@
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_any_child": false,
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_any_parent": false,
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_grip_animation": 3,
+    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_grip_animation": 8,
+    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_ik_hand_position": [
+        0.800000011920929,
+        1.2000000476837158,
+        -1.0
+    ],
+    "uevr_attachments_Wpn_w_S_PopUp_Gun_001_ik_hand_rotation": [
+        -8.300000190734863,
+        -10.300000190734863,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_is_melee": false,
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_is_scoped": false,
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_is_two_handed": true,
@@ -6064,7 +7478,7 @@
         -0.8999999761581421
     ],
     "uevr_attachments_Wpn_w_S_PopUp_Gun_001_rotation": [
-        -21.0,
+        0.10000000149011612,
         -90.0,
         0.0
     ],
@@ -6141,9 +7555,29 @@
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_accessory_picker": 1,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_accessory_start_time": 0.0,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_any_child": false,
-    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_any_parent": false,
+    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_any_parent": true,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_delete_accessory_override": false,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_grip_animation": 5,
+    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_ik_hand_position": [
+        0.6000000238418579,
+        -0.699999988079071,
+        -1.399999976158142
+    ],
+    "uevr_attachments_Wpn_w_S_ShrinkGun_FP_ik_hand_rotation": [
+        9.199999809265137,
+        -0.6000000238418579,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_is_melee": false,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_is_scoped": false,
     "uevr_attachments_Wpn_w_S_ShrinkGun_FP_is_two_handed": false,
@@ -6237,7 +7671,27 @@
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_any_child": false,
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_any_parent": false,
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_ik_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_Blocker_FP_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_is_melee": true,
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_is_scoped": false,
     "uevr_attachments_Wpn_w_TB_Blocker_FP_01_is_two_handed": false,
@@ -6331,7 +7785,27 @@
     "uevr_attachments_Wpn_w_TB_TBStick_01_any_child": false,
     "uevr_attachments_Wpn_w_TB_TBStick_01_any_parent": false,
     "uevr_attachments_Wpn_w_TB_TBStick_01_delete_accessory_override": false,
-    "uevr_attachments_Wpn_w_TB_TBStick_01_grip_animation": 9,
+    "uevr_attachments_Wpn_w_TB_TBStick_01_grip_animation": 10,
+    "uevr_attachments_Wpn_w_TB_TBStick_01_hand_position": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_TBStick_01_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_TBStick_01_ik_hand_position": [
+        0.0,
+        -1.2000000476837158,
+        0.0
+    ],
+    "uevr_attachments_Wpn_w_TB_TBStick_01_ik_hand_rotation": [
+        0.0,
+        0.0,
+        0.0
+    ],
     "uevr_attachments_Wpn_w_TB_TBStick_01_is_melee": true,
     "uevr_attachments_Wpn_w_TB_TBStick_01_is_scoped": false,
     "uevr_attachments_Wpn_w_TB_TBStick_01_is_two_handed": false,
@@ -6342,8 +7816,8 @@
     ],
     "uevr_attachments_Wpn_w_TB_TBStick_01_position": [
         -0.4000000059604645,
-        0.0,
-        -3.0
+        -29.399999618530273,
+        -3.299999952316284
     ],
     "uevr_attachments_Wpn_w_TB_TBStick_01_rotation": [
         34.0,

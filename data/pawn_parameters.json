@@ -15,7 +15,8 @@
         "hidePawnArmsBones": false,
         "hidePawnArmsMesh": true,
         "hidePawnBodyMesh": true,
-        "hideSettingsVisibility": true,
+        "hideSettingsRenderInDepthPass": true,
+        "hideSettingsVisibility": false,
         "pawnUpperArmLeft": "",
         "pawnUpperArmRight": ""
     }

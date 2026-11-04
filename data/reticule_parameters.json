@@ -1,4 +1,26 @@
 {
-    "currentReticuleID": "_none",
-    "reticuleList": null
+    "currentReticuleID": "117e4eaa-812c-41d5-81db-322711afae1d",
+    "reticuleList": [
+        {
+            "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/Reticle/Reticle_BP.Reticle_BP_C",
+            "id": "117e4eaa-812c-41d5-81db-322711afae1d",
+            "label": "New Widget",
+            "options": {
+                "collisionChannel": 0,
+                "ignorePawn": false,
+                "position_2d": [
+                    3.5,
+                    -2.0
+                ],
+                "removeFromViewport": true,
+                "scale_2d": [
+                    1.118,
+                    1.1169
+                ],
+                "twoSided": true
+            },
+            "type": "Widget"
+        }
+    ],
+    "reticuleTargetMethod": 6
 }

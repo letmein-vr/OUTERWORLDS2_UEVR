@@ -18,6 +18,7 @@ _G.OW2_SECTIONS = _G.OW2_SECTIONS or {}
 table.insert(_G.OW2_SECTIONS, { order = 1, label = "Hands", layout = {
 			{ widgetType = "combo", id = "hands_mode", label = "Hands", initialValue = HANDS_MODE_GLOVES, selections = {"Hands", "IK Arms"} },
 			{ widgetType = "text", id = "hands_mode_status", label = "Status: -" },
+			{ widgetType = "checkbox", id = "ik_weapon_lock", label = "IK Arms: lock weapon to the IK hand (no grip drift)", initialValue = true },
 }})
 local function getHandsMode()
 	local v = configui.getValue("hands_mode")
@@ -113,6 +114,11 @@ local function buildHands(token, tries)
 		-- IK mode: no glove pair; hand the arms over to the rig (its own auto-create builds it)
 		hands.setAutoCreateHands(false)
 		hands.destroyHands()
+		-- The rig's solvers need the motion controllers; nothing else creates them in IK mode, and a solver
+		-- that finds none retries once a second, so create them up front (the glove path below does the same).
+		controllers.createController(0)
+		controllers.createController(1)
+		controllers.createController(2)
 		setIK(true)
 		if arms ~= nil then lastArmsSignature = armsSignature(arms) end
 		configui.setLabel("hands_mode_status", "Status: IK Arms")

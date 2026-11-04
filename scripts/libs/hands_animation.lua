@@ -10,6 +10,7 @@ local activeComponents = {}
 local autoHandleInput = true
 local disableAnimations = false --used during hand configuration to prevent loaded animation from interfering
 local inputLocked = {} -- per-hand lock for the input-driven lerps, see M.setInputLocked
+local heldInput = {} -- per-hand {grip, trigger, thumb} last seen by handleInputForHands (non-holding hands only)
 
 
 local currentLogLevel = LogLevel.Error
@@ -155,7 +156,18 @@ function M.updateAnimationState(hand)
 		else
 			forEachUniqueTarget(function(target)
 				local handStr = hand == Handed.Left and "left" or "right"
-				animation.pose(handStr .. "_" .. target, "open_" .. handStr)
+				local animID = handStr .. "_" .. target
+				animation.pose(animID, "open_" .. handStr)
+				-- the open pose turns grip/trigger/thumb off, but their input states still say "pressed", so a button
+				-- held through this refresh (OW2 fires it ~250 ms after LB/LT reach the game) left the hand open until
+				-- re-pressed. Re-apply whatever is still held in the same tick (no lerp, so the open pose never renders)
+				-- and keep the input states in sync with what is shown.
+				local held = heldInput[hand] or {}
+				for _, part in ipairs({"grip", "trigger", "thumb"}) do
+					local animName = handStr .. "_" .. part
+					if held[part] then animation.animate(animID, animName, "on") end
+					animation.resetAnimation(animID, animName, held[part] == true)
+				end
 			end)
 		end
 	end
@@ -186,13 +198,17 @@ function M.handleInputForHands(state, rightAttachment, leftAttachment, overrideT
 
 			if not isHoldingAttachment then
 				local weaponHandTriggerValue = (hand == Handed.Right or overrideTrigger) and state.Gamepad.bRightTrigger or state.Gamepad.bLeftTrigger
-				animation.updateAnimation(handStr.."_"..target, handStr.."_trigger", weaponHandTriggerValue > 100, {duration=animDuration})
-				animation.updateAnimation(handStr.."_"..target, handStr.."_grip", uevrUtils.isButtonPressed(state, hand == Handed.Right and XINPUT_GAMEPAD_RIGHT_SHOULDER or XINPUT_GAMEPAD_LEFT_SHOULDER), {duration=animDuration})
+				local triggerDown = weaponHandTriggerValue > 100
+				local gripDown = uevrUtils.isButtonPressed(state, hand == Handed.Right and XINPUT_GAMEPAD_RIGHT_SHOULDER or XINPUT_GAMEPAD_LEFT_SHOULDER)
+				animation.updateAnimation(handStr.."_"..target, handStr.."_trigger", triggerDown, {duration=animDuration})
+				animation.updateAnimation(handStr.."_"..target, handStr.."_grip", gripDown, {duration=animDuration})
 
 				local weaponhandController = uevr.params.vr.get_right_joystick_source()
 				if not (hand == Handed.Right) then weaponhandController = uevr.params.vr.get_left_joystick_source() end
 				local weaponhandRest = uevr.params.vr.get_action_handle(hand == Handed.Right and "/actions/default/in/ThumbrestTouchRight" or "/actions/default/in/ThumbrestTouchLeft")
-				animation.updateAnimation(handStr.."_"..target, handStr.."_thumb", uevr.params.vr.is_action_active(weaponhandRest, weaponhandController), {duration=animDuration})
+				local thumbDown = uevr.params.vr.is_action_active(weaponhandRest, weaponhandController)
+				animation.updateAnimation(handStr.."_"..target, handStr.."_thumb", thumbDown, {duration=animDuration})
+				heldInput[hand] = {grip = gripDown, trigger = triggerDown, thumb = thumbDown == true}
 			else
 				local weaponHandTriggerValue = (hand == Handed.Right or overrideTrigger) and state.Gamepad.bRightTrigger or state.Gamepad.bLeftTrigger
 				animation.updateAnimation(handStr.."_"..target, handStr.."_trigger_weapon" .. attachmentExtension, weaponHandTriggerValue > 100, {duration=animDuration})

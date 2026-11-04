@@ -3,7 +3,7 @@
     "uevr_ui_autoAdjustUIWhenActivePriority": "0",
     "uevr_ui_autoAdjustUIWhenInGameState": 1,
     "uevr_ui_autoAdjustUIWhenInGameStatePriority": "0",
-    "uevr_ui_currentViewportWidgets": "ConversationSubtitleWidget_BP_C\nDamageTextContainerWidget_BP_C\nHUD_BP_C\nLedger_BP_C\n",
+    "uevr_ui_currentViewportWidgets": "ConversationSubtitleWidget_BP_C\nDamageTextContainerWidget_BP_C\nHUD_BP_C\nLedger_BP_C\nPauseMenu_C\nSkipInteractionAnimationWidget_HUD_BP_C\n",
     "uevr_ui_decouplePitchWhenActive": 1,
     "uevr_ui_decouplePitchWhenActivePriority": "0",
     "uevr_ui_decouplePitchWhenInGameState": 1,

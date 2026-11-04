@@ -195,6 +195,16 @@ Usage
 local uevrUtils = require("libs/uevr_utils")
 local controllers = require("libs/controllers")
 local linetracer = require("libs/linetracer")
+
+-- Reticule component liveness WITHOUT UObjectHook.exists(): on the joeyhodge/AFW backend a freshly created component
+-- is not adopted for seconds (deferred adoption). getValid()-gated code skipped the post-create setup and, in
+-- M.update(), took the "invalid" branch every tick and unsubscribed the line tracer - which is only subscribed at
+-- creation - so the reticule kept the first trace hit forever (OW2, 2026-09-29).
+local function isReticuleAlive(component)
+	if component == nil or type(component) ~= "userdata" then return false end
+	local ok, name = pcall(function() return component:get_full_name() end)
+	return ok and name ~= nil
+end
 local attachments = require("libs/attachments")
 local mathLib = require("libs/core/math_lib")
 
@@ -299,8 +309,10 @@ local function getCurrentReticuleParametersProfile()
 	return nil
 end
 
+local reticuleSystemEnabled = true -- see M.setEnabled
 local function setReticuleAutoCreationTypeFromParameters()
     reticuleAutoCreationType = M.ReticuleType.NONE
+    if not reticuleSystemEnabled then return end
     if parameters["currentReticuleID"] ~= nil then
         if parameters["currentReticuleID"] == "_default" then
             reticuleAutoCreationType = M.ReticuleType.DEFAULT
@@ -361,10 +373,10 @@ end
 
 local lastTargetLocation = uevrUtils.vector(0,0,0)
 local function lineTracerCallback(hitResult, targetLocation)
-	-- Update reticule position based on hit
-	if targetLocation then
-		lastTargetLocation = targetLocation
-	end
+	-- Update reticule position based on hit. A nil target means the trace had no origin this tick (e.g. a custom
+	-- target callback returning nothing because no gun is out): clear the last hit so M.update hides the reticule
+	-- instead of freezing it at its last position. Camera/controller traces always return an end point.
+	lastTargetLocation = targetLocation
 end
 
 local lineTracerSubscribed = false
@@ -542,7 +554,7 @@ end
 
 local function destroyReticuleComponent()
 	M.print("destroyReticuleComponent() called")
-	if uevrUtils.getValid(reticuleComponent) ~= nil then
+	if isReticuleAlive(reticuleComponent) then
         ---@cast reticuleComponent -nil
 		if reticuleComponent:is_a(uevrUtils.get_class("Class /Script/UMG.WidgetComponent")) then
 			local widget = reticuleComponent:GetWidget()
@@ -640,7 +652,7 @@ function M.createFromWidget(widget, options)
 		currentReticuleOptions = initOptionsDefaults(options, true)
 
 		reticuleComponent, restoreWidgetPosition = uevrUtils.createWidgetComponent(widget, currentReticuleOptions)
-		if uevrUtils.getValid(reticuleComponent) ~= nil then
+		if isReticuleAlive(reticuleComponent) then
 			---@cast reticuleComponent -nil
 			--reticuleComponent:SetDrawAtDesiredSize(true)
 			reticuleComponent.BoundsScale = 10 --without this object can disappear when small
@@ -676,7 +688,7 @@ function M.createFromMesh(mesh, options)
 	currentReticuleOptions = initOptionsDefaults(options, false)
 
 	reticuleComponent = uevrUtils.createStaticMeshComponent(mesh, {tag="uevrlib_reticule"})
-	if uevrUtils.getValid(reticuleComponent) ~= nil then
+	if isReticuleAlive(reticuleComponent) then
 		---@cast reticuleComponent -nil
 		if currentReticuleOptions.materialName ~= nil and currentReticuleOptions.materialName ~= "" then
 			M.print("Adding material to reticule component")
@@ -767,7 +779,7 @@ function M.update(originLocation, targetLocation, drawDistance, scale, rotation,
 		autoHandleInput = false --if something else is calling this function then dont auto handle input
 	end
 
-	if uevrUtils.getValid(reticuleComponent) ~= nil then
+	if isReticuleAlive(reticuleComponent) then
 		if isHidden or scopeHidden then
 			reticuleComponent:SetVisibility(false)
 			unsubscribeFromLineTracer()
@@ -799,6 +811,11 @@ function M.update(originLocation, targetLocation, drawDistance, scale, rotation,
 
 		if targetLocation == nil then
 			--updateLineTracerSubscription() -- targetLocation will be correct on the next tick
+			-- self-heal: the subscription is made at creation and dropped by hide/invalid paths; drawing from the
+			-- tracer without one would freeze the reticule on its last hit
+			if not lineTracerSubscribed and not weaponLineTracerSubscribed then
+				updateLineTracerSubscription()
+			end
 			targetLocation = lastTargetLocation
 		else
 			unsubscribeFromLineTracer()
@@ -946,6 +963,22 @@ end
 function M.setReticuleType(value)
 	reticuleAutoCreationType = value
 	destroyReticuleComponent()
+end
+
+-- Master switch for the whole reticule system. false: destroys the reticule (a widget reticule is handed back to the
+-- viewport, so the game's own HUD crosshair returns) and stops auto-creation, also across parameter reloads.
+-- true: auto-creation from the saved profile resumes (recreated by the 1 s poll).
+function M.setEnabled(enabled)
+	reticuleSystemEnabled = enabled ~= false
+	if reticuleSystemEnabled then
+		setReticuleAutoCreationTypeFromParameters()
+	else
+		M.setReticuleType(M.ReticuleType.NONE)
+	end
+end
+
+function M.isEnabled()
+	return reticuleSystemEnabled
 end
 
 --TODO add two more functions, one to get a label/id list of available reticules from parameters and

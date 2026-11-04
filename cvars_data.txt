@@ -1,7 +1,7 @@
-Engine_r.AmbientOcclusionLevels=0
+Engine_r.AmbientOcclusionLevels=1
 Engine_r.DepthOfFieldQuality=0
 Engine_r.MotionBlurQuality=0
-Engine_r.SceneColorFringeQuality=0
-Engine_r.VolumetricCloud=0
-Renderer_r.Tonemapper.Sharpen=1.000000
-Renderer_r.TonemapperGamma=1.813000
+Engine_r.SceneColorFringeQuality=1
+Engine_r.VolumetricCloud=1
+Renderer_r.Tonemapper.Sharpen=1.094000
+Renderer_r.TonemapperGamma=0.000000

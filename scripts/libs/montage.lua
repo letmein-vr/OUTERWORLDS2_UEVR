@@ -173,6 +173,8 @@ local stateConfig = {
 	{stateKey = "inputEnabled", valueKey = "inputWhenActive", kind = "tri"},
 	{stateKey = "leftAccessory", valueKey = "leftAccessoryWhenActive", kind = "accessory"},
 	{stateKey = "rightAccessory", valueKey = "rightAccessoryWhenActive", kind = "accessory"},
+	{stateKey = "aimMethod", valueKey = "aimMethodWhenActive", kind = "aim"}, -- 1 Input (no effect), 2 Game, 3 HMD
+	{stateKey = "weapon", valueKey = "weaponWhenActive", kind = "tri"}, -- 1 Show (no effect), 2 Hide; read via "is_weapon_hidden"
 }
 
 local currentLogLevel = LogLevel.Error
@@ -374,6 +376,38 @@ local developerWidgets = spliceableInlineArray{
 					initialValue = "0",
 					width = 35,
 				},
+				{
+					widgetType = "combo",
+					id = "aimMethodWhenActive",
+					label = "",
+					selections = {"Input", "Game", "HMD"},
+					initialValue = 1,
+					width = 150,
+				},
+				{ widgetType = "same_line" },
+				{
+					widgetType = "input_text",
+					id = "aimMethodWhenActivePriority",
+					label = " UEVR Aim Method",
+					initialValue = "0",
+					width = 35,
+				},
+				{
+					widgetType = "combo",
+					id = "weaponWhenActive",
+					label = "",
+					selections = {"Show", "Hide"},
+					initialValue = 1,
+					width = 150,
+				},
+				{ widgetType = "same_line" },
+				{
+					widgetType = "input_text",
+					id = "weaponWhenActivePriority",
+					label = " Weapon Visibility",
+					initialValue = "0",
+					width = 35,
+				},
             { widgetType = "end_rect", additionalSize = 12, rounding = 5 }, { widgetType = "unindent", width = 5 }, { widgetType = "end_group", },
             { widgetType = "unindent", width = 20 },
         {
@@ -436,7 +470,7 @@ local function showMontageEditFields()
 			-- Initialize and set values for all state configs
 			for _, config in ipairs(stateConfig) do
 				local valueKey = config.valueKey
-				if config.kind == "tri" then
+				if config.kind == "tri" or config.kind == "aim" then
 					if data[valueKey] == nil then data[valueKey] = 1 end
 					configui.setValue(valueKey, data[valueKey], true)
 				elseif config.kind == "accessory" then
@@ -576,7 +610,7 @@ local function updateCurrentMontageFields()
         if id ~= "" and  parameters ~= nil and parameters["montagelist"] ~= nil and parameters["montagelist"][id] ~= nil then
 			for _, config in ipairs(stateConfig) do
 				local valueKey = config.valueKey
-				if config.kind == "tri" then
+				if config.kind == "tri" or config.kind == "aim" then
 					parameters["montagelist"][id][valueKey] = configui.getValue(valueKey)
 				elseif config.kind == "accessory" then
 					local idxVal = configui.getValue(valueKey)
@@ -620,23 +654,145 @@ local function executeMontageChange(...)
 	uevrUtils.executeUEVRCallbacks("on_module_montage_change", table.unpack({...}))
 end
 
-local function handleMontageChanged(montage, montageName, label, animInstance)
-	--print("Montage changed: " .. tostring(montageName))
+-- UEVR aim method override: combo index 2 = Game (VR_AimMethod 0), 3 = HMD (VR_AimMethod 1); 1 = Input = no effect
+local AIM_OVERRIDE_VALUES = { [2] = 0, [3] = 1 }
+local function updateAimStateIfHigherPriority(data, stateKey, valueKey)
+	local value = AIM_OVERRIDE_VALUES[data[valueKey]]
+	if value == nil then return end
+	local priority = tonumber(data[valueKey .. "Priority"]) or 0
+	if priority >= (montageState[stateKey .. "Priority"] or 0) then
+		montageState[stateKey] = value
+		montageState[stateKey .. "Priority"] = priority
+	end
+end
+
+-- While an active montage asks for Game/HMD aim, VR_AimMethod is set to it and input.lua's own aim handling is
+-- told to stand down (setOverrideAimMethod(UEVR)); once no active montage asks, the VR_AimMethod value from
+-- before the override is restored and the input.lua override cleared.
+local aimOverride = { active = false, saved = nil, applied = nil }
+local function getInputModule()
+	local ok, input = pcall(require, "libs/input")
+	return ok and input or nil
+end
+local function applyAimOverride()
+	local want = montageState["aimMethod"]
+	if want ~= nil then
+		if not aimOverride.active then
+			aimOverride.saved = uevr.params.vr:get_mod_value("VR_AimMethod")
+			aimOverride.active = true
+			local input = getInputModule()
+			if input ~= nil and input.setOverrideAimMethod ~= nil then input.setOverrideAimMethod(input.AimMethod.UEVR) end
+		end
+		if aimOverride.applied ~= want then
+			uevr.params.vr.set_mod_value("VR_AimMethod", tostring(want))
+			aimOverride.applied = want
+			M.print("Montage aim override: VR_AimMethod=" .. tostring(want), LogLevel.Info)
+		end
+	elseif aimOverride.active then
+		if aimOverride.saved ~= nil then uevr.params.vr.set_mod_value("VR_AimMethod", tostring(aimOverride.saved)) end
+		local input = getInputModule()
+		if input ~= nil and input.setOverrideAimMethod ~= nil then input.setOverrideAimMethod(nil) end
+		M.print("Montage aim override ended: VR_AimMethod restored to " .. tostring(aimOverride.saved), LogLevel.Info)
+		aimOverride = { active = false, saved = nil, applied = nil }
+	end
+end
+
+uevr.params.sdk.callbacks.on_script_reset(function()
+	-- never leave VR_AimMethod stuck on a montage override across a script reset
+	if aimOverride.active and aimOverride.saved ~= nil then
+		uevr.params.vr.set_mod_value("VR_AimMethod", tostring(aimOverride.saved))
+	end
+end)
+
+-- Current montage per source ("Pawn" = pawn:GetCurrentMontage(), plus one entry per addMeshMonitor label).
+-- The combined state is rebuilt from ALL active sources on every change, so a montage starting or ending
+-- on one mesh (e.g. the third-person body) no longer wipes the rules of a montage still playing on another
+-- (e.g. the first-person arms). Priority ties resolve in label order.
+local activeMontageBySource = {} -- label -> { name = short name, fullName = object full name (asset path) }
+
+-- Pattern rules: a montage with no explicit settings of its own falls back to the first rule whose pattern
+-- matches it. Each rule is an ordinary montagelist entry (configured in the panel like any montage) plus a
+-- matcher: `pathContains` substrings of the montage's full asset path and/or `namePrefixes` of its short name
+-- (both case-insensitive). Explicit per-montage settings always win over a rule.
+local patternRules = {} -- ordered { id, pathContains = {}, namePrefixes = {} }
+
+local function hasExplicitConfig(data)
+	if data == nil then return false end
+	for _, config in ipairs(stateConfig) do
+		local v = data[config.valueKey]
+		if config.kind == "accessory" then
+			if v ~= nil and v ~= "" then return true end
+		elseif v ~= nil and v ~= 1 then
+			return true
+		end
+	end
+	return false
+end
+
+local function findPatternRuleData(name, fullName)
+	local lname = string.lower(name or "")
+	local lpath = string.lower(fullName or "")
+	for _, rule in ipairs(patternRules) do
+		local hit = false
+		for _, s in ipairs(rule.pathContains or {}) do
+			if lpath ~= "" and string.find(lpath, string.lower(s), 1, true) ~= nil then hit = true break end
+		end
+		if not hit then
+			for _, p in ipairs(rule.namePrefixes or {}) do
+				local lp = string.lower(p)
+				if string.sub(lname, 1, #lp) == lp then hit = true break end
+			end
+		end
+		if hit then return parameters["montagelist"][rule.id] end
+	end
+	return nil
+end
+
+local function recomputeMontageStateInner()
 	for _, config in ipairs(stateConfig) do
 		montageState[config.stateKey] = nil
 		montageState[config.stateKey .. "Priority"] = 0
 	end
+	if parameters == nil or parameters["montagelist"] == nil then return end
 
-	if parameters ~= nil and montageName ~= nil and montageName ~= "" and parameters["montagelist"] ~= nil and parameters["montagelist"][montageName] ~= nil  then
-		local data = parameters["montagelist"][montageName]
-		for _, config in ipairs(stateConfig) do
-			if config.kind == "tri" then
-				updateStateIfHigherPriority(data, config.stateKey, config.valueKey)
-			elseif config.kind == "accessory" then
-				updateAccessoryStateIfHigherPriority(data, config.stateKey, config.valueKey)
+	local labels = {}
+	for label in pairs(activeMontageBySource) do labels[#labels + 1] = label end
+	table.sort(labels)
+	for _, label in ipairs(labels) do
+		local active = activeMontageBySource[label]
+		local data = parameters["montagelist"][active.name]
+		if not hasExplicitConfig(data) then
+			data = findPatternRuleData(active.name, active.fullName) or data
+		end
+		if data ~= nil then
+			for _, config in ipairs(stateConfig) do
+				if config.kind == "tri" then
+					updateStateIfHigherPriority(data, config.stateKey, config.valueKey)
+				elseif config.kind == "accessory" then
+					updateAccessoryStateIfHigherPriority(data, config.stateKey, config.valueKey)
+				elseif config.kind == "aim" then
+					updateAimStateIfHigherPriority(data, config.stateKey, config.valueKey)
+				end
 			end
 		end
 	end
+end
+
+local function recomputeMontageState()
+	recomputeMontageStateInner()
+	pcall(applyAimOverride)
+end
+
+local function handleMontageChanged(montage, montageName, label, animInstance)
+	--print("Montage changed: " .. tostring(montageName))
+	if montageName ~= nil and montageName ~= "" then
+		local fullName = nil
+		pcall(function() fullName = montage:get_full_name() end)
+		activeMontageBySource[label or "Pawn"] = { name = montageName, fullName = fullName }
+	else
+		activeMontageBySource[label or "Pawn"] = nil
+	end
+	recomputeMontageState()
 
 	executeMontageChange(montage, montageName, label, animInstance)
 end
@@ -834,6 +990,51 @@ function M.addMeshMonitor(label, meshDescriptor)
 	meshMonitors[meshDescriptor] = {label = label, descriptor = meshDescriptor, meshObject = uevrUtils.getObjectFromDescriptor(meshDescriptor, false)}
 end
 
+-- Creates/labels the montagelist entry a rule is configured through (seeded only when missing).
+local function ensureRuleEntry(id, label, defaults)
+	if parameters == nil then return end
+	if parameters["montagelist"] == nil then parameters["montagelist"] = {} end
+	local entry = parameters["montagelist"][id]
+	if entry == nil then
+		entry = {}
+		for k, v in pairs(defaults or {}) do entry[k] = v end
+		parameters["montagelist"][id] = entry
+	end
+	if entry["label"] ~= label then entry["label"] = label end
+	isParametersDirty = true
+	pcall(updateMontageList)
+end
+
+-- Registers a pattern rule (see findPatternRuleData). `match` = { pathContains = {...}, namePrefixes = {...} }.
+-- The rule shows up in the Montages dropdown under `label` and is configured there like any montage;
+-- `defaults` (valueKey -> value) seed it only when the entry does not exist yet, so panel edits persist.
+function M.addPatternRule(id, label, match, defaults)
+	table.insert(patternRules, { id = id, pathContains = match and match.pathContains, namePrefixes = match and match.namePrefixes })
+	ensureRuleEntry(id, label, defaults)
+end
+
+-- State rules: for game states that are not a montage (e.g. climbing a ladder). `predicate()` is polled every
+-- pre-engine tick; while it returns true the rule acts as an extra active source (its own montagelist entry,
+-- configured in the panel under `label`), combined with any playing montages by priority like everything else.
+local stateRules = {} -- { id, predicate, active }
+function M.addStateRule(id, label, predicate, defaults)
+	table.insert(stateRules, { id = id, predicate = predicate, active = false })
+	ensureRuleEntry(id, label, defaults)
+end
+
+local function checkStateRules()
+	for _, rule in ipairs(stateRules) do
+		local ok, v = pcall(rule.predicate)
+		local active = ok and v == true
+		if active ~= rule.active then
+			rule.active = active
+			activeMontageBySource["~state:" .. rule.id] = active and { name = rule.id } or nil
+			recomputeMontageState()
+			M.print("State rule " .. rule.id .. (active and " active" or " inactive"), LogLevel.Info)
+		end
+	end
+end
+
 setInterval(2000, function()
 	if not disableMeshMonitoring then
 		for descriptor, monitor in pairs(meshMonitors) do
@@ -848,7 +1049,13 @@ function M.reset()
 	for descriptor, monitor in pairs(meshMonitors) do
 		monitor.meshObject = nil
 		monitor["currentMontage"] = nil
+		activeMontageBySource[monitor.label] = nil
 	end
+	for _, rule in ipairs(stateRules) do
+		rule.active = false
+		activeMontageBySource["~state:" .. rule.id] = nil
+	end
+	recomputeMontageState()
 end
 
 function M.loadParameters(fileName)
@@ -975,6 +1182,11 @@ hands.registerIsHiddenCallback(function()
 	return montageState["hands"], montageState["handsPriority"]
 end)
 
+-- true while an active montage says "Hide" for Weapon Visibility (consumed by the profile's weapon script)
+uevrUtils.registerUEVRCallback("is_weapon_hidden", function()
+	return montageState["weapon"], montageState["weaponPriority"]
+end)
+
 uevrUtils.registerUEVRCallback("is_input_disabled", function()
 	return montageState["inputEnabled"] ~= nil and (not montageState["inputEnabled"]) or nil, montageState["inputEnabledPriority"]
 end)
@@ -1015,6 +1227,7 @@ end)
 uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 	--check the monitored meshes for montages
 	checkMonitoredMeshes()
+	checkStateRules()
 end)
 
 M.loadParameters()

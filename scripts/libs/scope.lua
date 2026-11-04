@@ -32,7 +32,14 @@ Usage
 
 	scope.createConfigCallbacks(weaponTypeID, prefix)
 		Registers `configui.onUpdate` callbacks that persist settings and update all active
-		scope instances for that weaponTypeID.
+		scope instances for that weaponTypeID. weaponTypeID may also be a function returning the
+		ID to edit at the time of the change (one widget set for several scopes; nil = ignore).
+
+	scope.getParameter(weaponTypeID, key) -> value
+		Stored (or default) value of a scope parameter, e.g. to load it into shared widgets.
+
+	scope.setParameterDefault(key, value)
+		Profile-wide default for a parameter (used by scopes without a stored value).
 
 	scope.getScopeCount() -> number
 		Returns total number of active scope instances.
@@ -170,6 +177,19 @@ end
 local function getParameter(scopeID, key)
 	local value = paramManager:get({"scopes", scopeID, key})
     return value or parameterDefaults[key]
+end
+
+-- Stored (or default) value of a scope parameter, e.g. to load a scope's settings into shared config widgets.
+-- key: a parameter name without the widget prefix ("min_fov", "ocular_lens_location", ...).
+function M.getParameter(scopeID, key)
+	return getParameter(scopeID, key)
+end
+
+-- Profile-wide default for a scope parameter, used by every scope without a stored value for it. E.g. a game whose
+-- weapon meshes point the barrel along +X (not +Z) needs objective_lens_rotation {90, 0, 0}: the objective lens
+-- setter subtracts 90 from X (pitch).
+function M.setParameterDefault(key, value)
+	parameterDefaults[key] = value
 end
 
 -- Constructor for new scope instance
@@ -347,26 +367,36 @@ function M.getConfigWidgets(prefix)
     }
 end
 
+-- id: a scope ID, or a function returning the scope ID the widgets edit right now (one widget set shared by several
+-- scopes, e.g. one per weapon sight). A function returning nil = no scope to edit, the change is ignored.
 function M.createConfigCallbacks(id, prefix)
-	configui.onUpdate(prefix .. "scope_min_fov", function(value)
+	local getID = type(id) == "function" and id or function() return id end
+	local function onUpdate(widgetID, func)
+		configui.onUpdate(widgetID, function(value)
+			local scopeID = getID()
+			if scopeID ~= nil then func(scopeID, value) end
+		end)
+	end
+
+	onUpdate(prefix .. "scope_min_fov", function(id, value)
 		saveParameter(id, "min_fov", value, true)
 		-- Note: After multi-scope refactor, setZoom needs to be called on specific scope instance
 	end)
 
-	configui.onUpdate(prefix .. "scope_max_fov", function(value)
+	onUpdate(prefix .. "scope_max_fov", function(id, value)
 		saveParameter(id, "max_fov", value, true)
 		-- Note: After multi-scope refactor, setZoom needs to be called on specific scope instance
 	end)
 
-	configui.onUpdate(prefix .. "scope_zoom_speed", function(value)
+	onUpdate(prefix .. "scope_zoom_speed", function(id, value)
 		saveParameter(id, "zoom_speed", value, true)
 	end)
 
-	configui.onUpdate(prefix .. "scope_zoom_exponential", function(value)
+	onUpdate(prefix .. "scope_zoom_exponential", function(id, value)
 		saveParameter(id, "zoom_exponential", value, true)
 	end)
 
-	configui.onUpdate(prefix .. "scope_ocular_lens_scale", function(value)
+	onUpdate(prefix .. "scope_ocular_lens_scale", function(id, value)
 		saveParameter(id, "ocular_lens_scale", value, true)
 		if activeScopeInstances[id] ~= nil then
 			for _, scope in ipairs(activeScopeInstances[id]) do
@@ -375,7 +405,7 @@ function M.createConfigCallbacks(id, prefix)
 		end
 	end)
 
-	configui.onUpdate(prefix .. "scope_brightness", function(value)
+	onUpdate(prefix .. "scope_brightness", function(id, value)
 		saveParameter(id, "brightness", value, true)
 		if activeScopeInstances[id] ~= nil then
 			for _, scope in ipairs(activeScopeInstances[id]) do
@@ -384,8 +414,8 @@ function M.createConfigCallbacks(id, prefix)
 		end
 	end)
 
-	configui.onUpdate(prefix .. "scope_objective_lens_rotation", function(value)
-		saveParameter(id, "objective_lens_rotation", {value.Pitch, value.Yaw, value.Roll}, true)
+	onUpdate(prefix .. "scope_objective_lens_rotation", function(id, value)
+		saveParameter(id, "objective_lens_rotation", {value.X, value.Y, value.Z}, true) -- drag_float3 = Vector3f (X=pitch, Y=yaw, Z=roll, as the setters read it)
         if activeScopeInstances[id] ~= nil then
             for _, scope in ipairs(activeScopeInstances[id]) do
                 scope:setObjectiveLensRelativeRotation(value)
@@ -393,7 +423,7 @@ function M.createConfigCallbacks(id, prefix)
         end
 	end)
 
-	configui.onUpdate(prefix .. "scope_objective_lens_location", function(value)
+	onUpdate(prefix .. "scope_objective_lens_location", function(id, value)
 		saveParameter(id, "objective_lens_location", {value.X, value.Y, value.Z}, true)
         if activeScopeInstances[id] ~= nil then
             for _, scope in ipairs(activeScopeInstances[id]) do
@@ -402,8 +432,8 @@ function M.createConfigCallbacks(id, prefix)
         end
 	end)
 
-	configui.onUpdate(prefix .. "scope_ocular_lens_rotation", function(value)
-		saveParameter(id, "ocular_lens_rotation", {value.Pitch, value.Yaw, value.Roll}, true)
+	onUpdate(prefix .. "scope_ocular_lens_rotation", function(id, value)
+		saveParameter(id, "ocular_lens_rotation", {value.X, value.Y, value.Z}, true) -- drag_float3 = Vector3f (X=pitch, Y=yaw, Z=roll, as the setters read it)
         if activeScopeInstances[id] ~= nil then
             for _, scope in ipairs(activeScopeInstances[id]) do
                 scope:setOcularLensRelativeRotation(value)
@@ -411,7 +441,7 @@ function M.createConfigCallbacks(id, prefix)
         end
 	end)
 
-	configui.onUpdate(prefix .. "scope_ocular_lens_location", function(value)
+	onUpdate(prefix .. "scope_ocular_lens_location", function(id, value)
 		saveParameter(id, "ocular_lens_location", {value.X, value.Y, value.Z}, true)
         if activeScopeInstances[id] ~= nil then
             for _, scope in ipairs(activeScopeInstances[id]) do
@@ -420,7 +450,7 @@ function M.createConfigCallbacks(id, prefix)
         end
 	end)
 
-	configui.onUpdate(prefix .. "scope_disable", function(value)
+	onUpdate(prefix .. "scope_disable", function(id, value)
 		saveParameter(id, "disable", value, true)
 		M.print("Scope disable set to " .. tostring(value))
         if activeScopeInstances[id] ~= nil then
@@ -430,15 +460,15 @@ function M.createConfigCallbacks(id, prefix)
         end
 	end)
 
-	configui.onUpdate(prefix .. "scope_deactivate_distance", function(value)
+	onUpdate(prefix .. "scope_deactivate_distance", function(id, value)
 		saveParameter(id, "deactivate_distance", value, true)
 	end)
 
-	configui.onUpdate(prefix .. "scope_hide_ocular_lens_on_disable", function(value)
+	onUpdate(prefix .. "scope_hide_ocular_lens_on_disable", function(id, value)
 		saveParameter(id, "hide_ocular_lens_on_disable", value, true)
 	end)
 
-	configui.onUpdate(prefix .. "scope_show_debug", function(value)
+	onUpdate(prefix .. "scope_show_debug", function(id, value)
 		saveParameter(id, "show_debug", value, true)
 		-- Note: After multi-scope refactor, showDebugMeshes needs to be called on specific scope instance
 		if activeScopeInstances[id] ~= nil then
@@ -844,7 +874,7 @@ function Scope:setBrightness(value)
 	local scopeMaterial = self.scopeMeshComponent:GetMaterial(0)
 	if scopeMaterial ~= nil then
 		local color = uevrUtils.color_from_rgba(value, value, value, value)
-		scopeMaterial:SetVectorParameterValue("Color", color)
+		scopeMaterial:SetVectorParameterValue(uevrUtils.fname_from_string("Color"), color)
 	end
 end
 
@@ -872,8 +902,8 @@ function Scope:createOcularLens(renderTarget2D, options)
 			templateMaterial:set_property("TwoSided", false)
 
 ---@diagnostic disable-next-line: need-check-nil
-			local scopeMaterial = self.scopeMeshComponent:CreateDynamicMaterialInstance(0, templateMaterial, "scope_material")
-			scopeMaterial:SetTextureParameterValue("LinearColor", renderTarget2D)
+			local scopeMaterial = self.scopeMeshComponent:CreateDynamicMaterialInstance(0, templateMaterial, uevrUtils.fname_from_string("scope_material"))
+			scopeMaterial:SetTextureParameterValue(uevrUtils.fname_from_string("LinearColor"), renderTarget2D)
 			self:setBrightness(options.brightness)
 		end
 		M.print("scopeMeshComponent created")

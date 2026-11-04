@@ -189,6 +189,12 @@ end
 local function executeOnCreatedCallback(...)
 	return uevrUtils.executeUEVRCallbacks("on_hands_created", table.unpack({...}))
 end
+-- Read-only access to a hand component's definition from hands_parameters.json (e.g. "Left"/"Right" subtables
+-- with Name/Location/Rotation/Scale/TaperOffset), for profile code that builds extra meshes matching a hand.
+function M.getHandDefinition(componentName)
+	return componentName ~= nil and handDefinitions[componentName] or nil
+end
+
 function M.onCreatedCallback(func)
 	uevrUtils.registerUEVRCallback("on_hands_created", func)
 end
@@ -241,6 +247,23 @@ local function getValidRotator(definition, id, default)
 		return uevrUtils.rotator(default[1], default[2], default[3])
 	end
 	return uevrUtils.rotator(definition[id][1], definition[id][2], definition[id][3])
+end
+
+-- Per-attachment hand offsets (2026-11-01, port of the Borderlands 4 patch): the attachments panel's "Hands: Hand Position
+-- Offset" / "Hands: Hand Rotation Offset" of the attachment a hand grips are added to that hand's joint transform
+-- (definition Location / Rotation, root space). The gripped weapon rides the controller, not the joint, so only the
+-- hand moves. (The IK pair of the same panel is applied by scripts/ik_hand_offset.lua.)
+local jointOffsets = {} -- [hand] = {location = {x,y,z}, rotation = {pitch,yaw,roll}}
+
+local function getJointTransform(definition, hand)
+	local location = getValidVector(definition, "Location", {0,0,0})
+	local rotation = getValidRotator(definition, "Rotation", {0,0,0})
+	local offset = hand ~= nil and jointOffsets[hand] or nil
+	if offset ~= nil then
+		location = uevrUtils.vector(location.X + offset.location[1], location.Y + offset.location[2], location.Z + offset.location[3])
+		rotation = kismet_math_library:ComposeRotators(uevrUtils.rotator(offset.rotation[1], offset.rotation[2], offset.rotation[3]), rotation)
+	end
+	return location, rotation
 end
 
 local function getComponentName(componentName)
@@ -551,8 +574,7 @@ function M.createComponent(skeletalMeshComponent, name, hand, definition)
 			if definition ~= nil then
 				local jointName = definition["Name"]
 				if jointName ~= nil and jointName ~= "" then
-					local location = getValidVector(definition, "Location", {0,0,0})
-					local rotation = getValidRotator(definition, "Rotation", {0,0,0})
+					local location, rotation = getJointTransform(definition, hand)
 					local scale = getValidVector(definition, "Scale", {1,1,1})
 					local taperOffset = getValidVector(definition, "TaperOffset", {0,0,0})
 					M.print("[createComponent] hide pass for " .. tostring(jointName) .. " on " .. component:get_fname():to_string() .. " scale=" .. tostring(scale.X) .. "," .. tostring(scale.Y) .. "," .. tostring(scale.Z), LogLevel.Debug)
@@ -570,6 +592,7 @@ function M.createComponent(skeletalMeshComponent, name, hand, definition)
 						uevrUtils.setTimeout(delayMs, function()
 							if M.getHandComponent(hand, name) == component then
 								M.print("[createComponent] re-applying hide pass (+" .. delayMs .. "ms) on " .. component:get_fname():to_string(), LogLevel.Debug)
+								location, rotation = getJointTransform(definition, hand) -- the hand offset may have changed meanwhile
 								animation.transformBoneToRoot(component, jointName, location, rotation, scale, taperOffset)
 							end
 						end)
@@ -653,8 +676,7 @@ function M.transformBoneToRoot(hand, componentName)
 			local jointName = definition["Name"]
 			if jointName ~= nil and jointName ~= "" then
 				local success, response = pcall(function()
-					local location = getValidVector(definition, "Location", {0,0,0})
-					local rotation = getValidRotator(definition, "Rotation", {0,0,0})
+					local location, rotation = getJointTransform(definition, hand)
 					local scale = getValidVector(definition, "Scale", {1,1,1})
 					local taperOffset = getValidVector(definition, "TaperOffset", {0,0,0})
 					--When an animation is applied, every bone in the entire skeleton is moved, so we need to reapply the transform from wrist to root
@@ -671,6 +693,50 @@ function M.transformBoneToRoot(hand, componentName)
 		end
 	end
 end
+
+-- Re-places the hand joint of every hand component of this hand with its current per-attachment offset.
+local function applyJointOffset(hand)
+	local handStr = hand == Handed.Left and "Left" or "Right"
+	for componentName, definitions in pairs(handDefinitions) do
+		local definition = type(definitions) == "table" and definitions[handStr] or nil
+		local jointName = definition ~= nil and definition["Name"] or nil
+		local component = M.getHandComponent(hand, componentName)
+		-- liveness by name, not getValid(): a fresh glove may not be adopted by UObjectHook yet
+		local alive = component ~= nil and pcall(function() return component:get_full_name() end)
+		if jointName ~= nil and jointName ~= "" and alive then
+			local location, rotation = getJointTransform(definition, hand)
+			local scale = getValidVector(definition, "Scale", {1,1,1})
+			local taperOffset = getValidVector(definition, "TaperOffset", {0,0,0})
+			animation.transformBoneToRoot(component, jointName, location, rotation, scale, taperOffset)
+		end
+	end
+end
+
+function M.setJointOffsetFromAttachment(hand, attachmentID)
+	local location, rotation = attachments.getAttachmentHandOffset(attachmentID)
+	if location == nil and rotation == nil then
+		if jointOffsets[hand] == nil then return end
+		jointOffsets[hand] = nil
+	else
+		jointOffsets[hand] = { location = location or {0,0,0}, rotation = rotation or {0,0,0} }
+	end
+	local ok, err = pcall(applyJointOffset, hand)
+	if not ok then M.print("Could not apply hand offset: " .. tostring(err), LogLevel.Warning) end
+end
+
+-- grip changed (id "" on release -> no offset)
+attachments.registerAttachmentChangeCallback(function(id, gripHand, attachment)
+	if gripHand ~= nil then M.setJointOffsetFromAttachment(gripHand, id) end
+end)
+-- Hands offset edited in the attachments panel: configui callbacks run on the draw thread, bone writes go on the game thread
+attachments.registerHandOffsetChangeCallback(function(id, ik)
+	if ik == true then return end
+	uevrUtils.setTimeout(1, function()
+		for hand = Handed.Left, Handed.Right do
+			if attachments.getActiveAttachmentID(hand) == id then M.setJointOffsetFromAttachment(hand, id) end
+		end
+	end)
+end)
 
 function M.updateAnimationFromMesh_Native(hand, mesh, componentName)
 	--print("Updating animation from mesh", hand, mesh:get_full_name(), componentName)
@@ -689,8 +755,7 @@ function M.updateAnimationFromMesh_Native(hand, mesh, componentName)
 						component:CopyPoseFromSkeletalComponent(mesh)
 						--print("here", component:get_full_name(), mesh:get_full_name())
 						--component:SetLeaderPoseComponent(mesh, true)
-						local location = getValidVector(definition, "Location", {0,0,0})
-						local rotation = getValidRotator(definition, "Rotation", {0,0,0})
+						local location, rotation = getJointTransform(definition, hand)
 						local scale = getValidVector(definition, "Scale", {1,1,1})
 						local taperOffset = getValidVector(definition, "TaperOffset", {0,0,0})
 						--When an animation is applied, every bone in the entire skeleton is moved, so we need to reapply the transform from wrist to root

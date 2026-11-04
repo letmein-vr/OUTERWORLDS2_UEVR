@@ -1,7 +1,9 @@
 {
-    "handsWhenActive": 1,
+    "aimMethodWhenActive": 2,
+    "aimMethodWhenActivePriority": "0",
+    "handsWhenActive": 2,
     "handsWhenActivePriority": "0",
-    "inputWhenActive": 1,
+    "inputWhenActive": 3,
     "inputWhenActivePriority": "0",
     "knownMontageList": 1,
     "leftAccessoryWhenActive": 1,
@@ -12,14 +14,16 @@
     "motionSicknessCompensationWhenActivePriority": "0",
     "pawnArmBonesWhenActive": 1,
     "pawnArmBonesWhenActivePriority": "0",
-    "pawnArmsWhenActive": 1,
+    "pawnArmsWhenActive": 3,
     "pawnArmsWhenActivePriority": "0",
     "pawnBodyWhenActive": 1,
     "pawnBodyWhenActivePriority": "0",
-    "recentMontagesPlayed": "AS_P3P_SMG_Heavyburst_Empty_Reload_Montage",
+    "recentMontagesPlayed": "AS_P1P_SR_Accurate_Equip_Swap_Montage\nAS_P1P_MR_Tactical_Unequip_Montage\nAS_P1P_MR_Tactical_Equip_Montage\nAS_P1P_SR_Accurate_Unequip_Swap_Montage\nAS_P1P_SR_Accurate_Equip_Swap_Montage\nAS_P1P_SR_Accurate_Unequip_Swap_Montage\nAS_P1P_SR_Accurate_Equip_Swap_Montage\nAS_P1P_MR_Tactical_Unequip_Montage\nAS_P1P_MR_Tactical_ADS_Down_Montage\nAS_P1P_MR_Tactical_Rechamber_01_Montage",
     "rightAccessoryWhenActive": 1,
     "rightAccessoryWhenActivePriority": "0",
     "rightArmWhenActive": 1,
     "rightArmWhenActivePriority": "0",
-    "uevr_montage_ignore_generic": false
+    "uevr_montage_ignore_generic": false,
+    "weaponWhenActive": 2,
+    "weaponWhenActivePriority": "0"
 }

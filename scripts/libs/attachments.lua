@@ -145,6 +145,16 @@ Usage
 
 local uevrUtils = require("libs/uevr_utils")
 local configui = require("libs/configui")
+
+-- Attachment liveness WITHOUT UObjectHook.exists(): right after a level load exists() rejects a freshly spawned
+-- weapon mesh for 0-20+ s (deferred adoption on the joeyhodge/AFW backend). getValid()-gated code skipped the
+-- one-shot initialisation (offsets, grip animation) and left the gun unrecognised for the whole level
+-- (OW2, 2026-09-28). Same pcall(get_full_name) pattern as ik.lua / controllers.lua / animation.lua.
+local function isAttachmentAlive(attachment)
+	if attachment == nil or type(attachment) ~= "userdata" then return false end
+	local ok, name = pcall(function() return attachment:get_full_name() end)
+	return ok and name ~= nil
+end
 local controllers = require("libs/controllers")
 local scope = require('libs/scope')
 local laser = require('libs/laser')
@@ -197,6 +207,7 @@ local scopeActiveCallback = nil
 local defaultLocation = nil
 local defaultRotation = nil
 local defaultScale = nil
+local developerConfigShown = false -- true once showDeveloperConfiguration has created the dev panel
 local animationLabels = {"Default", "None"}
 local animationIDs = {"", "attachment_none"}
 --local activeAnimationID = false
@@ -285,6 +296,10 @@ function M.addAttachmentOffsetsToConfigUI(configDefinition, m_attachmentOffsets)
 		--local useSightsPositionOffset = m_attachmentOffsets[i]["use_sights_position_offset"] or false
 		local sightsPositionOffset = m_attachmentOffsets[i]["sights_position_offset"] or {0,0,0}
 		local useLaser = m_attachmentOffsets[i]["use_laser"] or false
+		local handLocation = m_attachmentOffsets[i]["hand_location"] or {0,0,0}
+		local handRotation = m_attachmentOffsets[i]["hand_rotation"] or {0,0,0}
+		local ikHandLocation = m_attachmentOffsets[i]["ik_hand_location"] or {0,0,0}
+		local ikHandRotation = m_attachmentOffsets[i]["ik_hand_rotation"] or {0,0,0}
 
 		local selectedIndex = 1
 		for j = 1, #animationIDs do
@@ -314,6 +329,34 @@ function M.addAttachmentOffsetsToConfigUI(configDefinition, m_attachmentOffsets)
 					{
 						id = widgetPrefix .. name .. "_scale", label = "Scale",
 						widgetType = "drag_float3", speed = .1, range = {0.01, 10}, initialValue = scale
+					}
+		)
+		-- Per-attachment hand offsets (2026-11-01, port of the Borderlands 4 lib patch, split per hands mode): move the
+		-- gripping hand while this attachment is held, without moving the attachment - to seat the hand on this weapon's
+		-- grip. "Hands" = the VR glove's hand joint (libs/hands.lua); "IK" = the right IK hand target
+		-- (scripts/ik_hand_offset.lua, added to the solver's end bone offset / rotation).
+		table.insert(configDefinition[1]["layout"],
+					{
+						id = widgetPrefix .. name .. "_hand_position", label = "Hands: Hand Position Offset",
+						widgetType = "drag_float3", speed = .1, range = {-100, 100}, initialValue = handLocation
+					}
+		)
+		table.insert(configDefinition[1]["layout"],
+					{
+						id = widgetPrefix .. name .. "_hand_rotation", label = "Hands: Hand Rotation Offset",
+						widgetType = "drag_float3", speed = .1, range = {-180, 180}, initialValue = handRotation
+					}
+		)
+		table.insert(configDefinition[1]["layout"],
+					{
+						id = widgetPrefix .. name .. "_ik_hand_position", label = "IK: Hand Position Offset",
+						widgetType = "drag_float3", speed = .1, range = {-100, 100}, initialValue = ikHandLocation
+					}
+		)
+		table.insert(configDefinition[1]["layout"],
+					{
+						id = widgetPrefix .. name .. "_ik_hand_rotation", label = "IK: Hand Rotation Offset",
+						widgetType = "drag_float3", speed = .1, range = {-180, 180}, initialValue = ikHandRotation
 					}
 		)
 		table.insert(configDefinition[1]["layout"],
@@ -466,6 +509,18 @@ function M.addAttachmentOffsetsToConfigUI(configDefinition, m_attachmentOffsets)
 		end)
 		configui.onUpdate(widgetPrefix .. name .. "_scale", function(value)
 			M.updateAttachmentTransform(nil, nil, value, id)
+		end)
+		configui.onUpdate(widgetPrefix .. name .. "_hand_position", function(value)
+			M.updateAttachmentHandOffset(id, value, nil)
+		end)
+		configui.onUpdate(widgetPrefix .. name .. "_hand_rotation", function(value)
+			M.updateAttachmentHandOffset(id, nil, value)
+		end)
+		configui.onUpdate(widgetPrefix .. name .. "_ik_hand_position", function(value)
+			M.updateAttachmentHandOffset(id, value, nil, true)
+		end)
+		configui.onUpdate(widgetPrefix .. name .. "_ik_hand_rotation", function(value)
+			M.updateAttachmentHandOffset(id, nil, value, true)
 		end)
 		configui.onCreateOrUpdate(widgetPrefix .. name .. "_is_melee", function(value)
 			M.updateAttachmentIsMelee(id, value)
@@ -693,10 +748,18 @@ local createDevMonitor = doOnce(function()
     end)
 end, Once.EVER)
 
+-- OW2 release layout (2026-10-12): keep the module in developer mode (the only mode this profile has been
+-- tested in) but do not show its panel. configui never adds a panel created with isHidden = true to the overlay.
+local hideDeveloperPanel = false
+function M.setDeveloperPanelHidden(val)
+	hideDeveloperPanel = val == true
+end
+
 local function getDefaultConfig()
 	return  {
 		{
 			panelLabel = "Attachments Config Dev",
+			isHidden = hideDeveloperPanel,
 			saveFile = configFileName,
 			layout =
 			{
@@ -712,6 +775,7 @@ function M.showDeveloperConfiguration(m_defaultLocation, m_defaultRotation, m_de
 
 	local configDefinition = M.addAttachmentOffsetsToConfigUI(getDefaultConfig())
 	configui.create(configDefinition)
+	developerConfigShown = true
 
 	configui.setValue("use_uevr_attachments_strip_parent_name_numeric_suffix", parameters["stripParentNameNumericSuffix"] or false, true)
 	configui.setValue("uevr_attachment_base_rotation", parameters["baseOffsets"].rotation or {0,0,0}, true)
@@ -756,6 +820,12 @@ function M.init(isDeveloperMode, logLevel, m_defaultLocation, m_defaultRotation,
 
 	scope.init()
 	accessoriesConfig.init(isDeveloperMode, logLevel, M)
+
+	-- OW2 release layout (2026-10-12): the defaults for attachments nobody has tuned yet must apply without the
+	-- dev panel too (they used to be stored only by showDeveloperConfiguration)
+	defaultLocation = m_defaultLocation
+	defaultRotation = m_defaultRotation
+	defaultScale = m_defaultScale
 
     if isDeveloperMode then
 		--backward compatibility
@@ -881,6 +951,7 @@ local function getAttachmentNames(attachment)
 	end
 
 	local attachmentChildName = getOverrideChildname(attachmentParentName)
+	local cacheable = true
 	if attachmentChildName == "" then
 		if attachment.StaticMesh ~= nil then
 			attachmentChildName = uevrUtils.getShortName(attachment.StaticMesh)
@@ -888,6 +959,9 @@ local function getAttachmentNames(attachment)
 			attachmentChildName = uevrUtils.getShortName(attachment.SkeletalMesh)
 		else
 			attachmentChildName = uevrUtils.getShortName(attachment)
+			-- no mesh asset yet (first frames after a level load): this fallback ID is temporary and must not be
+			-- cached, or the attachment keeps the wrong ID (no saved offsets / panel entry) for its whole life
+			cacheable = false
 		end
 	end
 
@@ -899,11 +973,13 @@ local function getAttachmentNames(attachment)
 	end
 
 	local attachmentID = attachmentParentName .. "_" .. attachmentChildName
-	attachmentNameCache[attachmentFullName] = {
-		parentName = attachmentParentName,
-		childName = attachmentChildName,
-		attachmentID = attachmentID,
-	}
+	if cacheable then
+		attachmentNameCache[attachmentFullName] = {
+			parentName = attachmentParentName,
+			childName = attachmentChildName,
+			attachmentID = attachmentID,
+		}
+	end
 
 	return attachmentParentName, attachmentChildName, attachmentID
 end
@@ -964,8 +1040,12 @@ function M.addAttachmentToConfig(attachment)
 
 				attachmentOffsets = parameters["attachmentOffsets"]
 				invalidateAttachmentNameLookups()
-				local configDefinition = M.addAttachmentOffsetsToConfigUI(getDefaultConfig())
-				configui.update(configDefinition)
+				-- only refresh the dev panel when it exists: configui.update CREATES a missing panel, which
+				-- would bring "Attachments Config Dev" back in the release layout on every new weapon
+				if developerConfigShown then
+					local configDefinition = M.addAttachmentOffsetsToConfigUI(getDefaultConfig())
+					configui.update(configDefinition)
+				end
 			end
 		end
 	end
@@ -1000,7 +1080,7 @@ function M.getAttachmentOffset(attachment)
 	local attachmentRotation = {0,0,0}
 	local attachmentScale = {1,1,1}
 
-	if uevrUtils.getValid(attachment) ~= nil then
+	if isAttachmentAlive(attachment) then
 		for i = 1, #attachmentOffsets do
 			local parent = attachmentOffsets[i]["parent"]
 			local child = attachmentOffsets[i]["child"]
@@ -1080,7 +1160,7 @@ local function getAttachmentDataFromMeshAttachmentList(id)
 			local ok, result = pcall(function()
 				if attachmentData == nil then
 					M.print("getAttachmentDataFromMeshAttachmentList had nil attachmentData " .. id)
-				elseif uevrUtils.getValid(attachmentData.attachment) ~= nil then
+				elseif isAttachmentAlive(attachmentData.attachment) then
 					local _, _, attachmentID = getAttachmentNames(attachmentData.attachment)
 					M.print("Checking attachment " .. attachmentID .. " against " .. id)
 					if id == attachmentID then
@@ -1165,7 +1245,7 @@ local function updateScopeForAttachmentID(id)
 	if attachmentDataArray ~= nil and #attachmentDataArray > 0 then
 		for j = 1, #attachmentDataArray do
 			local attachmentData = attachmentDataArray[j]
-			if attachmentData ~= nil and uevrUtils.getValid(attachmentData.attachment) ~= nil and attachmentData.gripHand ~= nil then
+			if attachmentData ~= nil and isAttachmentAlive(attachmentData.attachment) and attachmentData.gripHand ~= nil then
 				updateScopeForAttachment(id, attachmentData.attachment, attachmentData.gripHand)
 			end
 		end
@@ -1178,7 +1258,7 @@ function M.getSocketsForAttachmentID(id, callback)
 	if attachmentDataArray ~= nil and #attachmentDataArray > 0 then
 		for j = 1, #attachmentDataArray do
 			local attachmentData = attachmentDataArray[j]
-			if attachmentData ~= nil and uevrUtils.getValid(attachmentData.attachment) ~= nil and attachmentData.gripHand ~= nil then
+			if attachmentData ~= nil and isAttachmentAlive(attachmentData.attachment) and attachmentData.gripHand ~= nil then
 				uevrUtils.getSocketNames(attachmentData.attachment, callback)
 			end
 		end
@@ -1243,7 +1323,7 @@ local function updateLaserForAttachmentID(id)
 	if attachmentDataArray ~= nil and #attachmentDataArray > 0 then
 		for j = 1, #attachmentDataArray do
 			local attachmentData = attachmentDataArray[j]
-			if attachmentData ~= nil and uevrUtils.getValid(attachmentData.attachment) ~= nil and attachmentData.gripHand ~= nil then
+			if attachmentData ~= nil and isAttachmentAlive(attachmentData.attachment) and attachmentData.gripHand ~= nil then
 				updateLaserForAttachment(attachmentData.attachment, attachmentData.gripHand)
 			end
 		end
@@ -1331,7 +1411,7 @@ function M.getActiveAttachmentTransforms(hand)
 	local attachmentData = M.getCurrentGrippedAttachmentData(hand)
 	if attachmentData ~= nil then
 		if attachmentData.attachType ~= M.AttachType.RAW_CONTROLLER then
-			if uevrUtils.getValid(attachmentData.attachment) ~= nil and attachmentData.attachment.K2_GetComponentLocation ~= nil then
+			if isAttachmentAlive(attachmentData.attachment) and attachmentData.attachment.K2_GetComponentLocation ~= nil then
 				local location = attachmentData.attachment:K2_GetComponentLocation()
 				local rotation = attachmentData.attachment:K2_GetComponentRotation()
 				local sightsLocationOffset, sightsRotationOffset = M.getActiveAttachmentSightsOffsets(hand)
@@ -1456,6 +1536,27 @@ local function updateAttachmentProperty(id, propertyName, value)
 	isParametersDirty = true
 end
 
+-- Hand offset while this attachment is gripped (see the panel widgets). ik = true: the IK-mode pair, else Hands mode.
+function M.updateAttachmentHandOffset(id, location, rotation, ik)
+	local prefix = ik == true and "ik_" or ""
+	if location ~= nil then updateAttachmentProperty(id, prefix .. "hand_location", {location.X, location.Y, location.Z}) end
+	if rotation ~= nil then updateAttachmentProperty(id, prefix .. "hand_rotation", {rotation.X, rotation.Y, rotation.Z}) end
+	uevrUtils.executeUEVRCallbacks("attachment_hand_offset_changed", id, ik == true)
+end
+
+-- returns location {x,y,z}, rotation {pitch,yaw,roll} (either may be nil); ik = true for the IK-mode pair
+function M.getAttachmentHandOffset(id, ik)
+	local offset = id ~= nil and getAttachmentOffsetByID(id) or nil
+	if offset == nil then return nil, nil end
+	local prefix = ik == true and "ik_" or ""
+	return offset[prefix .. "hand_location"], offset[prefix .. "hand_rotation"]
+end
+
+-- callback(id, ik)
+function M.registerHandOffsetChangeCallback(callbackFunc)
+	uevrUtils.registerUEVRCallback("attachment_hand_offset_changed", callbackFunc)
+end
+
 function M.updateAttachmentUseAnyChild(id, anyChild)
 	updateAttachmentProperty(id, "any_child", anyChild)
 end
@@ -1492,7 +1593,7 @@ end
 
 local function checkAttachmentProperty(attachment, property)
 	--print("checkAttachmentProperty called for property " .. property, attachment)
-	if uevrUtils.getValid(attachment) ~= nil then
+	if isAttachmentAlive(attachment) then
 		local _, _, attachmentID = getAttachmentNames(attachment)
 		--print("Checking attachment property " .. property .. " for attachment ID " .. attachmentID)
 		for i = 1, #attachmentOffsets do
@@ -1553,7 +1654,7 @@ end
 -- 		for attachmentName, attachmentData in pairs(meshData) do
 -- 			if attachmentData == nil then
 -- 				print("getNamedAttachmentFromMeshAttachmentList had nil attachmentData", parentName, childName)
--- 			elseif uevrUtils.getValid(attachmentData.attachment) ~= nil then
+-- 			elseif isAttachmentAlive(attachmentData.attachment) then
 -- 				if hasNamedObject(attachmentData.attachment, parentName, childName) then
 -- 					return attachmentData.attachment, attachmentData.attachType, attachmentData.state
 -- 				end
@@ -1639,7 +1740,7 @@ function M.updateAttachmentTransform(pos, rot, scale, id, gripHand)
 	end
 	-- for id, mesh in pairs(meshAttachmentList) do
 	-- 	for attachmentName, attachmentData in pairs(mesh) do
-	-- 		if uevrUtils.getValid(attachmentData.attachment) ~= nil then
+	-- 		if isAttachmentAlive(attachmentData.attachment) then
 	-- 			if hasNamedObject(attachmentData.attachment, parentName, childName) then
 	-- 				local attachType = attachmentData.attachType
 	-- 				if attachType == M.AttachType.RAW_CONTROLLER then
@@ -1688,7 +1789,7 @@ uevrUtils.registerUEVRCallback("gunstock_transform_change", function(id, locatio
 		if attachmentDataArray ~= nil and #attachmentDataArray > 0 then
 			for j = 1, #attachmentDataArray do
 				local attachmentData = attachmentDataArray[j]
-				if attachmentData ~= nil and uevrUtils.getValid(attachmentData.attachment) ~= nil then
+				if attachmentData ~= nil and isAttachmentAlive(attachmentData.attachment) then
 					local loc, rot, scale = M.getAttachmentOffset(attachmentData.attachment)
 					M.updateAttachmentTransform(loc, rot, scale, id)
 				end
@@ -1716,8 +1817,8 @@ local function updateSelectedColors()
 		configui.setColor(widgetPrefix .. m_id, "#FFFFFFFF")
 	end
 
-	local leftAttachment = uevrUtils.getValid(M.getCurrentGrippedAttachment(Handed.Left))
-	local rightAttachment = uevrUtils.getValid(M.getCurrentGrippedAttachment(Handed.Right))
+	local leftAttachment = M.getCurrentGrippedAttachment(Handed.Left) -- already liveness-checked (no exists() gate: fresh post-load meshes)
+	local rightAttachment = M.getCurrentGrippedAttachment(Handed.Right)
 	--print("Updating selected colors for left and right attachments", leftAttachment, rightAttachment)
 
 	local leftID, rightID = nil, nil
@@ -1786,7 +1887,7 @@ function M.setActiveAnimation(attachment, gripHand)
 	if gripHand ~= nil then
 		local previousAnimation = activeGripAnimations[gripHand]
 		local nextAnimation = false
-		if uevrUtils.getValid(attachment) ~= nil then
+		if isAttachmentAlive(attachment) then
 			nextAnimation = true
 			local attachmentID = M.getAttachmentIDFromAttachment(attachment)
 			--print("Attachment ID", attachmentID)
@@ -1814,7 +1915,7 @@ M.setActiveAnimation = uevrUtils.profiler:wrap("Attachments: setActiveAnimation"
 function M.getCurrentGrippedAttachment(gripHand)
 	local attachmentData = M.getCurrentGrippedAttachmentData(gripHand)
 	if attachmentData ~= nil then
-		return uevrUtils.getValid(attachmentData.attachment)
+		return isAttachmentAlive(attachmentData.attachment) and attachmentData.attachment or nil
 	end
 	-- if gripHand == nil then gripHand = Handed.Right end
 	-- if gripHand ~= nil then
@@ -1896,7 +1997,7 @@ function M.attachToMesh(attachment, mesh, socketName, gripHand, options)
 	--printMeshAttachmentList()
 	local success = false
 	--print(attachment:get_full_name(), mesh:get_full_name(), socketName, tostring(gripHand), tostring(detachFromParent), tostring(allowReattach))
-	if uevrUtils.getValid(attachment) ~= nil and uevrUtils.getValid(mesh) ~= nil  then
+	if isAttachmentAlive(attachment) and uevrUtils.getValid(mesh) ~= nil  then
 		if options == nil then
 			options = {
 				detachFromOriginOnGrip = true,
@@ -2057,7 +2158,11 @@ end
 
 --set grip hand to nil and use the hand param instead if you just want a non-managed attachment
 function M.attachToRawController(attachment, gripHand, options, hand)
-	if uevrUtils.getValid(attachment) ~= nil then
+	-- liveness via pcall, not getValid(): right after a level load UObjectHook.exists() rejects the freshly spawned
+	-- weapon mesh for seconds (deferred adoption), which silently skipped the attach and left the gun on the
+	-- game's hidden arms (OW2, 2026-09-28)
+	local alive = attachment ~= nil and type(attachment) == "userdata" and pcall(function() return attachment:get_full_name() end)
+	if alive then
 		if options == nil then
 			options = {
 				detachFromOriginOnGrip = true,
@@ -2122,7 +2227,7 @@ end
 
 function M.detach(attachment, parent, attachType, originalTransform, detachFromParentOnRelease, maintainWorldPositionOnDetachFromParent)
 	--print("Detaching attachment", attachment, parent or nil, attachType)
-	if uevrUtils.getValid(attachment) ~= nil then
+	if isAttachmentAlive(attachment) then
 		--grab the name early before its detached or else it will be lost at reattach time
 		local attachSocketName = attachment.AttachSocketName
 
@@ -2407,7 +2512,7 @@ end)
 
 local function updateLeftHandOffsets()
 	local attachmentData = M.getCurrentGrippedAttachmentData(Handed.Left)
-	if attachmentData ~= nil and uevrUtils.getValid(attachmentData.attachment) ~= nil then
+	if attachmentData ~= nil and isAttachmentAlive(attachmentData.attachment) then
 		local loc, rot, scale = M.getAttachmentOffset(attachmentData.attachment)
 		local id = M.getAttachmentIDFromAttachment(attachmentData.attachment)
 		M.updateAttachmentTransform(loc, rot, scale, id, Handed.Left)

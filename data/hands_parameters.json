@@ -32,6 +32,16 @@
                         "off"
                     ]
                 ],
+                "grip_left_weapon_goo_pistol": [
+                    [
+                        "left_grip_weapon_goo_pistol",
+                        "on"
+                    ],
+                    [
+                        "left_trigger_weapon_goo_pistol",
+                        "off"
+                    ]
+                ],
                 "grip_left_weapon_machine_pistol": [
                     [
                         "left_grip_weapon_machine_pistol",
@@ -119,6 +129,16 @@
                     ],
                     [
                         "right_trigger_weapon_baton",
+                        "off"
+                    ]
+                ],
+                "grip_right_weapon_goo_pistol": [
+                    [
+                        "right_grip_weapon_goo_pistol",
+                        "on"
+                    ],
+                    [
+                        "right_trigger_weapon_goo_pistol",
                         "off"
                     ]
                 ],
@@ -1238,6 +1258,132 @@
                         ]
                     }
                 },
+                "right_grip_weapon_goo_pistol": {
+                    "off": {
+                        "RightHandMiddle1_JNT": [
+                            -6.7638,
+                            -100.2122,
+                            -167.5875
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.35,
+                            -65.5482,
+                            2.7841
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.7777,
+                            -59.529,
+                            -2.8992
+                        ],
+                        "RightHandPinky1_JNT": [
+                            5.6357,
+                            -48.0033,
+                            14.8882
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.4628,
+                            -76.63,
+                            -1.9944
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.2369,
+                            -8.145,
+                            2.2051
+                        ],
+                        "RightHandRing1_JNT": [
+                            10.3278,
+                            -69.0508,
+                            12.0363
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0968,
+                            -68.6039,
+                            -1.5795
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.4741,
+                            -44.7905,
+                            -1.2971
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -2.0454,
+                            -38.9118,
+                            -136.5914
+                        ],
+                        "RightHandThumb2_JNT": [
+                            3.5881,
+                            -55.0494,
+                            -0.2816
+                        ],
+                        "RightHandThumb3_JNT": [
+                            5.6259,
+                            -19.4092,
+                            12.2573
+                        ]
+                    },
+                    "on": {
+                        "RightHandMiddle1_JNT": [
+                            -6.7638,
+                            -100.2122,
+                            -167.5875
+                        ],
+                        "RightHandMiddle2_JNT": [
+                            -4.35,
+                            -65.5482,
+                            2.7841
+                        ],
+                        "RightHandMiddle3_JNT": [
+                            0.7777,
+                            -59.529,
+                            -2.8992
+                        ],
+                        "RightHandPinky1_JNT": [
+                            5.6357,
+                            -48.0033,
+                            14.8882
+                        ],
+                        "RightHandPinky2_JNT": [
+                            -0.4628,
+                            -76.63,
+                            -1.9944
+                        ],
+                        "RightHandPinky3_JNT": [
+                            0.2369,
+                            -8.145,
+                            2.2051
+                        ],
+                        "RightHandRing1_JNT": [
+                            10.3278,
+                            -69.0508,
+                            12.0363
+                        ],
+                        "RightHandRing2_JNT": [
+                            0.0968,
+                            -68.6039,
+                            -1.5795
+                        ],
+                        "RightHandRing3_JNT": [
+                            3.4741,
+                            -44.7905,
+                            -1.2971
+                        ],
+                        "RightHandThumb1_JNT": [
+                            -2.0454,
+                            -38.9118,
+                            -136.5914
+                        ],
+                        "RightHandThumb2_JNT": [
+                            3.5881,
+                            -55.0494,
+                            -0.2816
+                        ],
+                        "RightHandThumb3_JNT": [
+                            5.6259,
+                            -19.4092,
+                            12.2573
+                        ]
+                    }
+                },
                 "right_grip_weapon_machine_pistol": {
                     "off": {
                         "RightHandMiddle1_JNT": [
@@ -2174,6 +2320,42 @@
                         ]
                     }
                 },
+                "right_trigger_weapon_goo_pistol": {
+                    "off": {
+                        "RightHandIndex1_JNT": [
+                            -0.0436,
+                            -135.6193,
+                            -179.9677
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -3.4825,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            -0.0027,
+                            0.6967,
+                            0.0015
+                        ]
+                    },
+                    "on": {
+                        "RightHandIndex1_JNT": [
+                            -0.0436,
+                            -135.6193,
+                            -179.9677
+                        ],
+                        "RightHandIndex2_JNT": [
+                            0.0,
+                            -68.7321,
+                            0.0
+                        ],
+                        "RightHandIndex3_JNT": [
+                            -0.0027,
+                            0.6967,
+                            0.0015
+                        ]
+                    }
+                },
                 "right_trigger_weapon_machine_pistol": {
                     "off": {
                         "RightHandIndex1_JNT": [
@@ -2399,6 +2581,9 @@
         },
         "baton": {
             "label": "Baton"
+        },
+        "goo_pistol": {
+            "label": "Goo Pistol"
         },
         "machine_pistol": {
             "label": "Machine Pistol"

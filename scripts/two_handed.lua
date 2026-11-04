@@ -49,6 +49,7 @@ table.insert(_G.OW2_SECTIONS, { order = 2, label = "Two-Handed Aiming", layout =
             { widgetType = "checkbox", id = "th_enabled", label = "Enable Two-Handing", initialValue = true },
             { widgetType = "combo", id = "th_grab_button", label = "Grab button", initialValue = 2, selections = {"Left grip", "Left trigger"} },
             { widgetType = "checkbox", id = "th_suppress_left_grip", label = "Hide grab button from game while two-handing", initialValue = true },
+            { widgetType = "checkbox", id = "th_ads", label = "Aim down sights (ADS) while two-handing", initialValue = true },
             { widgetType = "checkbox", id = "th_snap_left_hand", label = "Snap left hand to grip point", initialValue = true },
             { widgetType = "slider_float", id = "th_grab_radius", label = "Grab radius (cm)", initialValue = 14.0, range = {3.0, 40.0} },
             { widgetType = "slider_float", id = "th_release_radius", label = "Release radius (cm)", initialValue = 35.0, range = {5.0, 100.0} },
@@ -466,14 +467,48 @@ local function detachIKLeftHand()
     pcall(function() uevrUtils.executeUEVRCallbacks("on_accessory_detach", Handed.Left) end)
 end
 
+-- The right IK hand turns with the gun as well (Hellraiser's method): its IK target is attached to the gun at the right
+-- controller's pose in the gun's local space at grab time (gun not pivoted yet). libs/ik.lua reads that as a virtual
+-- controller - the real one swung about the grip with the gun - and applies the solver's end-bone offsets to it as
+-- usual, so the hand stays on the grip. No feedback loop: UObjectHook places the gun from the real controller.
+-- The target follows the gun's pose at solve time, which includes the weapon kick (weapon_recoil.lua then leaves the
+-- right solver alone while two-handing).
+local ikRightAttached = false
+
+local function attachIKRightHand(weaponMesh)
+    local ok, err = pcall(function()
+        local rightCtrl = controllers.getController(1, true)
+        if not alive(rightCtrl) then return end
+        local one = uevrUtils.vector(1, 1, 1)
+        local ctrlT = kismet_math_library:MakeTransform(rightCtrl:K2_GetComponentLocation(), rightCtrl:K2_GetComponentRotation(), one)
+        local gunT = kismet_math_library:MakeTransform(weaponMesh:K2_GetComponentLocation(), weaponMesh:K2_GetComponentRotation(), one)
+        local rel = kismet_math_library:MakeRelativeTransform(ctrlT, gunT)
+        local t, r = rel.Translation, kismet_math_library:Quat_Rotator(rel.Rotation)
+        uevrUtils.executeUEVRCallbacks("on_accessory_attach", Handed.Right, weaponMesh, "", 0,
+            { X = t.X, Y = t.Y, Z = t.Z }, { Pitch = r.Pitch, Yaw = r.Yaw, Roll = r.Roll })
+        ikRightAttached = true
+    end)
+    if not ok then print("[two_handed] IK right attach failed: " .. tostring(err)) end
+end
+
+local function detachIKRightHand()
+    if not ikRightAttached then return end
+    ikRightAttached = false
+    pcall(function() uevrUtils.executeUEVRCallbacks("on_accessory_detach", Handed.Right) end)
+end
+_G.isTwoHandingIKRightLocked = function() return ikRightAttached end
+
 -- ---------------------------------------------------------------------------------------------
 -- Activation
 -- ---------------------------------------------------------------------------------------------
 local function activate(weaponMesh, gripPoint)
     if active then return end
+    -- the right glove's rest is snapshotted below: never a kicked one (weapon_recoil.lua)
+    if _G.ow2RecoilRestoreHand ~= nil then pcall(_G.ow2RecoilRestoreHand) end
     active = true
     local animName = attachments.getCurrentGripAnimation(Handed.Right)
     if ikMode() then
+        attachIKRightHand(weaponMesh) -- first: the gun is still un-pivoted this view
         attachIKLeftHand(weaponMesh, gripPoint)
     else
         parentHandToWeapon(Handed.Right, weaponMesh, nil)
@@ -490,11 +525,28 @@ local function activate(weaponMesh, gripPoint)
     scheduleLeftPose()
 end
 
+-- ---------------------------------------------------------------------------------------------
+-- Pivot application (every view)
+-- ---------------------------------------------------------------------------------------------
+-- UObjectHook re-places the gun from the right controller for EACH stereo view (found on Hellraiser 2026-10-09 with a
+-- probe: the pivot written after view 0 was already undone when view 1 was calculated), so a pivot applied once per
+-- frame never reached the renderer. The pivot is re-applied after every view's post-stereo; the last write before the
+-- frame is rendered is ours. The turret rotation starts from the gun's freshly reset pose each time (idempotent).
+local pivotArgs = nil -- { weaponMesh, rightHand, leftHand } while two-handing
+
+local function applyPivot()
+    local a = pivotArgs
+    if a == nil or not alive(a.weaponMesh) then return end
+    twoHandedAiming.applyTwoHandedRotation(a.weaponMesh, a.rightHand, a.leftHand)
+end
+
 local function deactivate(reason)
     if not active then return end
     active = false
+    pivotArgs = nil
     leftBaseRel = nil
     detachIKLeftHand()
+    detachIKRightHand()
     restoreHand(Handed.Left)
     restoreHand(Handed.Right)
     pcall(function() if hands.setInputLocked then hands.setInputLocked(Handed.Left, false) end end)
@@ -526,7 +578,10 @@ uevrUtils.registerPreLevelChangeCallback(function(level)
     -- rig would keep targeting the old world's weapon mesh
     if ikAccessoryAttached then pcall(function() uevrUtils.executeUEVRCallbacks("on_accessory_detach", Handed.Left) end) end
     ikAccessoryAttached = false
+    if ikRightAttached then pcall(function() uevrUtils.executeUEVRCallbacks("on_accessory_detach", Handed.Right) end) end
+    ikRightAttached = false
     ikBase = nil
+    pivotArgs = nil
     snapshots = {}
     pcall(function() if hands.setInputLocked then hands.setInputLocked(Handed.Left, false) end end)
     marker = nil
@@ -557,6 +612,16 @@ uevrUtils.registerOnPreInputGetStateCallback(function(retval, user_index, state)
         end
     end
 end, 5) -- after hands_animation (10) so the left hand still animates as "grip held"; before remap (0) and the game
+
+-- ADS while two-handing: the game's aim ("fine aim") is the left trigger. Held for the game while the gun is two-handed
+-- (tighter spread, ADS pose; the zoom is removed by controls.lua "Disable ADS zoom"). Priority 0.5: after controls.lua's
+-- grip/trigger swap (1) so this is what the game finally sees as LT, before remap (0).
+uevrUtils.registerOnPreInputGetStateCallback(function(retval, user_index, state)
+    if user_index ~= 0 or state == nil then return end
+    if active and configui.getValue("th_ads") ~= false then
+        state.Gamepad.bLeftTrigger = 255
+    end
+end, 0.5)
 
 -- ---------------------------------------------------------------------------------------------
 -- Per-tick body (runs once per tick from the post-stereo callback, where controller and
@@ -618,7 +683,8 @@ local function tick()
         if release then
             deactivate(leftGripDown and "too far" or "grip released")
         else
-            twoHandedAiming.applyTwoHandedRotation(weaponMesh, rightHand, leftHand)
+            pivotArgs = { weaponMesh = weaponMesh, rightHand = rightHand, leftHand = leftHand }
+            applyPivot()
             -- safety net: re-assert the captured pose once a second (hand animation lerps can overwrite it)
             poseReapplyTimer = (poseReapplyTimer or 0) + 1
             if poseReapplyTimer >= 60 then poseReapplyTimer = 0; applyLeftPose() end
@@ -628,7 +694,14 @@ end
 
 uevrUtils.registerPostCalculateStereoViewCallback(function(device, view_index, world_to_meters, position, rotation, is_double)
     if not vr.is_hmd_active() then return end
-    if ranThisTick then return end
+    if ranThisTick then
+        -- later views this frame: UObjectHook has re-placed the gun again, re-apply the pivot (see applyPivot)
+        if active and pivotArgs ~= nil then
+            local ok, err = pcall(applyPivot)
+            if not ok then print("[two_handed] pivot: " .. tostring(err)) end
+        end
+        return
+    end
     ranThisTick = true
     local ok, err = pcall(tick)
     if not ok then print("[two_handed] " .. tostring(err)) end

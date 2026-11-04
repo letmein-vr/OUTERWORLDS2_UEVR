@@ -17,6 +17,7 @@
             0.0,
             0.0
         ],
+        "enhanced_stabilization": false,
         "hide_body": true,
         "left_shoulder_bone_name": "l_shoulder_JNT",
         "mesh": "Pawn.FPVMesh",
@@ -36,39 +37,61 @@
         "solvers": {
             "13d6136f-06af-40c4-a5f1-ddc9c75785fe": {
                 "active": true,
-                "allow_stretch": false,
+                "allow_stretch": true,
                 "allow_wrist_affects_elbow": true,
                 "end_bone": "r_hand_JNT",
                 "end_bone_lock_pitch": false,
                 "end_bone_lock_roll": false,
                 "end_bone_lock_yaw": false,
                 "end_bone_offset": [
-                    -7.8141,
-                    2.094,
-                    -0.005
+                    -8.6163,
+                    3.094,
+                    0.9929
                 ],
                 "end_bone_rotation": [
-                    8.0,
-                    8.0,
-                    43.0
+                    10.0,
+                    7.0,
+                    37.0
                 ],
                 "end_control_type": 1,
+                "enhanced_stability": false,
+                "incremental_forearm_twist": false,
                 "joint_bone": "r_lowerArm_JNT",
                 "label": "Right Arm",
-                "max_stretch_scale": 0.0,
+                "max_stretch_scale": 1.25,
+                "shoulder_swing_only": false,
                 "smoothing": 0.0,
                 "solver_type": 1,
                 "sort_order": 2,
                 "start_bone": "r_upperArm_JNT",
-                "start_stretch_ratio": 0.0,
-                "twist_bones": null,
+                "start_stretch_ratio": 1.0,
+                "twist_bones": [
+                    {
+                        "bone": "r_lowerArm_TwistLow_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.7730000019073486,
+                        "yaw": 0.0
+                    },
+                    {
+                        "bone": "r_lowerArm_TwistMid_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.5,
+                        "yaw": 0.0
+                    },
+                    {
+                        "bone": "r_lowerArm_TwistTop_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.25,
+                        "yaw": 0.0
+                    }
+                ],
                 "wrist_bone": "r_wrist_JNT",
                 "wrist_twist_influence": 0.35,
                 "wrist_twist_max": 75.0
             },
             "3a22b95d-d434-4502-bd1d-49a947e7be14": {
                 "active": true,
-                "allow_stretch": false,
+                "allow_stretch": true,
                 "allow_wrist_affects_elbow": true,
                 "end_bone": "l_hand_JNT",
                 "end_bone_lock_pitch": false,
@@ -87,12 +110,32 @@
                 "end_control_type": 0,
                 "joint_bone": "l_lowerArm_JNT",
                 "label": "Left Arm",
-                "max_stretch_scale": 0.0,
+                "max_stretch_scale": 1.25,
                 "smoothing": 0,
                 "solver_type": 1,
                 "sort_order": 1,
                 "start_bone": "l_upperArm_JNT",
-                "start_stretch_ratio": 0.0,
+                "start_stretch_ratio": 1.0,
+                "twist_bones": [
+                    {
+                        "bone": "l_ArmLower_TwistLow_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.75,
+                        "yaw": 0.0
+                    },
+                    {
+                        "bone": "l_ArmLower_TwistMid_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.5,
+                        "yaw": 0.0
+                    },
+                    {
+                        "bone": "l_ArmLower_TwistTop_JNT",
+                        "pitch": 0.0,
+                        "roll": 0.25,
+                        "yaw": 0.0
+                    }
+                ],
                 "wrist_bone": "l_wrist_JNT",
                 "wrist_twist_influence": 0.35,
                 "wrist_twist_max": 75.0

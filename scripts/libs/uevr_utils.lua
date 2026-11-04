@@ -1426,11 +1426,40 @@ end
 --note that only the last result will be returned for functions that return results
 --therefore, for function returning results, only one callback should be 
 --registered system wide or use executeUEVRCallbacksWithBooleanResult
+-- Per-callback timing into the backend Frame Profiler when uevr.perf exists (no-op otherwise).
+local perfNowFn = uevr.perf and uevr.perf.now_us or nil
+local perfAddFn = uevr.perf and uevr.perf.add or nil
+local function perfNameForEntry(callbackName, entry)
+	if entry.perfName == nil then
+		local src = nil
+		if uevr.perf ~= nil and uevr.perf.describe ~= nil then
+			local ok, described = pcall(uevr.perf.describe, entry.func)
+			if ok and type(described) == "string" and described ~= "" then src = described end
+		end
+		if src == nil and type(debug) == "table" and debug.getinfo ~= nil then
+			local ok, info = pcall(debug.getinfo, entry.func, "S")
+			if ok and info ~= nil and info.short_src ~= nil then
+				src = (info.short_src:match("([^/\\]+)$") or info.short_src) .. ":" .. tostring(info.linedefined)
+			end
+		end
+		if src == nil then src = tostring(entry.func) end
+		entry.perfName = "cb " .. callbackName .. " " .. src
+	end
+	return entry.perfName
+end
+
 local function executeUEVRCallbacks(callbackName, ...)
 	if uevrCallbacks[callbackName] ~= nil then
 		local lastResults = nil
 		for i, entry in ipairs(uevrCallbacks[callbackName]) do
-			local results = {entry.func(table.unpack({...}))}
+			local results
+			if perfNowFn ~= nil then
+				local t = perfNowFn()
+				results = {entry.func(table.unpack({...}))}
+				perfAddFn(perfNameForEntry(callbackName, entry), perfNowFn() - t)
+			else
+				results = {entry.func(table.unpack({...}))}
+			end
 			if #results > 0 then
 				lastResults = results
 			end
@@ -1754,27 +1783,42 @@ function M.initUEVR(UEVR, callbackFunc)
 		end
 	end)
 
+	-- Optional per-step timing into the backend's Frame Profiler (About tab). Only active when the
+	-- backend exposes uevr.perf; behaviour is identical either way.
+	local perf = uevr.perf
+	local perfNow = perf and perf.now_us or nil
+	local perfAdd = perf and perf.add or nil
+	local function timed(name, fn, ...)
+		if perfNow == nil then
+			fn(...)
+			return
+		end
+		local t = perfNow()
+		fn(...)
+		perfAdd(name, perfNow() - t)
+	end
+
 	uevr.sdk.callbacks.on_pre_engine_tick(function(engine, delta)
 		--local success, response = pcall(function()
-			pawn = uevr.api:get_local_pawn(0)
-			updateCurrentLevel()
-			updateDelay(delta)
-			updateTimer(delta)
-			updateDeferrals(delta)
-			updateLazyPoll(delta)
-			updateKeyPress()
-			updateLerp(delta)
-			updateGamePaused()
-			updateCharacterHidden()
-			updateCutscene()
-			updateMontage()
-			updateUEVRUIState()
+			timed("utils.get_local_pawn", function() pawn = uevr.api:get_local_pawn(0) end)
+			timed("utils.updateCurrentLevel", updateCurrentLevel)
+			timed("utils.updateDelay", updateDelay, delta)
+			timed("utils.updateTimer", updateTimer, delta)
+			timed("utils.updateDeferrals", updateDeferrals, delta)
+			timed("utils.updateLazyPoll", updateLazyPoll, delta)
+			timed("utils.updateKeyPress", updateKeyPress)
+			timed("utils.updateLerp", updateLerp, delta)
+			timed("utils.updateGamePaused", updateGamePaused)
+			timed("utils.updateCharacterHidden", updateCharacterHidden)
+			timed("utils.updateCutscene", updateCutscene)
+			timed("utils.updateMontage", updateMontage)
+			timed("utils.updateUEVRUIState", updateUEVRUIState)
 
 			if on_pre_engine_tick ~= nil then
-				on_pre_engine_tick(engine, delta)
+				timed("utils.global on_pre_engine_tick", on_pre_engine_tick, engine, delta)
 			end
 
-			executeUEVRCallbacks("preEngineTick", engine, delta)
+			timed("utils.callbacks preEngineTick", executeUEVRCallbacks, "preEngineTick", engine, delta)
 		-- end)
 		-- if success == false then
 		-- 	M.print("[on_pre_engine_tick] " .. response, LogLevel.Error)
@@ -3340,9 +3384,11 @@ function M.getAssetDataFromPath(pathStr)
 		local arr2 = M.splitStr(arr[#arr], ".")
 		fAssetData.AssetName = M.fname_from_string(arr2[2])
 		local packagePath = table.concat(arr, "/", 1, #arr - 1)
-		fAssetData.PackagePath = "/" .. packagePath
+		-- FName fields: build the FName in-engine (Conv_StringToName). A plain string relies on UEVR's FName
+		-- constructor, which is not found on some games (OW2: "FName construction failed").
+		fAssetData.PackagePath = M.fname_from_string("/" .. packagePath)
 		if arr2[1] ~= nil then
-			fAssetData.PackageName = "/" .. packagePath .. "/" .. arr2[1]
+			fAssetData.PackageName = M.fname_from_string("/" .. packagePath .. "/" .. arr2[1])
 		end
 	end
 	return fAssetData

@@ -34,6 +34,16 @@
             "any_parent": false,
             "child": "w_AC_Triple_Shotgun_01_base",
             "id": "Wpn_w_AC_Triple_Shotgun_01_base",
+            "ik_hand_location": [
+                -0.20000000298023224,
+                0.30000001192092896,
+                -0.800000011920929
+            ],
+            "ik_hand_rotation": [
+                0.0,
+                -9.100000381469727,
+                0.0
+            ],
             "location": [
                 -1.0,
                 5.0,
@@ -42,7 +52,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -18.799999237060547,
+                0.20000000298023224,
                 -90.0,
                 0.4000000059604645
             ],
@@ -59,9 +69,14 @@
         {
             "animation": "baton",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "ME_ShockBaton_Base_001",
             "id": "Wpn_ME_ShockBaton_Base_001",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 -0.8999999761581421,
                 2.4000000953674316,
@@ -118,6 +133,16 @@
             "any_parent": false,
             "child": "w_MR_Standard_001",
             "id": "Wpn_w_MR_Standard_001",
+            "ik_hand_location": [
+                2.0,
+                0.4000000059604645,
+                1.0
+            ],
+            "ik_hand_rotation": [
+                -13.699999809265137,
+                -11.800000190734863,
+                -19.0
+            ],
             "location": [
                 -0.30000001192092896,
                 3.299999952316284,
@@ -126,7 +151,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -20.799999237060547,
+                -0.30000001192092896,
                 -90.30000305175781,
                 0.0
             ],
@@ -146,6 +171,11 @@
             "any_parent": false,
             "child": "w_SMG_HeavyBurst_01",
             "id": "Wpn_w_SMG_HeavyBurst_01",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 -0.30000001192092896,
                 -0.8999999761581421,
@@ -174,6 +204,11 @@
             "any_parent": false,
             "child": "SK_ED_SentryKnife_01",
             "id": "Wpn_SK_ED_SentryKnife_01",
+            "ik_hand_location": [
+                0.0,
+                -1.600000023841858,
+                0.0
+            ],
             "location": [
                 0.20000000298023224,
                 -0.5,
@@ -227,13 +262,18 @@
         {
             "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_ED_LightPistol",
             "id": "Wpn_w_ED_LightPistol",
+            "ik_hand_location": [
+                0.0,
+                -0.800000011920929,
+                0.0
+            ],
             "location": [
                 0.0,
                 1.7999999523162842,
-                -3.799999952316284
+                -4.699999809265137
             ],
             "melee": false,
             "parent": "Wpn",
@@ -255,9 +295,14 @@
         {
             "animation": "revolver",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_PI_LongShot_Base_01",
             "id": "Wpn_w_PI_LongShot_Base_01",
+            "ik_hand_location": [
+                1.5,
+                0.0,
+                -0.20000000298023224
+            ],
             "location": [
                 -0.800000011920929,
                 2.5,
@@ -311,11 +356,21 @@
         {
             "animation": "revolver",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_P_LightRevolver_01",
             "id": "Wpn_w_P_LightRevolver_01",
+            "ik_hand_location": [
+                0.4000000059604645,
+                -1.2000000476837158,
+                -1.100000023841858
+            ],
+            "ik_hand_rotation": [
+                5.5,
+                -3.299999952316284,
+                7.400000095367432
+            ],
             "location": [
-                -0.8999999761581421,
+                -0.10000000149011612,
                 2.9000000953674316,
                 -2.799999952316284
             ],
@@ -423,9 +478,19 @@
         {
             "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_AC_MachinePistol_01",
             "id": "Wpn_w_AC_MachinePistol_01",
+            "ik_hand_location": [
+                1.100000023841858,
+                -2.0,
+                -3.9000000953674316
+            ],
+            "ik_hand_rotation": [
+                30.600000381469727,
+                -2.700000047683716,
+                0.0
+            ],
             "location": [
                 0.4000000059604645,
                 1.7999999523162842,
@@ -434,7 +499,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                22.299999237060547,
+                0.0,
                 -90.19999694824219,
                 -5.699999809265137
             ],
@@ -454,9 +519,14 @@
             "any_parent": false,
             "child": "w_AC_TeleStaff_01",
             "id": "Wpn_w_AC_TeleStaff_01",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 -1.100000023841858,
-                0.10000000149011612,
+                -33.400001525878906,
                 -3.799999952316284
             ],
             "melee": true,
@@ -482,6 +552,11 @@
             "any_parent": false,
             "child": "w_PI_Rocket_LR_01",
             "id": "Wpn_w_PI_Rocket_LR_01",
+            "ik_hand_location": [
+                0.0,
+                -0.6000000238418579,
+                -0.20000000298023224
+            ],
             "location": [
                 0.0,
                 2.700000047683716,
@@ -518,7 +593,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -12.5,
+                0.20000000298023224,
                 -90.0,
                 0.0
             ],
@@ -529,7 +604,7 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": true,
+            "two_handed": false,
             "use_laser": false
         },
         {
@@ -566,6 +641,11 @@
             "any_parent": false,
             "child": "w_AB_PlasmaCutter_FP",
             "id": "Wpn_w_AB_PlasmaCutter_FP",
+            "ik_hand_location": [
+                0.0,
+                -1.2000000476837158,
+                0.0
+            ],
             "location": [
                 0.0,
                 2.5999999046325684,
@@ -591,9 +671,14 @@
         {
             "animation": "smg",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_SMG_Tribolt_NRAge",
             "id": "Wpn_w_SMG_Tribolt_NRAge",
+            "ik_hand_location": [
+                1.5,
+                -0.699999988079071,
+                0.6000000238418579
+            ],
             "location": [
                 0.0,
                 -0.20000000298023224,
@@ -678,6 +763,16 @@
             "any_parent": false,
             "child": "w_S_PopUp_Gun_001",
             "id": "Wpn_w_S_PopUp_Gun_001",
+            "ik_hand_location": [
+                0.800000011920929,
+                1.2000000476837158,
+                -1.0
+            ],
+            "ik_hand_rotation": [
+                -8.300000190734863,
+                -10.300000190734863,
+                0.0
+            ],
             "location": [
                 -0.8999999761581421,
                 5.699999809265137,
@@ -686,7 +781,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -21.0,
+                0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -731,9 +826,19 @@
         {
             "animation": "shock_rifle",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_P_RepeatingRifle_01",
             "id": "Wpn_w_P_RepeatingRifle_01",
+            "ik_hand_location": [
+                0.0,
+                1.0,
+                1.5
+            ],
+            "ik_hand_rotation": [
+                -7.5,
+                -8.800000190734863,
+                0.0
+            ],
             "location": [
                 -0.10000000149011612,
                 2.0,
@@ -742,7 +847,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -19.799999237060547,
+                0.6000000238418579,
                 -90.0,
                 0.0
             ],
@@ -762,9 +867,14 @@
             "any_parent": false,
             "child": "w_OA_NRadiated_Scythe_001",
             "id": "Wpn_w_OA_NRadiated_Scythe_001",
+            "ik_hand_location": [
+                0.0,
+                -0.699999988079071,
+                0.0
+            ],
             "location": [
                 -0.6000000238418579,
-                0.0,
+                -22.799999237060547,
                 -3.9000000953674316
             ],
             "melee": true,
@@ -790,6 +900,11 @@
             "any_parent": false,
             "child": "w_AC_AR_Mobility_Base",
             "id": "Wpn_w_AC_AR_Mobility_Base",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.699999988079071
+            ],
             "location": [
                 0.20000000298023224,
                 -1.399999976158142,
@@ -826,7 +941,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -15.199999809265137,
+                -0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -871,9 +986,14 @@
         {
             "animation": "assault_riflr",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_AC_ARM_BulletBlender",
             "id": "Wpn_w_AC_ARM_BulletBlender",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                -0.6000000238418579
+            ],
             "location": [
                 0.0,
                 0.0,
@@ -893,7 +1013,7 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
@@ -925,11 +1045,16 @@
             "use_laser": false
         },
         {
-            "animation": "baton",
+            "animation": "machine_pistol",
             "any_child": false,
             "any_parent": false,
             "child": "w_LMG_FastHeat_01",
             "id": "Wpn_w_LMG_FastHeat_01",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 0.0,
                 1.899999976158142,
@@ -958,6 +1083,16 @@
             "any_parent": false,
             "child": "w_LMG_LightBurst_Base_01",
             "id": "Wpn_w_LMG_LightBurst_Base_01",
+            "ik_hand_location": [
+                0.6000000238418579,
+                -0.10000000149011612,
+                1.600000023841858
+            ],
+            "ik_hand_rotation": [
+                -15.5,
+                0.0,
+                0.0
+            ],
             "location": [
                 -0.6000000238418579,
                 1.899999976158142,
@@ -966,7 +1101,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -27.200000762939453,
+                -0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -977,7 +1112,7 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
@@ -986,9 +1121,14 @@
             "any_parent": false,
             "child": "ME_Tripblade_Base_001",
             "id": "Wpn_ME_Tripblade_Base_001",
+            "ik_hand_location": [
+                0.0,
+                -0.30000001192092896,
+                0.0
+            ],
             "location": [
                 -1.7000000476837158,
-                -0.699999988079071,
+                -46.400001525878906,
                 -3.299999952316284
             ],
             "melee": true,
@@ -1042,10 +1182,15 @@
             "any_parent": false,
             "child": "w_TB_TBStick_01",
             "id": "Wpn_w_TB_TBStick_01",
+            "ik_hand_location": [
+                0.0,
+                -1.2000000476837158,
+                0.0
+            ],
             "location": [
                 -0.4000000059604645,
-                0.0,
-                -3.0
+                -29.399999618530273,
+                -3.299999952316284
             ],
             "melee": true,
             "parent": "Wpn",
@@ -1067,9 +1212,19 @@
         {
             "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_S_ShrinkGun_FP",
             "id": "Wpn_w_S_ShrinkGun_FP",
+            "ik_hand_location": [
+                0.6000000238418579,
+                -0.699999988079071,
+                -1.399999976158142
+            ],
+            "ik_hand_rotation": [
+                9.199999809265137,
+                -0.6000000238418579,
+                0.0
+            ],
             "location": [
                 0.0,
                 2.0999999046325684,
@@ -1093,11 +1248,16 @@
             "use_laser": false
         },
         {
-            "animation": "pistol",
+            "animation": "goo_pistol",
             "any_child": false,
             "any_parent": false,
             "child": "w_AC_GooPistol_01",
             "id": "Wpn_w_AC_GooPistol_01",
+            "ik_hand_location": [
+                0.0,
+                -1.2000000476837158,
+                0.0
+            ],
             "location": [
                 0.0,
                 2.700000047683716,
@@ -1154,6 +1314,16 @@
             "any_parent": false,
             "child": "w_P_HRifle_01",
             "id": "Wpn_w_P_HRifle_01",
+            "ik_hand_location": [
+                0.0,
+                -0.20000000298023224,
+                2.0
+            ],
+            "ik_hand_rotation": [
+                -11.100000381469727,
+                0.0,
+                0.0
+            ],
             "location": [
                 -0.8999999761581421,
                 5.699999809265137,
@@ -1162,7 +1332,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -29.600000381469727,
+                0.20000000298023224,
                 -93.0999984741211,
                 -7.0
             ],
@@ -1179,9 +1349,14 @@
         {
             "animation": "baton",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_SDS_001",
             "id": "Wpn_w_SDS_001",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 0.0,
                 0.0,
@@ -1294,6 +1469,16 @@
             "any_parent": false,
             "child": "w_SR_A_DeVries",
             "id": "Wpn_w_SR_A_DeVries",
+            "ik_hand_location": [
+                1.899999976158142,
+                0.6000000238418579,
+                -1.0
+            ],
+            "ik_hand_rotation": [
+                -6.699999809265137,
+                -14.600000381469727,
+                0.0
+            ],
             "location": [
                 0.0,
                 5.099999904632568,
@@ -1302,7 +1487,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -22.700000762939453,
+                0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -1322,9 +1507,14 @@
             "any_parent": false,
             "child": "w_P_TeleStaff_01",
             "id": "Wpn_w_P_TeleStaff_01",
+            "ik_hand_location": [
+                0.0,
+                -1.2999999523162842,
+                0.0
+            ],
             "location": [
                 -0.699999988079071,
-                0.0,
+                -17.200000762939453,
                 -4.199999809265137
             ],
             "melee": true,
@@ -1350,9 +1540,14 @@
             "any_parent": false,
             "child": "W_TL_TremorCleaver_FP_01",
             "id": "Wpn_W_TL_TremorCleaver_FP_01",
+            "ik_hand_location": [
+                0.0,
+                -0.800000011920929,
+                0.0
+            ],
             "location": [
                 -0.699999988079071,
-                -24.100000381469727,
+                -34.0,
                 -2.5999999046325684
             ],
             "melee": true,
@@ -1378,6 +1573,11 @@
             "any_parent": false,
             "child": "w_OA_SpinBeam_01",
             "id": "Wpn_w_OA_SpinBeam_01",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 0.0,
                 2.5999999046325684,
@@ -1513,11 +1713,21 @@
             "use_laser": false
         },
         {
-            "animation": "baton",
+            "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_SCI_LNCH_Armaggedon_01",
             "id": "Wpn_w_SCI_LNCH_Armaggedon_01",
+            "ik_hand_location": [
+                0.800000011920929,
+                0.4000000059604645,
+                -1.2999999523162842
+            ],
+            "ik_hand_rotation": [
+                5.300000190734863,
+                0.10000000149011612,
+                0.0
+            ],
             "location": [
                 -1.2000000476837158,
                 2.799999952316284,
@@ -1537,15 +1747,20 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
             "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_AC_WildSpray_AH50000",
             "id": "Wpn_w_AC_WildSpray_AH50000",
+            "ik_hand_location": [
+                1.399999976158142,
+                -0.699999988079071,
+                0.0
+            ],
             "location": [
                 -0.30000001192092896,
                 -0.6000000238418579,
@@ -1597,11 +1812,21 @@
             "use_laser": false
         },
         {
-            "animation": "baton",
+            "animation": "pistol",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_AC_Boarst_Blaster_01",
             "id": "Wpn_w_AC_Boarst_Blaster_01",
+            "ik_hand_location": [
+                0.4000000059604645,
+                0.0,
+                -3.0
+            ],
+            "ik_hand_rotation": [
+                6.400000095367432,
+                -3.200000047683716,
+                0.0
+            ],
             "location": [
                 -0.6000000238418579,
                 3.299999952316284,
@@ -1621,13 +1846,13 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
             "animation": "shock_rifle",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_P_ChainSpark",
             "id": "Wpn_w_P_ChainSpark",
             "location": [
@@ -1638,7 +1863,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -20.700000762939453,
+                0.0,
                 -90.0,
                 0.0
             ],
@@ -1658,6 +1883,16 @@
             "any_parent": false,
             "child": "w_SR_Damage_Base_01",
             "id": "Wpn_w_SR_Damage_Base_01",
+            "ik_hand_location": [
+                0.30000001192092896,
+                0.5,
+                -1.899999976158142
+            ],
+            "ik_hand_rotation": [
+                0.0,
+                -11.899999618530273,
+                0.0
+            ],
             "location": [
                 0.0,
                 3.700000047683716,
@@ -1666,7 +1901,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -22.299999237060547,
+                -0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -1677,15 +1912,20 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
             "animation": "smg",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_SMG_Tribolt_Base_01",
             "id": "Wpn_w_SMG_Tribolt_Base_01",
+            "ik_hand_location": [
+                0.8999999761581421,
+                -0.6000000238418579,
+                0.0
+            ],
             "location": [
                 0.0,
                 0.0,
@@ -1711,9 +1951,19 @@
         {
             "animation": "shock_rifle",
             "any_child": false,
-            "any_parent": false,
+            "any_parent": true,
             "child": "w_AC_TBS_TheHunt_01",
             "id": "Wpn_w_AC_TBS_TheHunt_01",
+            "ik_hand_location": [
+                0.0,
+                -0.6000000238418579,
+                0.0
+            ],
+            "ik_hand_rotation": [
+                0.0,
+                -10.800000190734863,
+                0.0
+            ],
             "location": [
                 0.0,
                 4.199999809265137,
@@ -1722,7 +1972,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -19.5,
+                -0.5,
                 -90.0,
                 0.0
             ],
@@ -1742,6 +1992,11 @@
             "any_parent": false,
             "child": "w_MR_CC",
             "id": "Wpn_w_MR_CC",
+            "ik_hand_location": [
+                0.0,
+                -0.800000011920929,
+                1.100000023841858
+            ],
             "location": [
                 0.0,
                 -2.200000047683716,
@@ -1770,6 +2025,16 @@
             "any_parent": false,
             "child": "w_MR_T_DS",
             "id": "Wpn_w_MR_T_DS",
+            "ik_hand_location": [
+                -0.20000000298023224,
+                0.6000000238418579,
+                -0.20000000298023224
+            ],
+            "ik_hand_rotation": [
+                0.0,
+                -11.800000190734863,
+                0.0
+            ],
             "location": [
                 -0.30000001192092896,
                 2.299999952316284,
@@ -1778,7 +2043,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -24.100000381469727,
+                0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -1789,7 +2054,7 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
@@ -1798,6 +2063,11 @@
             "any_parent": false,
             "child": "w_AC_IceBreaker",
             "id": "Wpn_w_AC_IceBreaker",
+            "ik_hand_location": [
+                0.0,
+                -0.8999999761581421,
+                0.0
+            ],
             "location": [
                 0.0,
                 5.400000095367432,
@@ -1817,7 +2087,7 @@
             ],
             "scoped": false,
             "strip_child_suffix_length": false,
-            "two_handed": false,
+            "two_handed": true,
             "use_laser": false
         },
         {
@@ -1826,9 +2096,14 @@
             "any_parent": false,
             "child": "w_SC_Unique_Jackpot_001",
             "id": "Wpn_w_SC_Unique_Jackpot_001",
+            "ik_hand_location": [
+                0.0,
+                -0.699999988079071,
+                0.0
+            ],
             "location": [
                 -0.8999999761581421,
-                -20.299999237060547,
+                -22.399999618530273,
                 -3.200000047683716
             ],
             "melee": false,
@@ -1849,11 +2124,16 @@
             "use_laser": false
         },
         {
-            "animation": "pistol",
+            "animation": "goo_pistol",
             "any_child": false,
             "any_parent": false,
             "child": "w_Kaur_GooPistol_01",
             "id": "Wpn_w_Kaur_GooPistol_01",
+            "ik_hand_location": [
+                0.0,
+                -0.800000011920929,
+                0.0
+            ],
             "location": [
                 0.0,
                 2.9000000953674316,
@@ -1882,6 +2162,16 @@
             "any_parent": false,
             "child": "w_SG_Pump_Whisper",
             "id": "Wpn_w_SG_Pump_Whisper",
+            "ik_hand_location": [
+                -0.30000001192092896,
+                0.699999988079071,
+                0.30000001192092896
+            ],
+            "ik_hand_rotation": [
+                -7.5,
+                -8.300000190734863,
+                0.0
+            ],
             "location": [
                 -0.699999988079071,
                 5.800000190734863,
@@ -1890,7 +2180,7 @@
             "melee": false,
             "parent": "Wpn",
             "rotation": [
-                -19.899999618530273,
+                -0.10000000149011612,
                 -90.0,
                 0.0
             ],
@@ -1902,6 +2192,33 @@
             "scoped": false,
             "strip_child_suffix_length": false,
             "two_handed": true,
+            "use_laser": false
+        },
+        {
+            "any_child": false,
+            "any_parent": false,
+            "child": "SK_Dematerializer_001",
+            "id": "IndianaPlayerCharacter_BP_C_SK_Dematerializer_001",
+            "location": [
+                5.5,
+                -0.30000001192092896,
+                0.0
+            ],
+            "melee": false,
+            "parent": "IndianaPlayerCharacter_BP_C",
+            "rotation": [
+                -180.0,
+                112.9000015258789,
+                0.4000000059604645
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "scoped": false,
+            "strip_child_suffix_length": false,
+            "two_handed": false,
             "use_laser": false
         }
     ],
