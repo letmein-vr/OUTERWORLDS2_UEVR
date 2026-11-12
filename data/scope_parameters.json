@@ -1,6 +1,15 @@
 {
     "scopes": {
         "SightData_AR_Longburst_Prism": {
+            "brightness": 2.4391549646027215,
+            "show_debug": true,
+            "zoom": 1.0
+        },
+        "SightData_AR_Longburst_Unique_TheOracle": {
+            "lens_offset": 0.06199999898672104,
+            "zoom": 1.0
+        },
+        "SightData_AR_Standard_Prism": {
             "zoom": 1.0
         },
         "SightData_LMG_Slowbeam_Telescopic": {
@@ -25,7 +34,13 @@
             "zoom": 0.8220043517735576
         },
         "SightData_MR_Standard_Telescopic": {
-            "deactivate_distance": 35.0,
+            "deactivate_distance": 23.125,
+            "lens_offset": 0.06199999898672104,
+            "objective_lens_rotation": [
+                90.0,
+                0.20000000298023224,
+                -90.0
+            ],
             "ocular_lens_location": [
                 10.0,
                 0.0,
@@ -44,9 +59,13 @@
             ],
             "zoom": 0.7616936582173821
         },
+        "SightData_PI_LongShot_Prism": {
+            "zoom": 1.0
+        },
         "SightData_SR_Accurate": {
             "brightness": 0.8494681909880684,
-            "deactivate_distance": 30.625,
+            "deactivate_distance": 30.312000274658203,
+            "lens_offset": 0.18799999356269836,
             "max_fov": 2.634000062942505,
             "objective_lens_location": [
                 24.350000381469727,
@@ -72,14 +91,24 @@
             "zoom": 0.5431738292872978
         },
         "SightData_SR_Damage": {
+            "deactivate_distance": 22.5,
+            "lens_offset": 0.5,
             "max_fov": 3.384000062942505,
             "ocular_lens_location": [
                 7.449999809265137,
                 0.0,
                 15.149999618530273
             ],
+            "reticle_depth": 0.875,
             "zoom": 1.0,
             "zoom_speed": 1.475000023841858
+        },
+        "SightData_SR_Damage_Prism": {
+            "zoom": 1.0
+        },
+        "SightData_SR_Damage_Telescopic": {
+            "deactivate_distance": 23.125,
+            "zoom": 1.0
         }
     }
 }

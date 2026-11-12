@@ -66,7 +66,8 @@ table.insert(_G.OW2_SECTIONS, { order = 3, label = "Physical Melee", layout = {
             { widgetType = "checkbox",     id = "pm_log",           label = "Log to console", initialValue = false },
             { widgetType = "spacing" },
             { widgetType = "text", label = "Contact mode: the attack fires when the moving weapon enters an enemy" },
-            { widgetType = "checkbox",     id = "pm_contact_mode",  label = "Contact mode (off = fire on swing peak, old behaviour)", initialValue = true },
+            -- was the checkbox pm_contact_mode (true = contact); zz_ow2_vr_panel.lua migrates a saved false to 2
+            { widgetType = "combo",        id = "pm_melee_type",    label = "Melee type", initialValue = 1, selections = {"Contact mode", "Fire on swing peak"} },
             { widgetType = "slider_float", id = "pm_contact_speed", label = "Contact: min weapon speed (cm/s)", initialValue = 120.0, range = {0.0, 600.0} },
             { widgetType = "slider_float", id = "pm_contact_refire", label = "Contact: re-fire interval while still inside (s)", initialValue = 0.6, range = {0.2, 2.0} },
             { widgetType = "slider_float", id = "pm_hit_buffer",    label = "Contact: hit forgiveness (cm)", initialValue = 15.0, range = {0.0, 80.0} },
@@ -605,7 +606,7 @@ end
 
 local function detect()
     local now = os.clock()
-    local contactMode = configui.getValue("pm_contact_mode") ~= false
+    local contactMode = configui.getValue("pm_melee_type") ~= 2 -- 1 = contact (default), 2 = fire on swing peak
 
     local hand = controllers.getController(1, true)   -- right controller
     local head = controllers.getHMDController()
@@ -710,7 +711,7 @@ local function tick()
         if #debugSpheres > 0 then hideDebugSpheres() end
         return
     end
-    if configui.getValue("pm_contact_mode") ~= false then
+    if configui.getValue("pm_melee_type") ~= 2 then
         readGameCapsule()
         enemyRefreshTick = enemyRefreshTick + 1
         if enemyRefreshTick >= ENEMY_REFRESH_TICKS then

@@ -50,20 +50,55 @@ local fovClasses = nil
 local fovOriginals = {} -- address -> { obj = object, values = { field = original } }
 local playerModeCache = {} -- RangedMode address -> true (player's) / false (NPC/CDO); name checked once per object
 
+-- The originals are also kept on disk (data/ads_zoom_originals.json), keyed by a stable name: the sight asset's full
+-- name, or the fire mode's path below the inventory with the instance numbers removed. The in-memory table alone lost
+-- them on a script reset or a level change while the objects kept the neutral values, so a later "restore" (and
+-- pip_scope.lua's game zoom, 2026-11-12) only ever saw 1.0. A value is recorded the first time it is seen non-neutral,
+-- i.e. once per game start for each sight.
+local ORIGINALS_FILE = "ads_zoom_originals.json"
+local savedOriginals = {}
+pcall(function() savedOriginals = json.load_file(ORIGINALS_FILE) or {} end)
+local function originalsKey(obj)
+    local ok, name = pcall(function() return obj:get_full_name() end)
+    if not ok or name == nil then return nil end
+    local below = name:match("%.Inventory%.(.+)$")
+    if below ~= nil then return (below:gsub("_%d%d%d%d%d+", "")) end -- fire mode: weapon class + mode, no instance numbers
+    return name -- sight asset: its full name is stable
+end
+
 local function neutraliseObject(obj, fields)
     local ok, address = pcall(function() return obj:get_address() end)
     if not ok or address == nil then return end
     local entry = fovOriginals[address]
+    local key, dirty = nil, false
     for field, neutral in pairs(fields) do
         pcall(function()
             local current = obj[field]
             if current ~= nil and current ~= neutral then
                 if entry == nil then entry = { obj = obj, values = {} }; fovOriginals[address] = entry end
                 if entry.values[field] == nil then entry.values[field] = current end
+                key = key or originalsKey(obj)
+                if key ~= nil then
+                    savedOriginals[key] = savedOriginals[key] or {}
+                    if savedOriginals[key][field] ~= current then savedOriginals[key][field] = current dirty = true end
+                end
                 obj[field] = neutral
             end
         end)
     end
+    if dirty then pcall(function() json.dump_file(ORIGINALS_FILE, savedOriginals, 4) end) end
+end
+
+-- The game's own value of a zoom field on a sight / fire mode, even while "Disable ADS zoom" holds it neutral:
+-- the saved original, else the live value (= the original when it was never neutralised).
+_G.ow2OriginalZoomValue = function(obj, field)
+    if obj == nil then return nil end
+    local key = originalsKey(obj)
+    local saved = key ~= nil and savedOriginals[key] or nil
+    if saved ~= nil and saved[field] ~= nil then return saved[field] end
+    local value = nil
+    pcall(function() value = obj[field] end)
+    return value
 end
 
 local function restoreFovValues()
@@ -75,6 +110,16 @@ local function restoreFovValues()
         end
     end
     fovOriginals = {}
+    -- objects neutralised before a script reset / level change are no longer in fovOriginals: use the saved originals
+    for _, kind in ipairs({ "SightData", "RangedMode" }) do
+        local class = fovClasses ~= nil and fovClasses[kind] or nil
+        for _, obj in ipairs(class ~= nil and UEVR_UObjectHook.get_objects_by_class(class, false) or {}) do
+            local key = originalsKey(obj)
+            for field, value in pairs(key ~= nil and savedOriginals[key] or {}) do
+                if FOV_FIELDS[kind][field] ~= nil then pcall(function() obj[field] = value end) end
+            end
+        end
+    end
 end
 
 local function ensureFovClasses()

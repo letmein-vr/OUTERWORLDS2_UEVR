@@ -44,6 +44,7 @@ UObjectHook_CreationTracking=true
 UObjectHook_EnabledAtStartup=false
 UObjectHook_LogFlushAll=false
 UObjectHook_ToggleUObjectHookKey=-1
+VR_2DScreenFullSource=false
 VR_2DScreenMode=false
 VR_AFW_EnableSharpening=false
 VR_AFW_FixMovingObjectBrightnessFlickering=true

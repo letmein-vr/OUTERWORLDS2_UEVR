@@ -185,6 +185,11 @@ function M.getParameter(scopeID, key)
 	return getParameter(scopeID, key)
 end
 
+-- Stores (and persists to scope_parameters.json) a parameter for one scope, e.g. a profile's own per-scope setting.
+function M.setParameter(scopeID, key, value)
+	if scopeID ~= nil and scopeID ~= "" then saveParameter(scopeID, key, value, true) end
+end
+
 -- Profile-wide default for a scope parameter, used by every scope without a stored value for it. E.g. a game whose
 -- weapon meshes point the barrel along +X (not +Z) needs objective_lens_rotation {90, 0, 0}: the objective lens
 -- setter subtracts 90 from X (pitch).

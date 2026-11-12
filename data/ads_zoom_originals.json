@@ -1,0 +1,588 @@
+{
+    "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Base/SightData_AR_Longburst.SightData_AR_Longburst": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Base/SightData_AR_Longburst_Prism.SightData_AR_Longburst_Prism": {
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Unique/SightData_AR_Longburst_Unique_TheOracle.SightData_AR_Longburst_Unique_TheOracle": {
+        "AimingFOVMagnification": 2.5
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/Mobility/Base/SightData_AR_Mobility.SightData_AR_Mobility": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/Mobility/Base/SightData_AR_Mobility_Reflex.SightData_AR_Mobility_Reflex": {
+        "AimingFOVMagnification": 1.75
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/Standard/Base/SightData_AR_Standard.SightData_AR_Standard": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/Standard/Base/SightData_AR_Standard_MicroReflex.SightData_AR_Standard_MicroReflex": {
+        "AimingFOVMagnification": 1.5
+    },
+    "SightData /Game/Blueprints/WEAP/Class_AR/Standard/Base/SightData_AR_Standard_Prism.SightData_AR_Standard_Prism": {
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_FastHeat/SightData_LMG_FastHeat.SightData_LMG_FastHeat": {
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_LightBurst/Base/SightData_LMG_LightBurst.SightData_LMG_LightBurst": {
+        "AimingFOVMagnification": 1.149999976158142
+    },
+    "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_Slowbeam/Base/SightData_LMG_Slowbeam.SightData_LMG_Slowbeam": {
+        "AimingFOVMagnification": 1.149999976158142
+    },
+    "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_Slowbeam/Base/SightData_LMG_Slowbeam_Telescopic.SightData_LMG_Slowbeam_Telescopic": {
+        "AimingFOVMagnification": 2.5
+    },
+    "SightData /Game/Blueprints/WEAP/Class_LNCH/LockOn/Base/SightData_LNCH_LockOn_PitchballMachine.SightData_LNCH_LockOn_PitchballMachine": {
+        "AimingFOVMagnification": 1.2000000476837158
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Frontline/Base/SightData_MR_Frontline.SightData_MR_Frontline": {
+        "AimingFOVMagnification": 1.149999976158142
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Frontline/Base/SightData_MR_Frontline_Telescopic.SightData_MR_Frontline_Telescopic": {
+        "AimingFOVMagnification": 2.5
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Standard/Base/SightData_MR_Standard.SightData_MR_Standard": {
+        "AimingFOVMagnification": 1.149999976158142
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Standard/Base/SightData_MR_Standard_Reflex.SightData_MR_Standard_Reflex": {
+        "AimingFOVMagnification": 1.75
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Standard/Base/SightData_MR_Standard_Telescopic.SightData_MR_Standard_Telescopic": {
+        "AimingFOVMagnification": 2.5
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Tactical/Base/SightData_MR_Tactical.SightData_MR_Tactical": {
+        "AimingFOVMagnification": 1.149999976158142
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Tactical/Base/SightData_MR_Tactical_Hologram.SightData_MR_Tactical_Hologram": {
+        "AimingFOVMagnification": 1.25
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Burst/Base/SightData_PI_Burst.SightData_PI_Burst": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Goo/Base/SightData_PI_Goo.SightData_PI_Goo": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/LongShot/Base/SightData_PI_LongShot.SightData_PI_LongShot": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/LongShot/Base/SightData_PI_LongShot_Prism.SightData_PI_LongShot_Prism": {
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Rocket/Base/SightData_PI_Rocket.SightData_PI_Rocket": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Standard/Base/SightData_PI_Standard.SightData_PI_Standard": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Versatile/Base/SightData_PI_Versatile.SightData_PI_Versatile": {
+        "AimingFOVMagnification": 1.2000000476837158
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Fullauto/Base/SightData_SG_Fullauto.SightData_SG_Fullauto": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Pump/Base/SightData_SG_Pump.SightData_SG_Pump": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Pump/Base/SightData_SG_Pump_Hologram.SightData_SG_Pump_Hologram": {
+        "AimingFOVMagnification": 1.25
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Pump/Base/SightData_SG_Pump_Reflex.SightData_SG_Pump_Reflex": {
+        "AimingFOVMagnification": 1.75
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Semiauto/Base/SightData_SG_Semiauto.SightData_SG_Semiauto": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SG/Semiauto/Base/SightData_SG_Semiauto_TheHunt.SightData_SG_Semiauto_TheHunt": {
+        "AimingFOVMagnification": 1.100000023841858
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SMG/HeavyBurst/Base/SightData_SMG_Heavyburst.SightData_SMG_Heavyburst": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SMG/TriBolt/Base/SightData_SMG_Tribolt.SightData_SMG_Tribolt": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SMG/WildSpray/Base/SightData_SMG_Wildspray.SightData_SMG_Wildspray": {
+        "AimingFOVMagnification": 1.0499999523162842
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SPCL/Minigun/SightData_SPCL_Minigun.SightData_SPCL_Minigun": {
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SPCL/Spinbeam/SightData_SPCL_Spinbeam.SightData_SPCL_Spinbeam": {
+        "AimingFOVMagnification": 1.25
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Accurate/Base/SightData_SR_Accurate.SightData_SR_Accurate": {
+        "AimingFOVMagnification": 10.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Accurate/Base/SightData_SR_Accurate_Hologram.SightData_SR_Accurate_Hologram": {
+        "AimingFOVMagnification": 1.25
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Accurate/Unique/TheSimplifier/SightData_SR_Accurate_Simplifier.SightData_SR_Accurate_Simplifier": {
+        "AimingFOVAdjustment": -58.560001373291016,
+        "AimingFOVMagnification": 40.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Damage/Base/SightData_SR_Damage.SightData_SR_Damage": {
+        "AimingFOVAdjustment": -58.560001373291016,
+        "AimingFOVMagnification": 10.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Damage/Base/SightData_SR_Damage_Prism.SightData_SR_Damage_Prism": {
+        "AimingFOVAdjustment": -58.560001373291016,
+        "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_SR/Damage/Base/SightData_SR_Damage_Telescopic.SightData_SR_Damage_Telescopic": {
+        "AimingFOVAdjustment": -58.560001373291016,
+        "AimingFOVMagnification": 2.5
+    },
+    "Weapon_AR_LongBurst_Modded_BurnBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_LongBurst_Modded_ExplosiveRounds_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_LongBurst_Modded_Prism_TracingRounds_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_LongBurst_Modded_Telescopic_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_LongBurst_Modded_TracingUnit_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_LongBurst_Unique_TheOracle_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_AR_Mobility_Modded_DoubleBarrel_AdvancedMag_ReflexOptics_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Mobility_Modded_Reflex_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Mobility_Modded_ZapBarrel_AcceleratedBursts_ReflexOptics_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Mobility_Unique_TheBulletBlender_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Modded_AdvancedEnergyModulator_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Modded_Micro-Reflex_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Modded_Micro-Reflex_ChargedBurst_CutDownBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Modded_Prism_AdvancedEnergyModulator_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Modded_Prism_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_AR_Standard_Unique_Aggravator_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -20.06800079345703
+    },
+    "Weapon_LMG_FastHeat_Modded_CutDownBarrel_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Modded_CutDownBarrel_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Modded_DoubleBarrel_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Modded_DoubleBarrel_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Modded_TracingUnit_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Modded_TracingUnit_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Unique_Agatha_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_FastHeat_Unique_Agatha_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_AcceleratedBursts_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_AcceleratedBursts_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_AdvancedMag_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_AdvancedMag_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_PlasmaBarrel_AdvancedMag_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_PlasmaBarrel_AdvancedMag_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_AcceleratedBursts_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_AcceleratedBursts_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Unique_CoverFire_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_LightBurst_Unique_CoverFire_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_LMG_Slowbeam_Modded_BiomassConverter_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_LMG_Slowbeam_Modded_Micro-Reflex_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_LMG_Slowbeam_Modded_Telescopic_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_LMG_Slowbeam_Unique_ChainsparkCannon_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_LNCH_Lockon_Unique_BoarstBlaster_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_LNCH_Lockon_Unique_PitchballMachine_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_MR_Frontline_Modded_AdvancedMag_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Frontline_Modded_Micro-Reflex_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Frontline_Modded_Telescopic_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Frontline_Unique_CritterCatcher_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Modded_ReflexOptic_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Modded_ReflexOptic_ReinforcedBarrel_FrostConverter_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Modded_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Modded_Telescopic_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Modded_Telescopic_SawedOffBarrel_EnergyModule_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Standard_Unique_FeedbackCannon_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_MR_Tactical_Modded_ExplosiveRounds_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Modded_Holo_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Modded_Holo_Silencer_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Modded_Prism_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Modded_Silencer_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Unique_DeathSentence_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_MR_Tactical_Unique_EmergencyStop_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
+    "Weapon_PI_Burst_Modded_AdvancedMag_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Burst_Modded_DoubleBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Burst_Modded_ExplosiveRounds_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Burst_Modded_ForceCharger_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Burst_Modded_Silencer_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_AcceleratedBursts_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_AcceleratedBursts_ReinforcedBarrel_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_EnergyModule_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_EnergyModule_ReinforcedBarrel_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_FrostConverter_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_FrostConverter_Silencer_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_ReinforcedBarrel_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Modded_Silencer_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Goo_Unique_KaursKorroder_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_LongShot_Modded_Holo_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_Holo_ZapBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_Prism_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_Prism_Silencer_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_ReinforcedBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_ReinforcedBarrel_Prism_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_Silencer_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_LongShot_Modded_ZapBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Plasma_Modded_BiomassConverter_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Plasma_Modded_EnergyModule_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Plasma_Modded_FrostConverter_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Plasma_Modded_Silencer_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Plasma_Modded_Silencer_FrostConverter_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Rocket_Modded_BurnBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Rocket_Modded_ZapBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Rocket_Unique_LittleRoar_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
+    },
+    "Weapon_PI_Standard_Modded_AcceleratedBurst_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Standard_Modded_AdvancedMag_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Standard_Modded_Holo_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Standard_Unique_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_BurnBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_ExplosiveRounds_BurnBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_ExplosiveRounds_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_Silencer_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_TracingUnit_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_ZapBarrel_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Modded_ZapBarrel_TracingUnit_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Unique_BiggestFan_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Versatile_Unique_Rattler_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_SG_Fullauto_Modded_DoubleBarrel_ChargedBurst_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SG_Fullauto_Modded_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SG_Fullauto_Modded_ReinforcedBarrel_EnergyModule_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SG_Fullauto_Unique_TheGoomerang_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SG_Pump_Modded_Holo_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Pump_Modded_Holo_ZapBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Pump_Modded_ReflexOptics_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Pump_Unique_LastWhisper_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Modded_BurnBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Modded_ChargedBurst_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Modded_SawedOffBarrelNew_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Modded_TracingUnit_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Unique_IceBreaker_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SG_Semiauto_Unique_TheHunt_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_HeavyBurst_Modded_ExplosiveRounds_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_HeavyBurst_Modded_ForceCharger_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_HeavyBurst_Unique_Premium_Moonman_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_HeavyBurst_Unique_TrainingGun_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_TriBolt_Modded_BiomassConverter_RefinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_TriBolt_Modded_FrostConverter_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_TriBolt_Modded_FrostConverter_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_TriBolt_Unique_NRage_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_WildSpray_Modded_AdvancedMag_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_WildSpray_Modded_AdvancedMag_DoubleBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_WildSpray_Modded_ExplosiveRounds_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_WildSpray_Modded_ExplosiveRounds_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_WildSpray_Modded_ReinforcedBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SMG_Wildspray_Unique_AutoHacker5000_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SPCL_Minigun_Unique_Base_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_SPCL_Minigun_Unique_Base_C.FireMode_HeavyWeapon_C_1": {
+        "FineAimFovAdjustment": -21.959999084472656
+    },
+    "Weapon_SPCL_Science_Armageddon_C.FireMode_HeavyWeapon_C_2": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_SPCL_Science_Armageddon_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SPCL_Science_BigBang_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_SPCL_Science_PopupGun_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -18.299999237060547
+    },
+    "Weapon_SPCL_Science_ShrinkRay_C.FireMode_Hndgn_C_1": {
+        "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_SPCL_Spinbeam_Modded_EnergyModule_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_SPCL_Spinbeam_Modded_ZapBarrel_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_SPCL_Spinbeam_Unique_ZyraniumRay_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    },
+    "Weapon_SR_Accurate_Modded_Holo_ZapBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -58.560001373291016
+    },
+    "Weapon_SR_Accurate_Modded_Silencer_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -58.560001373291016
+    },
+    "Weapon_SR_Accurate_Modded_ZapBarrel_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -58.560001373291016
+    },
+    "Weapon_SR_Accurate_Unique_RemoteDetonator_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -58.560001373291016
+    },
+    "Weapon_SR_Accurate_Unique_TheSimplifier_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -58.560001373291016
+    },
+    "Weapon_SR_Damage_Modded_FrostConverter_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SR_Damage_Modded_Prism_BiomassConverter_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SR_Damage_Modded_Telescopic_FrostConverter_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_SR_Damage_Unique_PlanetKiller_C.FireMode_LongGun_C_0": {
+        "FineAimFovAdjustment": -30.0
+    },
+    "Weapon_TelescopingStaff_Unique_Thunderstruck_C.FireMode_HeavyWeapon_C_0": {
+        "FineAimFovAdjustment": -10.0
+    }
+}

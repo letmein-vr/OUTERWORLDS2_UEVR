@@ -381,7 +381,7 @@ end)
 -- Attachments stays in developer mode - the mode this profile was built and confirmed in (attachments.init(false)
 -- left hands / IK arms not appearing, 2026-10-12). Its "Attachments Config Dev" panel is hidden for the release layout;
 -- comment the line out to show it again for tuning (per-weapon offsets, the left-hand gadget prop in left_gadget.lua).
-attachments.setDeveloperPanelHidden(true)
+-- attachments.setDeveloperPanelHidden(true)
 attachments.init(true, nil, {0,0,0}, {0,-90,0})
 
 -- -------------------------------------------------------------------------
