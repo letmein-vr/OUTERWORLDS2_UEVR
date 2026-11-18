@@ -59,6 +59,7 @@ local MAIN = {
     { id = "ow2_recoil_two_handed", label = "Weapon recoil while two-handing" },
     { id = "hz_enabled", label = "Holsters (right grip at hips / shoulders = weapons, left grip at the face = flashlight)" },
     { id = "ps_enabled", label = "PiP scopes" },
+    { id = "ow2_immersive_hud", label = "Immersive HUD (health, map + companions on the left hand, ammo on the gun, rest in view)" },
 
     { heading = "Physical Melee" },
     { id = "pm_enabled", label = "Physical melee (swing = attack)" },
@@ -88,6 +89,14 @@ local MAIN = {
     { id = "ip_color", label = "Pointer colour" },
     { id = "ip_rot_pitch", label = "Pointer pitch (up / down)" },
     { id = "ip_rot_yaw", label = "Pointer yaw (left / right)" },
+
+    { heading = "VR Tutorial" },
+    { id = "tut_show" },
+    { id = "tut_startup" },
+    { id = "tut_gesture" },
+    { id = "tut_pause" },
+    { id = "tut_reset" },
+    { id = "tut_status" },
 }
 
 local sections = _G.OW2_SECTIONS or {}

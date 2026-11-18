@@ -8,7 +8,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 
 ## IMPORTANT!
 
-- My custom UEVR backend is required - see releases to download this. Version 1.6 of the profile needs UEVR release 2026-11-02.2 or newer (it fixes engine name lookups on this game, which the scopes rely on).
+- My custom UEVR backend is required. Every release includes the matching UEVR build (`UEVR.zip`), and the **Outer Worlds 2 VR Launcher** installs and injects it for you. Version 1.8 of the profile needs UEVR release 2026-11-16 or newer (it fixes a freeze while paging through the VR tutorial).
 
 ## Features
 
@@ -20,7 +20,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 - **Per-weapon hand placement.** Every weapon has its own hand position and rotation offset, tuned separately for glove hands and IK arms, so the hand sits on the grip properly on each gun.
 - **Natural IK wrists.** In IK mode the forearm twist bones follow your wrist roll, so the forearms turn with the hand instead of twisting like a candy wrapper.
 - **Weapon in hand.** The equipped weapon is attached to your right controller and aims where you point it, with a per-weapon position and rotation offset. Bullets go where the barrel points via a small native aim-fix plugin.
-- **Two-handed aiming.** On rifles and other long guns, reach your left hand to the fore-grip and hold the left trigger to grab it. The weapon then pivots between both hands. The left hand takes a grip pose captured from the game's own animation for that weapon and holds it for the whole grab, with the left trigger ignored for finger animation while you're gripping. Works in both hand modes; in IK mode both arms are solved onto the gun, so the right hand turns with the weapon as it pivots and the left arm follows the fore-grip.
+- **Two-handed aiming.** On rifles and other long guns, reach your left hand to the fore-grip and hold the left grip to grab it (the grab button can be switched to the left trigger). The weapon then pivots between both hands. The left hand takes a grip pose captured from the game's own animation for that weapon and holds it for the whole grab, with finger animation held while you're gripping. Works in both hand modes; in IK mode both arms are solved onto the gun, so the right hand turns with the weapon as it pivots and the left arm follows the fore-grip.
 - **Picture-in-picture scopes.** Weapons fitted with a magnifying scope get a working scope you look through. It only appears when your eye is at the eyepiece and switches off when you lower the gun. The scope camera sits on the muzzle and looks straight down the barrel, so the centre of the scope is where your shot goes, and the gun's own scope model can't block the view. It follows the sight actually fitted: a scope mod added at the workbench adds the PiP, a holographic sight removes it. Zoom with the right stick while looking through it. Settings are saved per sight.
 - **Weapon recoil.** Each shot kicks the gun in your hand, driven by the game's own arm animation, in both hand modes and while two-handing.
 - **Body holsters.** Press the right grip with your hand at your right hip, right shoulder, left shoulder or left hip to switch to weapon slots 1, 2, 3 or 4. A short buzz tells you when your hand is in a holster zone.
@@ -41,6 +41,8 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 
 ### Interface and comfort
 
+- **In-game VR tutorial.** An illustrated tutorial pops up when gameplay starts and walks through every VR feature, page by page. Bring your left controller to your eyes and pull the left trigger to open or close it at any time; the game pauses while it is open.
+- **Immersive HUD.** Health, the map and your companions sit on your left hand, the ammo count rides on the gun, and the rest of the HUD (quests, prompts) stays in view. Switch it off in the panel for the flat HUD; the HUD panel sets each piece's size and opacity.
 - **UI that moves with context.** The HUD and menus sit at a comfortable distance normally and pull in close during conversations and terminal use, driven by the game's zoom.
 - **Conversation and cutscene handling.** Camera offsets, UI placement and hands adjust automatically in dialogue and cutscenes. In scripted cutscenes the IK arms are hidden and VR input is paused, so the arms no longer float above you and the character appearance screen shows your character properly.
 - **Clean full-screen menus.** Native Stereo Fix switches off automatically in the inventory (ledger), companion selection, trading and workbench screens, and comes back on when you close them. In those menus the controls are the plain flat-game ones (no left grip / trigger swap).
@@ -53,18 +55,23 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 | Move | Left stick, relative to where you look |
 | Turn | Right stick |
 | Aim / fire | Point the right controller, right trigger |
-| Two-hand a long gun | Bring the left hand to the fore-grip and hold the left trigger |
+| Two-hand a long gun | Bring the left hand to the fore-grip and hold the left grip |
 | Melee attack | Swing the right controller left, right or down with a melee weapon equipped |
 | Weapon slot 1 / 2 / 3 / 4 | Right grip with the right hand at the right hip / right shoulder / left shoulder / left hip |
 | Flashlight | Left grip with the left hand in front of your face |
 | Look through a scope | Bring the scope's eyepiece up to your eye |
 | Scope zoom | Right stick up / down while looking through a scope |
 | Menus and terminals | Right-hand laser pointer |
+| VR tutorial (open / close) | Left controller at your eyes, pull the left trigger |
 
 ## Installation
 
-1. Install my custom UEVR.
-2. Import the relevant profile you want to use (GDK=Gamepass, AFW=AFW rendering method).
+**With the launcher (recommended):** download `OuterWorlds2VR_Launcher.exe` from the latest release and run it. It installs the profile and its UEVR build, lets you set the main VR and gameplay options, starts the game and injects UEVR. It offers updates when a new release comes out and keeps your panel settings (your old profile is backed up first).
+
+**By hand:**
+
+1. Download `UEVR.zip` and `TheOuterWorlds2-Win64-Shipping.zip` from the latest release.
+2. Unzip UEVR and import the profile zip in UEVR.
 3. Inject UEVR at the main menu.
 
 ## Tuning
@@ -78,6 +85,8 @@ Everything is adjustable from the **Outer Worlds 2 VR** panel in the UEVR overla
 - **PiP Scope** – on/off, zoom range, brightness, lens size and position, and the eye distance at which the scope appears. Saved per sight, for the sight currently equipped, with a live readout of the eye distance.
 - **Physical Melee** – swing sensitivity, cooldown and animation speed.
 - **Camera Stabilize** – individual toggles for head bob, camera shake, camera animations, weapon kick, and the camera-rotation source.
+- **Immersive HUD** – on/off; the separate **HUD** panel sets each HUD piece's size and opacity.
+- **VR Tutorial** – show it now, show it when gameplay starts, the open gesture, pause while open, reset.
 - **UI & Conversations**, **Controls** (left grip / trigger swap, ADS zoom off), **Weapon Reticule** and **Interaction Pointer**.
 
 ## Under the hood

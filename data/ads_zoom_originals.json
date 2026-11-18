@@ -5,6 +5,9 @@
     "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Base/SightData_AR_Longburst_Prism.SightData_AR_Longburst_Prism": {
         "AimingFOVMagnification": 2.0
     },
+    "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Base/SightData_AR_Longburst_Telescopic.SightData_AR_Longburst_Telescopic": {
+        "AimingFOVMagnification": 2.5
+    },
     "SightData /Game/Blueprints/WEAP/Class_AR/LongBurst/Unique/SightData_AR_Longburst_Unique_TheOracle.SightData_AR_Longburst_Unique_TheOracle": {
         "AimingFOVMagnification": 2.5
     },
@@ -291,6 +294,9 @@
     "Weapon_MR_Standard_Unique_FeedbackCannon_C.FireMode_LongGun_C_0": {
         "FineAimFovAdjustment": -30.0
     },
+    "Weapon_MR_Tactical_Base_WithMesh_C.FireMode_LongGun_C_1": {
+        "FineAimFovAdjustment": -20.056800842285156
+    },
     "Weapon_MR_Tactical_Modded_ExplosiveRounds_C.FireMode_LongGun_C_1": {
         "FineAimFovAdjustment": -20.056800842285156
     },
@@ -326,6 +332,9 @@
     },
     "Weapon_PI_Burst_Modded_Silencer_C.FireMode_Hndgn_C_0": {
         "FineAimFovAdjustment": -14.640000343322754
+    },
+    "Weapon_PI_Dematerializer_Base_C.FireMode_Hndgn_C_0": {
+        "FineAimFovAdjustment": -20.0
     },
     "Weapon_PI_Goo_Modded_AcceleratedBursts_C.FireMode_Hndgn_C_1": {
         "FineAimFovAdjustment": -14.640000343322754

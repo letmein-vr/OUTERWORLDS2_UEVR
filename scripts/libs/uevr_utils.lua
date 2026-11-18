@@ -3162,6 +3162,29 @@ end
     -- pressButton(state, XINPUT_GAMEPAD_DPAD_LEFT)
 -- end
 
+-- fs.glob regexes are case sensitive but Windows file names are not, so "png" becomes "[pP][nN][gG]"
+local function anyCasePattern(text)
+	return (text:gsub("%a", function(c) return "[" .. c:lower() .. c:upper() .. "]" end))
+end
+
+-- Files in a folder inside the data folder, as paths relative to data separated by backslashes.
+-- path is an ordinary folder path using / or \, with or without a trailing separator; nil or "" is data itself.
+-- extension matches in any case and nil matches every file. includeSubfolders also returns files in folders
+-- below path. Returns nil when fs.glob is unavailable. (From the Atomic Heart uevr_utils, for libs/tutorial.lua;
+-- added to Outer Worlds 2 2026-11-16 for the VR tutorial.)
+function M.getFiles(path, extension, includeSubfolders)
+	if fs == nil or fs.glob == nil then return nil end
+	local folder = (path or ""):gsub("[/\\]+", "\\"):gsub("^\\", ""):gsub("\\$", "")
+	local prefix = ""
+	if folder ~= "" then
+		-- folder names are literal, so escape regex characters, then add the separator
+		prefix = folder:gsub("([%^%$%(%)%.%[%]%*%+%?%{%}%|\\])", "\\%1") .. "\\\\"
+	end
+	local name = includeSubfolders and ".*" or "[^\\\\]*"
+	local suffix = extension ~= nil and ("\\." .. anyCasePattern(extension)) or ""
+	return fs.glob(prefix .. name .. suffix) or {}
+end
+
 local fadeHardLock = false
 local fadeSoftLock = false
 function M.isFadeHardLocked()

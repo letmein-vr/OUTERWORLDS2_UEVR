@@ -95,6 +95,9 @@ local isInMotionSicknessCausingScene = false
 
 local currentWidgetViewportState = {}
 local currentCustomViewportWidgets = {}
+-- widgets the UI state scan skips (ui.ignoreWidget), keyed by address. The VR tutorial's host widget borrows a game
+-- widget class, so it must not count as that game widget (Atomic Heart ui.lua, added to Outer Worlds 2 2026-11-16)
+local ignoredWidgets = {}
 
 --In some games widgets will act like they are active even though they are not actually open
 --Set this to true to require that the widget's GetOpenState() returns 0 (open) for it to be considered active
@@ -381,7 +384,7 @@ local function updateUIState()
 
         for index, widget in pairs(foundWidgets) do
             --if widget:IsInViewport() then --check not really needed since GetAllWidgetsOfClass with the last param true should only return viewport widgets.also currentCustomViewportWidgets might not be in viewport
-            if requireWidgetOpenState == false or (widget.GetOpenState ~= nil and widget:GetOpenState() == 0) then
+            if ignoredWidgets[widget:get_address()] == nil and (requireWidgetOpenState == false or (widget.GetOpenState ~= nil and widget:GetOpenState() == 0)) then
                 if requireWidgetVisibility == false or widget:GetVisibility() == 0 or widget:GetVisibility() == 3 or widget:GetVisibility() == 4 then -- (widget.IsVisible ~= nil and widget:IsVisible()) then
                     --get the widget data from the configurations
                     local id = widget:get_class():get_full_name()
@@ -554,6 +557,18 @@ function M.addViewportWidget(widget)
     if index == nil then
         table.insert(currentCustomViewportWidgets, widget)
     end
+end
+
+-- UI state skips this widget while it is in the viewport, so it never matches a widgetlist entry
+function M.ignoreWidget(widget)
+    if uevrUtils.getValid(widget) == nil then return end
+    ignoredWidgets[widget:get_address()] = true
+end
+
+-- stops ignoring a widget passed to ui.ignoreWidget
+function M.unignoreWidget(widget)
+    if widget == nil then return end
+    ignoredWidgets[widget:get_address()] = nil
 end
 
 function M.removeViewportWidget(widget)

@@ -1,0 +1,230 @@
+{
+    "elements": {
+        "element_1": {
+            "appearance": {
+                "blendMode": 1,
+                "brightness": 4.599999904632568,
+                "exposure": false,
+                "exposureStrength": 1.0800000429153442,
+                "opacity": 1.0,
+                "twoSided": false
+            },
+            "enabled": true,
+            "id": "element_1",
+            "label": "Health",
+            "mode": "region",
+            "regionPadding": 8,
+            "resolutionScale": 2,
+            "target": {
+                "socket": "l_hand_JNT",
+                "type": "left_hand"
+            },
+            "transform": {
+                "position": [
+                    1.5,
+                    -5.900000095367432,
+                    -3.0
+                ],
+                "rotation": [
+                    171.0,
+                    80.5,
+                    30.5
+                ],
+                "widthCm": 11.399999618530273
+            },
+            "widget": {
+                "child": "PlayerStatsDisplay",
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        },
+        "element_2": {
+            "appearance": {
+                "blendMode": 1,
+                "brightness": 5.25,
+                "exposure": true,
+                "twoSided": false
+            },
+            "enabled": true,
+            "id": "element_2",
+            "label": "Ammo",
+            "mode": "region",
+            "region": [
+                1464.822998046875,
+                930.7739868164063,
+                326.177001953125,
+                271.22601318359375
+            ],
+            "regionPadding": 8,
+            "resolutionScale": 2,
+            "target": {
+                "socket": "r_hand_JNT",
+                "type": "right_controller"
+            },
+            "transform": {
+                "position": [
+                    15.399999618530273,
+                    13.699999809265137,
+                    8.600000381469727
+                ],
+                "rotation": [
+                    -1.0,
+                    180.5,
+                    -0.5
+                ],
+                "widthCm": 10.699999809265137
+            },
+            "widget": {
+                "child": "AmmoReadout",
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        },
+        "element_3": {
+            "appearance": {
+                "blendMode": 1,
+                "brightness": 4.949999809265137,
+                "exposure": true,
+                "opacity": 1.0,
+                "twoSided": false
+            },
+            "enabled": true,
+            "id": "element_3",
+            "label": "Map",
+            "mode": "region",
+            "regionPadding": 8,
+            "resolutionScale": 2,
+            "target": {
+                "socket": "l_hand_JNT",
+                "type": "left_hand"
+            },
+            "transform": {
+                "position": [
+                    -9.5,
+                    -3.5999999046325684,
+                    4.5
+                ],
+                "rotation": [
+                    159.5,
+                    87.5,
+                    -8.0
+                ],
+                "widthCm": 12
+            },
+            "widget": {
+                "child": "MinimapWidget",
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        },
+        "element_4": {
+            "appearance": {
+                "blendMode": 1,
+                "brightness": 5.849999904632568,
+                "exposure": true,
+                "exposureStrength": 1.059999942779541,
+                "twoSided": false
+            },
+            "enabled": true,
+            "id": "element_4",
+            "label": "HUD",
+            "mode": "region",
+            "regionPadding": 8,
+            "regionRest": true,
+            "resolutionScale": 2,
+            "target": {
+                "type": "hmd"
+            },
+            "transform": {
+                "position": [
+                    35.400001525878906,
+                    5.400000095367432,
+                    -5.0
+                ],
+                "rotation": [
+                    0.0,
+                    178.5,
+                    0.0
+                ],
+                "widthCm": 41.79999923706055
+            },
+            "widget": {
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        },
+        "element_5": {
+            "appearance": {
+                "blendMode": 1,
+                "brightness": 5.25,
+                "exposure": true,
+                "twoSided": false
+            },
+            "id": "element_5",
+            "label": "Companions",
+            "mode": "region",
+            "regionPadding": 8,
+            "resolutionScale": 2,
+            "target": {
+                "socket": "l_hand_JNT",
+                "type": "left_hand"
+            },
+            "transform": {
+                "position": [
+                    2.5999999046325684,
+                    -5.400000095367432,
+                    0.699999988079071
+                ],
+                "rotation": [
+                    153.5,
+                    89.5,
+                    31.5
+                ],
+                "widthCm": 13.399999618530273
+            },
+            "widget": {
+                "child": "CompanionOverview_0",
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        },
+        "element_6": {
+            "appearance": {
+                "brightness": 5.400000095367432,
+                "exposure": true,
+                "twoSided": false
+            },
+            "id": "element_6",
+            "label": "Companion 2",
+            "mode": "region",
+            "regionPadding": 8,
+            "resolutionScale": 2,
+            "target": {
+                "type": "left_controller"
+            },
+            "transform": {
+                "position": [
+                    0.0,
+                    -3.799999952316284,
+                    4.300000190734863
+                ],
+                "rotation": [
+                    183.5,
+                    113.5,
+                    29.5
+                ],
+                "widthCm": 12.899999618530273
+            },
+            "widget": {
+                "child": "CompanionOverview_1",
+                "class": "WidgetBlueprintGeneratedClass /Game/UI/HUD/HUD_BP.HUD_BP_C"
+            }
+        }
+    },
+    "exposureSource": "none",
+    "exposureStops": 0.0,
+    "order": [
+        "element_1",
+        "element_2",
+        "element_3",
+        "element_4",
+        "element_5",
+        "element_6"
+    ],
+    "redrawRate": 0
+}

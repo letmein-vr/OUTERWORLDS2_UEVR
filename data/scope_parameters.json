@@ -5,6 +5,9 @@
             "show_debug": true,
             "zoom": 1.0
         },
+        "SightData_AR_Longburst_Telescopic": {
+            "zoom": 1.0
+        },
         "SightData_AR_Longburst_Unique_TheOracle": {
             "lens_offset": 0.06199999898672104,
             "zoom": 1.0
