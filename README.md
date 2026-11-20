@@ -8,7 +8,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 
 ## IMPORTANT!
 
-- My custom UEVR backend is required. Every release includes the matching UEVR build (`UEVR.zip`), and the **Outer Worlds 2 VR Launcher** installs and injects it for you. Version 1.8 of the profile needs UEVR release 2026-11-16 or newer (it fixes a freeze while paging through the VR tutorial).
+- My custom UEVR backend is required. Every release includes the matching UEVR build (`UEVR.zip`), and the **Outer Worlds 2 VR Launcher** installs and injects it for you. Version 1.9 of the profile needs UEVR release 2026-11-16 or newer (it fixes a freeze while paging through the VR tutorial).
 
 ## Features
 
@@ -28,6 +28,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 - **Gadgets in the left hand.** The Dematerializer acid spray is held in your left hand while you use it.
 - **Physical melee.** With a melee weapon out, a fast swing left, right or down attacks when overlapping with an enemy.
 - **Reticule.** Dynamic reticule on by default, can be toggled off/on and change brightness.
+- **Manual reload, every gun.** Press reload and the old magazine drops out. Take a new one from your left hip with the left grip and push it into the gun. After an empty magazine, grab the slide, charging handle, bolt or crank and work it by hand. It covers every gun the player can use: magazines, batteries and drums; revolver speedloaders and loading gates, one round at a time; break-action barrels you flick shut; the shock rod and the goo canisters. Each gun's reload was learned from the game's own animation, so the magazine, your fingers and the moving parts match that gun.
 - **Reload fix.** Reloads always refill the magazine, which the game otherwise skips in VR.
 - **Clean weapon swaps.** The game's own arm mesh no longer flashes on screen when switching weapons, and weapon mods such as magazines render with their proper textures.
 
@@ -59,6 +60,9 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 | Melee attack | Swing the right controller left, right or down with a melee weapon equipped |
 | Weapon slot 1 / 2 / 3 / 4 | Right grip with the right hand at the right hip / right shoulder / left shoulder / left hip |
 | Flashlight | Left grip with the left hand in front of your face |
+| Reload | Reload button drops the magazine; left grip at your left hip takes a new one, push it into the gun |
+| Rack the slide / handle / crank (after an empty magazine) | Left grip on it, pull (or wind) and let go |
+| Close a revolver cylinder or break-action barrel | Flick the gun |
 | Look through a scope | Bring the scope's eyepiece up to your eye |
 | Scope zoom | Right stick up / down while looking through a scope |
 | Menus and terminals | Right-hand laser pointer |
@@ -83,6 +87,7 @@ Everything is adjustable from the **Outer Worlds 2 VR** panel in the UEVR overla
 - **Weapon Recoil** – on/off, kick distance and rotation strength, kick while two-handing, and recovery time.
 - **Holsters** – on/off, haptic pulse, zone sizes and positions, with a live readout of where each hand is.
 - **PiP Scope** – on/off, zoom range, brightness, lens size and position, and the eye distance at which the scope appears. Saved per sight, for the sight currently equipped, with a live readout of the eye distance.
+- **Manual Reload** – on/off and racking on/off on the main panel; under Dev Config: the hip pouch position, grab and insert distances, finger poses, flick speed, rack distance and pull, and the Analysis section (re-learn a gun from its next native reloads).
 - **Physical Melee** – swing sensitivity, cooldown and animation speed.
 - **Camera Stabilize** – individual toggles for head bob, camera shake, camera animations, weapon kick, and the camera-rotation source.
 - **Immersive HUD** – on/off; the separate **HUD** panel sets each HUD piece's size and opacity.

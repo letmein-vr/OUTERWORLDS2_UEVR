@@ -58,6 +58,8 @@ local MAIN = {
     { id = "ow2_recoil_enabled", label = "Weapon recoil" },
     { id = "ow2_recoil_two_handed", label = "Weapon recoil while two-handing" },
     { id = "hz_enabled", label = "Holsters (right grip at hips / shoulders = weapons, left grip at the face = flashlight)" },
+    { id = "mr_enabled", label = "Manual reload (reload button drops the magazine, take a new one from the left hip and push it in)" },
+    { id = "mr_rack", label = "Rack the slide / charging handle / crank after an empty magazine" },
     { id = "ps_enabled", label = "PiP scopes" },
     { id = "ow2_immersive_hud", label = "Immersive HUD (health, map + companions on the left hand, ammo on the gun, rest in view)" },
 

@@ -947,6 +947,13 @@ local function tick()
         updateMarker(nil, nil)
         return
     end
+    -- a manual reload (manual_reload.lua) needs the left hand: let go of the gun, and do not grab it again until the
+    -- reload is over (2026-11-19: reloading while two-handing played the game's automatic reload)
+    if _G.ow2ManualReloadBusy == true then
+        if active then deactivate("manual reload") end
+        updateMarker(nil, nil)
+        return
+    end
 
     local weaponMesh = attachments.getCurrentGrippedAttachment(Handed.Right)
     local twoHanded = alive(weaponMesh) and attachments.isActiveAttachmentTwoHanded(Handed.Right) == true

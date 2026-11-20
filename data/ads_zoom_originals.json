@@ -44,6 +44,9 @@
     "SightData /Game/Blueprints/WEAP/Class_MR/Frontline/Base/SightData_MR_Frontline.SightData_MR_Frontline": {
         "AimingFOVMagnification": 1.149999976158142
     },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Frontline/Base/SightData_MR_Frontline_MicroReflex.SightData_MR_Frontline_MicroReflex": {
+        "AimingFOVMagnification": 1.5
+    },
     "SightData /Game/Blueprints/WEAP/Class_MR/Frontline/Base/SightData_MR_Frontline_Telescopic.SightData_MR_Frontline_Telescopic": {
         "AimingFOVMagnification": 2.5
     },
@@ -71,8 +74,14 @@
     "SightData /Game/Blueprints/WEAP/Class_PI/LongShot/Base/SightData_PI_LongShot.SightData_PI_LongShot": {
         "AimingFOVMagnification": 1.0499999523162842
     },
+    "SightData /Game/Blueprints/WEAP/Class_PI/LongShot/Base/SightData_PI_LongShot_Hologram.SightData_PI_LongShot_Hologram": {
+        "AimingFOVMagnification": 1.25
+    },
     "SightData /Game/Blueprints/WEAP/Class_PI/LongShot/Base/SightData_PI_LongShot_Prism.SightData_PI_LongShot_Prism": {
         "AimingFOVMagnification": 2.0
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Plasma/Base/SightData_PI_Plasma.SightData_PI_Plasma": {
+        "AimingFOVMagnification": 1.0499999523162842
     },
     "SightData /Game/Blueprints/WEAP/Class_PI/Rocket/Base/SightData_PI_Rocket.SightData_PI_Rocket": {
         "AimingFOVMagnification": 1.0499999523162842
@@ -80,7 +89,13 @@
     "SightData /Game/Blueprints/WEAP/Class_PI/Standard/Base/SightData_PI_Standard.SightData_PI_Standard": {
         "AimingFOVMagnification": 1.0499999523162842
     },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Standard/Base/SightData_PI_Standard_Hologram.SightData_PI_Standard_Hologram": {
+        "AimingFOVMagnification": 1.25
+    },
     "SightData /Game/Blueprints/WEAP/Class_PI/Versatile/Base/SightData_PI_Versatile.SightData_PI_Versatile": {
+        "AimingFOVMagnification": 1.2000000476837158
+    },
+    "SightData /Game/Blueprints/WEAP/Class_PI/Versatile/Base/SightData_PI_Versatile_Rattler.SightData_PI_Versatile_Rattler": {
         "AimingFOVMagnification": 1.2000000476837158
     },
     "SightData /Game/Blueprints/WEAP/Class_SG/Fullauto/Base/SightData_SG_Fullauto.SightData_SG_Fullauto": {
