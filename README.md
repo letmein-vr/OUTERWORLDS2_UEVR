@@ -8,7 +8,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 
 ## IMPORTANT!
 
-- My custom UEVR backend is required. Every release includes the matching UEVR build (`UEVR.zip`), and the **Outer Worlds 2 VR Launcher** installs and injects it for you. Version 1.9 of the profile needs UEVR release 2026-11-16 or newer (it fixes a freeze while paging through the VR tutorial).
+- My custom UEVR backend is required. Every release includes the matching UEVR build (`UEVR.zip`), and the **Outer Worlds 2 VR Launcher** installs and injects it for you. Version 1.9.1 of the profile needs UEVR release 2026-11-16 or newer (it fixes a freeze while paging through the VR tutorial).
 
 ## Features
 
@@ -19,7 +19,7 @@ NOTE: PERFORMANCE IS ROUGH AND I DO NOT KNOW WHY!
 - **Per-weapon grip poses.** The hands wrap around each weapon type correctly, with separate grip and trigger poses for pistol, revolver, SMG, machine pistol, rifle, assault rifle, shock rifle and baton. One pose set drives both glove hands and IK arms.
 - **Per-weapon hand placement.** Every weapon has its own hand position and rotation offset, tuned separately for glove hands and IK arms, so the hand sits on the grip properly on each gun.
 - **Natural IK wrists.** In IK mode the forearm twist bones follow your wrist roll, so the forearms turn with the hand instead of twisting like a candy wrapper.
-- **Weapon in hand.** The equipped weapon is attached to your right controller and aims where you point it, with a per-weapon position and rotation offset. Bullets go where the barrel points via a small native aim-fix plugin.
+- **Weapon in hand.** The equipped weapon is attached to your right controller and aims where you point it, with a per-weapon position and rotation offset. Bullets go where the barrel points via a small native aim-fix plugin, and beam weapons (Kinetic Beam Caster, Zyranium Ray) fire their beam straight out of the muzzle.
 - **Two-handed aiming.** On rifles and other long guns, reach your left hand to the fore-grip and hold the left grip to grab it (the grab button can be switched to the left trigger). The weapon then pivots between both hands. The left hand takes a grip pose captured from the game's own animation for that weapon and holds it for the whole grab, with finger animation held while you're gripping. Works in both hand modes; in IK mode both arms are solved onto the gun, so the right hand turns with the weapon as it pivots and the left arm follows the fore-grip.
 - **Picture-in-picture scopes.** Weapons fitted with a magnifying scope get a working scope you look through. It only appears when your eye is at the eyepiece and switches off when you lower the gun. The scope camera sits on the muzzle and looks straight down the barrel, so the centre of the scope is where your shot goes, and the gun's own scope model can't block the view. It follows the sight actually fitted: a scope mod added at the workbench adds the PiP, a holographic sight removes it. Zoom with the right stick while looking through it. Settings are saved per sight.
 - **Weapon recoil.** Each shot kicks the gun in your hand, driven by the game's own arm animation, in both hand modes and while two-handing.
