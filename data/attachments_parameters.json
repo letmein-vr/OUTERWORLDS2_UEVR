@@ -2362,6 +2362,33 @@
             "strip_child_suffix_length": false,
             "two_handed": false,
             "use_laser": false
+        },
+        {
+            "any_child": false,
+            "any_parent": false,
+            "child": "SK_ENV_Inter_Oxygen_Mask",
+            "id": "IndianaPlayerCharacter_BP_C_SK_ENV_Inter_Oxygen_Mask",
+            "location": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "melee": false,
+            "parent": "IndianaPlayerCharacter_BP_C",
+            "rotation": [
+                0.0,
+                -90.0,
+                0.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "scoped": false,
+            "strip_child_suffix_length": false,
+            "two_handed": false,
+            "use_laser": false
         }
     ],
     "baseOffsets": {

@@ -1,4 +1,8 @@
 {
+ "Weapon_AR_LongBurst_Modded_BurnBarrel_C": {
+  "e": 2.4000000953674316,
+  "r": 1.7999999523162842
+ },
  "Weapon_AR_LongBurst_Modded_ExplosiveRounds_C": {
   "e": 2.4000000953674316,
   "r": 1.7999999523162842
@@ -35,7 +39,15 @@
   "e": 0.25,
   "r": 0.25
  },
+ "Weapon_AR_Standard_Modded_Micro-Reflex_C": {
+  "e": 3.0,
+  "r": 3.0
+ },
  "Weapon_AR_Standard_Modded_Micro-Reflex_ChargedBurst_CutDownBarrel_C": {
+  "e": 3.0,
+  "r": 3.0
+ },
+ "Weapon_AR_Standard_Modded_Prism_C": {
   "e": 3.0,
   "r": 3.0
  },
@@ -67,11 +79,31 @@
   "e": 2.5999999046325684,
   "r": 2.0
  },
+ "Weapon_LMG_LightBurst_Modded_PlasmaBarrel_AdvancedMag_C": {
+  "e": 2.5999999046325684,
+  "r": 2.0
+ },
+ "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_AcceleratedBursts_C": {
+  "e": 2.5999999046325684,
+  "r": 2.0
+ },
+ "Weapon_LMG_LightBurst_Modded_SawedOffBarrel_C": {
+  "e": 2.5999999046325684,
+  "r": 2.0
+ },
  "Weapon_LMG_LightBurst_Unique_CoverFire_C": {
   "e": 2.5999999046325684,
   "r": 2.0
  },
  "Weapon_LMG_Slowbeam_Modded_BiomassConverter_C": {
+  "e": 4.5,
+  "r": 4.5
+ },
+ "Weapon_LMG_Slowbeam_Modded_Micro-Reflex_C": {
+  "e": 4.5,
+  "r": 4.5
+ },
+ "Weapon_LMG_Slowbeam_Modded_Telescopic_C": {
   "e": 4.5,
   "r": 4.5
  },
@@ -86,6 +118,10 @@
  "Weapon_LNCH_Lockon_Unique_PitchballMachine_C": {
   "e": 5.0,
   "r": 5.0
+ },
+ "Weapon_MR_Frontline_Modded_AdvancedMag_C": {
+  "e": 2.5999999046325684,
+  "r": 2.0
  },
  "Weapon_MR_Frontline_Modded_Micro-Reflex_C": {
   "e": 2.5999999046325684,
@@ -107,6 +143,10 @@
   "e": 3.299999952316284,
   "r": 3.299999952316284
  },
+ "Weapon_MR_Standard_Modded_Telescopic_SawedOffBarrel_EnergyModule_C": {
+  "e": 3.299999952316284,
+  "r": 3.299999952316284
+ },
  "Weapon_MR_Standard_Unique_FeedbackCannon_C": {
   "e": 3.299999952316284,
   "r": 3.299999952316284
@@ -119,6 +159,14 @@
   "e": 2.25,
   "r": 1.5199999809265137
  },
+ "Weapon_MR_Tactical_Modded_Prism_C": {
+  "e": 2.25,
+  "r": 1.5199999809265137
+ },
+ "Weapon_MR_Tactical_Modded_Silencer_C": {
+  "e": 2.25,
+  "r": 1.5199999809265137
+ },
  "Weapon_MR_Tactical_Unique_DeathSentence_C": {
   "e": 2.25,
   "r": 1.5199999809265137
@@ -127,7 +175,15 @@
   "e": 2.25,
   "r": 1.5199999809265137
  },
+ "Weapon_PI_Burst_Modded_AdvancedMag_C": {
+  "e": 2.0999999046325684,
+  "r": 1.5
+ },
  "Weapon_PI_Burst_Modded_DoubleBarrel_C": {
+  "e": 2.0999999046325684,
+  "r": 1.5
+ },
+ "Weapon_PI_Burst_Modded_ExplosiveRounds_C": {
   "e": 2.0999999046325684,
   "r": 1.5
  },
@@ -135,11 +191,23 @@
   "e": 2.0999999046325684,
   "r": 1.5
  },
+ "Weapon_PI_Burst_Modded_Silencer_C": {
+  "e": 2.0999999046325684,
+  "r": 1.5
+ },
+ "Weapon_PI_Goo_Modded_AcceleratedBursts_C": {
+  "e": 3.9000000953674316,
+  "r": 2.9700000286102295
+ },
  "Weapon_PI_Goo_Modded_AcceleratedBursts_ReinforcedBarrel_C": {
   "e": 3.9000000953674316,
   "r": 2.9700000286102295
  },
  "Weapon_PI_Goo_Modded_FrostConverter_C": {
+  "e": 3.9000000953674316,
+  "r": 2.9700000286102295
+ },
+ "Weapon_PI_Goo_Modded_FrostConverter_Silencer_C": {
   "e": 3.9000000953674316,
   "r": 2.9700000286102295
  },
@@ -155,11 +223,35 @@
   "e": 3.4000000953674316,
   "r": 3.4000000953674316
  },
+ "Weapon_PI_LongShot_Modded_Holo_ZapBarrel_C": {
+  "e": 3.4000000953674316,
+  "r": 3.4000000953674316
+ },
+ "Weapon_PI_LongShot_Modded_Prism_C": {
+  "e": 3.4000000953674316,
+  "r": 3.4000000953674316
+ },
+ "Weapon_PI_LongShot_Modded_ReinforcedBarrel_Prism_C": {
+  "e": 3.4000000953674316,
+  "r": 3.4000000953674316
+ },
+ "Weapon_PI_Plasma_Modded_BiomassConverter_C": {
+  "e": 2.0,
+  "r": 1.5
+ },
  "Weapon_PI_Plasma_Modded_EnergyModule_C": {
   "e": 2.0,
   "r": 1.5
  },
+ "Weapon_PI_Plasma_Modded_FrostConverter_C": {
+  "e": 2.0,
+  "r": 1.5
+ },
  "Weapon_PI_Plasma_Modded_Silencer_C": {
+  "e": 2.0,
+  "r": 1.5
+ },
+ "Weapon_PI_Plasma_Modded_Silencer_FrostConverter_C": {
   "e": 2.0,
   "r": 1.5
  },
@@ -179,6 +271,18 @@
   "e": 2.0,
   "r": 1.2000000476837158
  },
+ "Weapon_PI_Standard_Modded_AdvancedMag_C": {
+  "e": 2.0,
+  "r": 1.2000000476837158
+ },
+ "Weapon_PI_Standard_Modded_Holo_C": {
+  "e": 2.0,
+  "r": 1.2000000476837158
+ },
+ "Weapon_PI_Standard_Unique_C": {
+  "e": 2.0,
+  "r": 1.2000000476837158
+ },
  "Weapon_PI_Versatile_Modded_BurnBarrel_C": {
   "e": 0.25,
   "r": 2.299999952316284
@@ -188,6 +292,10 @@
   "r": 2.299999952316284
  },
  "Weapon_PI_Versatile_Modded_Silencer_C": {
+  "e": 0.25,
+  "r": 2.299999952316284
+ },
+ "Weapon_PI_Versatile_Modded_ZapBarrel_TracingUnit_C": {
   "e": 0.25,
   "r": 2.299999952316284
  },
@@ -207,9 +315,17 @@
   "e": 0.25,
   "r": 4.5
  },
+ "Weapon_SG_Fullauto_Modded_ReinforcedBarrel_EnergyModule_C": {
+  "e": 0.25,
+  "r": 4.5
+ },
  "Weapon_SG_Fullauto_Unique_TheGoomerang_C": {
   "e": 0.25,
   "r": 4.5
+ },
+ "Weapon_SG_Pump_Modded_Holo_C": {
+  "e": 3.1700000762939453,
+  "r": 2.1600000858306885
  },
  "Weapon_SG_Pump_Modded_Holo_ZapBarrel_C": {
   "e": 3.1700000762939453,
@@ -222,6 +338,10 @@
  "Weapon_SG_Pump_Unique_LastWhisper_C": {
   "e": 3.1700000762939453,
   "r": 2.1600000858306885
+ },
+ "Weapon_SG_Semiauto_Modded_BurnBarrel_C": {
+  "e": 0.25,
+  "r": 3.5
  },
  "Weapon_SG_Semiauto_Modded_ChargedBurst_C": {
   "e": 0.25,
@@ -239,6 +359,14 @@
   "e": 0.25,
   "r": 3.5
  },
+ "Weapon_SG_Semiauto_Unique_TheHunt_C": {
+  "e": 0.25,
+  "r": 3.5
+ },
+ "Weapon_SMG_HeavyBurst_Modded_ExplosiveRounds_C": {
+  "e": 2.700000047683716,
+  "r": 1.7200000286102295
+ },
  "Weapon_SMG_HeavyBurst_Modded_ForceCharger_C": {
   "e": 2.700000047683716,
   "r": 1.7200000286102295
@@ -250,6 +378,10 @@
  "Weapon_SMG_HeavyBurst_Unique_TrainingGun_C": {
   "e": 2.700000047683716,
   "r": 1.7200000286102295
+ },
+ "Weapon_SMG_TriBolt_Modded_FrostConverter_C": {
+  "e": 3.799999952316284,
+  "r": 2.5799999237060547
  },
  "Weapon_SMG_TriBolt_Modded_FrostConverter_ReinforcedBarrel_C": {
   "e": 3.799999952316284,
@@ -264,6 +396,10 @@
   "r": 2.700000047683716
  },
  "Weapon_SMG_WildSpray_Modded_AdvancedMag_DoubleBarrel_C": {
+  "e": 3.299999952316284,
+  "r": 2.700000047683716
+ },
+ "Weapon_SMG_WildSpray_Modded_ExplosiveRounds_C": {
   "e": 3.299999952316284,
   "r": 2.700000047683716
  },
@@ -306,6 +442,14 @@
  "Weapon_SPCL_Spinbeam_Unique_ZyraniumRay_C": {
   "e": 5.599999904632568,
   "r": 5.599999904632568
+ },
+ "Weapon_SR_Accurate_Modded_Holo_ZapBarrel_C": {
+  "e": 2.700000047683716,
+  "r": 2.7100000381469727
+ },
+ "Weapon_SR_Accurate_Modded_Silencer_C": {
+  "e": 2.700000047683716,
+  "r": 2.7100000381469727
  },
  "Weapon_SR_Accurate_Modded_ZapBarrel_C": {
   "e": 2.700000047683716,

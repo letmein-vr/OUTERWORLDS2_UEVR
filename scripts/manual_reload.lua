@@ -41,14 +41,12 @@ table.insert(_G.OW2_SECTIONS, { order = 2.8, label = "Manual Reload", layout = {
     { widgetType = "text", id = "mr_status", label = "Manual reload: -" },
     { widgetType = "drag_float3", id = "mr_pouch_loc", label = "Hip pouch position (cm from the HMD: forward / right / up, body facing)", initialValue = { 8.0, -24.0, -58.0 }, range = {-120, 120}, speed = 0.5 },
     { widgetType = "slider_float", id = "mr_grab_radius", label = "Grab: hand within (cm of the pouch)", initialValue = 13.0, range = {4.0, 30.0} },
-    { widgetType = "slider_float", id = "mr_insert_radius", label = "Insert: magazine within (cm of the well)", initialValue = 7.0, range = {2.0, 20.0} },
     { widgetType = "slider_float", id = "mr_rack_radius", label = "Rack: hand within (cm of the slide)", initialValue = 10.0, range = {3.0, 25.0} },
     { widgetType = "slider_float", id = "mr_rack_done", label = "Rack: pull at least (fraction of the travel)", initialValue = 0.8, range = {0.3, 1.0} },
     { widgetType = "slider_float", id = "mr_grab_glide", label = "Pouch to hand glide time (s)", initialValue = 0.10, range = {0.0, 0.5} },
     { widgetType = "slider_float", id = "mr_insert_time", label = "Insert glide time (s)", initialValue = 0.15, range = {0.03, 0.6} },
     { widgetType = "slider_float", id = "mr_finish_rate", label = "Native reload fast-forward rate", initialValue = 20.0, range = {2.0, 40.0} },
     { widgetType = "slider_float", id = "mr_feed_rate", label = "Round-by-round: native reload rate while one round goes in", initialValue = 10.0, range = {2.0, 20.0} },
-    { widgetType = "slider_float", id = "mr_round_insert_radius", label = "Round-by-round: insert radius (cm, any side of the stroke)", initialValue = 12.0, range = {3.0, 25.0} },
     { widgetType = "slider_float", id = "mr_pour_rate", label = "Canister: native reload rate while it pours", initialValue = 3.0, range = {1.0, 10.0} },
     { widgetType = "slider_float", id = "mr_prop_dock_down", label = "Canister: dock lower than the game's (cm, along the gun's up)", initialValue = 5.0, range = {-10.0, 20.0} },
     { widgetType = "checkbox", id = "mr_fingers", label = "Left hand takes the game's finger pose on the magazine", initialValue = true },
@@ -56,7 +54,29 @@ table.insert(_G.OW2_SECTIONS, { order = 2.8, label = "Manual Reload", layout = {
     { widgetType = "checkbox", id = "mr_flick_close", label = "Flick the gun to close a swung-out cylinder / barrel (off = closes by itself)", initialValue = true },
     { widgetType = "slider_float", id = "mr_flick_speed", label = "Flick: gun speed at least (cm/s)", initialValue = 110.0, range = {40.0, 400.0} },
     { widgetType = "checkbox", id = "mr_haptics", label = "Haptics", initialValue = true },
+    { widgetType = "checkbox", id = "mr_marker", label = "Show the seat (a glowing sphere where the magazine / round / canister goes) while you take / hold one", initialValue = true },
+    { widgetType = "slider_float", id = "mr_marker_size", label = "Seat size (cm across, every gun - per gun in Tuning): the item inside it goes in", initialValue = 12.0, range = {2.0, 30.0} },
+    { widgetType = "slider_float", id = "mr_marker_opacity", label = "Seat opacity", initialValue = 0.54, range = {0.05, 1.0} },
+    { widgetType = "color_picker", id = "mr_marker_color", label = "Seat colour", initialValue = "#1CF400FF" },
+    { widgetType = "slider_float", id = "mr_marker_brightness", label = "Seat brightness", initialValue = 5.0, range = {0.1, 10.0} },
     { widgetType = "checkbox", id = "mr_log", label = "Log to log.txt", initialValue = false },
+}})
+
+-- per-gun tuning (2026-11-25, Borderlands 4 port): the seat zone's shape / size / offset, and offsets for the item in
+-- the left hand and for its seat in the gun, saved per profile key in data/manual_reload_tune.json, applied live
+table.insert(_G.OW2_SECTIONS, { order = 2.82, label = "Manual Reload - Tuning (this gun)", layout = {
+    { widgetType = "text", id = "mr_tune_gun", label = "Gun: -" },
+    { widgetType = "text", label = "Seat zone (shows while you take / hold the item; the item inside it goes in):" },
+    { widgetType = "combo", id = "mr_tune_marker_shape", label = "Seat shape", initialValue = 1, selections = { "Sphere", "Cube" } },
+    { widgetType = "slider_float", id = "mr_tune_marker_size", label = "Seat size (cm across, 0 = the Manual Reload default)", initialValue = 0.0, range = {0.0, 30.0} },
+    { widgetType = "drag_float3", id = "mr_tune_marker_loc", label = "Seat zone offset (cm, gun frame)", initialValue = { 0.0, 0.0, 0.0 }, range = {-40, 40}, speed = 0.1 },
+    { widgetType = "text", label = "In the left hand (cm / deg, hand frame):" },
+    { widgetType = "drag_float3", id = "mr_tune_hold_loc", label = "Hold offset", initialValue = { 0.0, 0.0, 0.0 }, range = {-40, 40}, speed = 0.1 },
+    { widgetType = "drag_float3", id = "mr_tune_hold_rot", label = "Hold rotation (pitch / yaw / roll)", initialValue = { 0.0, 0.0, 0.0 }, range = {-180, 180}, speed = 0.5 },
+    { widgetType = "text", label = "Seated in the gun (cm / deg, gun frame; applies live):" },
+    { widgetType = "drag_float3", id = "mr_tune_seat_loc", label = "Seat offset", initialValue = { 0.0, 0.0, 0.0 }, range = {-40, 40}, speed = 0.1 },
+    { widgetType = "drag_float3", id = "mr_tune_seat_rot", label = "Seat rotation (pitch / yaw / roll)", initialValue = { 0.0, 0.0, 0.0 }, range = {-180, 180}, speed = 0.5 },
+    { widgetType = "button", id = "mr_tune_reset", label = "Reset this gun's tuning", size = {200, 22} },
 }})
 
 -- -------------------------------------------------------------------------------------------------------------------
@@ -168,6 +188,108 @@ local function setWorld(comp, t)
 end
 local function worldOf(comp) return fromUE(comp:K2_GetComponentToWorld()) end
 local function smooth(t) return t * t * (3 - 2 * t) end
+local function r2q(p, y, r)
+    local d = math.pi / 360
+    local sp, cp = math.sin(p * d), math.cos(p * d)
+    local sy, cy = math.sin(y * d), math.cos(y * d)
+    local sr, cr = math.sin(r * d), math.cos(r * d)
+    return { X = cr * sp * sy - sr * cp * cy, Y = -cr * sp * cy - sr * cp * sy,
+             Z = cr * cp * sy - sr * sp * cy, W = cr * cp * cy + sr * sp * sy }
+end
+
+-- -------------------------------------------------------------------------------------------------------------------
+-- per-gun tuning (panel "Manual Reload - Tuning (this gun)"), keyed by the analyzer's profile key
+-- -------------------------------------------------------------------------------------------------------------------
+-- (kept inside a do-block: the main chunk is at Lua's 200-local limit; the rest of the script uses tuning.* and the
+-- seat-zone functions declared here)
+local tuning = {}   -- hold(rel), seat(seat, approach), vec(field), zone() -> shape, size, load(key), key()
+local markerLastErr = nil
+local inSeatZone, markerHide, markerTick, markerDestroy, markerForget
+do
+local TUNE_FILE = "manual_reload_tune.json"
+local tune = {}
+pcall(function() local t = json.load_file(TUNE_FILE) if type(t) == "table" then tune = t end end)
+local tuneKey = nil
+local TUNE_IDS = { hl = "mr_tune_hold_loc", hr = "mr_tune_hold_rot", sl = "mr_tune_seat_loc", sr = "mr_tune_seat_rot",
+                   ml = "mr_tune_marker_loc" }
+
+local function tuneVec(field)
+    local t = tuneKey ~= nil and tune[tuneKey] or nil
+    local v = t ~= nil and t[field] or nil
+    if type(v) ~= "table" then return 0, 0, 0 end
+    return v[1] or 0, v[2] or 0, v[3] or 0
+end
+local function saveTune() pcall(function() json.dump_file(TUNE_FILE, tune, 1) end) end
+-- item pose in the hand frame -> with the hold tuning
+local function tunedHold(rel)
+    local x, y, z = tuneVec("hl")
+    local p, yw, r = tuneVec("hr")
+    return { loc = addV(rel.loc, { X = x, Y = y, Z = z }), q = qmul(r2q(p, yw, r), rel.q) }
+end
+-- seat / approach (gun space) -> with the seat tuning (the approach keeps its offset from the seat)
+local function tunedSeat(seat, approach)
+    local x, y, z = tuneVec("sl")
+    local p, yw, r = tuneVec("sr")
+    local R = r2q(p, yw, r)
+    local st = { loc = addV(seat.loc, { X = x, Y = y, Z = z }), q = qmul(R, seat.q) }
+    local a = { loc = addV(st.loc, qrot(R, subV(approach.loc, seat.loc))), q = qmul(R, approach.q) }
+    return st, a
+end
+-- the seat zone: shape (1 sphere, 2 cube) and size (cm across) for this gun
+local function seatZone()
+    local t = tuneKey ~= nil and tune[tuneKey] or nil
+    local shape = (t ~= nil and t.mk == 2) and 2 or 1
+    local size = (t ~= nil and type(t.ms) == "number" and t.ms > 0) and t.ms or cfgNum("mr_marker_size", 12.0)
+    return shape, size
+end
+
+local function loadTuneUI(key)
+    tuneKey = key
+    local t = key ~= nil and tune[key] or {}
+    pcall(function() configui.setLabel("mr_tune_gun", "Gun: " .. tostring(key or "-")) end)
+    for field, id in pairs(TUNE_IDS) do
+        local v = t[field]
+        if type(v) ~= "table" then v = { 0, 0, 0 } end
+        pcall(function() configui.setValue(id, { v[1] or 0, v[2] or 0, v[3] or 0 }, true) end)
+    end
+    pcall(function() configui.setValue("mr_tune_marker_size", type(t.ms) == "number" and t.ms or 0.0, true) end)
+    pcall(function() configui.setValue("mr_tune_marker_shape", t.mk == 2 and 2 or 1, true) end)
+end
+
+configui.onUpdate("mr_tune_marker_size", function(value)
+    if tuneKey == nil or type(value) ~= "number" then return end
+    tune[tuneKey] = tune[tuneKey] or {}
+    tune[tuneKey].ms = value > 0 and value or nil
+    saveTune()
+end)
+configui.onUpdate("mr_tune_marker_shape", function(value)
+    if tuneKey == nil or type(value) ~= "number" then return end
+    tune[tuneKey] = tune[tuneKey] or {}
+    tune[tuneKey].mk = value == 2 and 2 or nil   -- 2 = cube, nil = sphere
+    saveTune()
+end)
+for field, id in pairs(TUNE_IDS) do
+    configui.onUpdate(id, function(value)
+        if tuneKey == nil then return end
+        local x, y, z = cfgVec(id, { 0, 0, 0 })
+        tune[tuneKey] = tune[tuneKey] or {}
+        tune[tuneKey][field] = { x, y, z }
+        saveTune()
+        if (field == "sl" or field == "sr") and tuning.onSeat ~= nil then pcall(tuning.onSeat) end
+    end)
+end
+configui.onUpdate("mr_tune_reset", function()
+    if tuneKey == nil then return end
+    tune[tuneKey] = nil
+    saveTune()
+    uevrUtils.setTimeout(1, function()
+        loadTuneUI(tuneKey)
+        if tuning.onSeat ~= nil then pcall(tuning.onSeat) end
+    end)
+end)
+tuning.hold, tuning.seat, tuning.vec, tuning.zone, tuning.load = tunedHold, tunedSeat, tuneVec, seatZone, loadTuneUI
+tuning.key = function() return tuneKey end
+end
 
 local function blocked()
     if _G.ow2IsMenuOpen ~= nil and _G.ow2IsMenuOpen() then return "menu" end
@@ -1016,6 +1138,7 @@ local function cleanup(resumeGame, reason)
         cur.propFx = nil
     end
     if reason ~= "done" then info("released (" .. tostring(reason) .. ") in state " .. state) end
+    pcall(markerHide)
     if rackHandRelease ~= nil then pcall(rackHandRelease, os.clock()) end
     if resumeGame then
         pcall(function() if cur.armsMontage ~= nil then cur.armsAnim:Montage_SetPlayRate(cur.armsMontage, 1.0) cur.armsAnim:Montage_Resume(cur.armsMontage) end end)
@@ -1068,8 +1191,10 @@ local function selectRoundSeat()
     if seats == nil or #seats == 0 then return end
     local s = seats[math.min(#seats, (cur.loaded or 0) + 1)]
     cur.seat = fromProfile(s.seat)
-    cur.approachT = fromProfile(s.approach)
+    cur.approachT = fromProfile(s.approach) or cur.seat
     cur.seatBone = s.bone
+    cur.seatRaw, cur.approachRaw = cur.seat, cur.approachT
+    cur.seat, cur.approachT = tuning.seat(cur.seat, cur.approachT)
 end
 
 local function tryIntercept(pawn, weapon, gun, profile)
@@ -1137,7 +1262,13 @@ local function tryIntercept(pawn, weapon, gun, profile)
         cur.approachT = cur.seat
     end
     cur.missing = math.max(0, (profile.poolSize or clip or 0) - (clip or 0))
-    selectRoundSeat()
+    if profile.item.seats ~= nil and #profile.item.seats > 0 then
+        selectRoundSeat()
+    else
+        cur.approachT = cur.approachT or fromProfile(profile.item.approach) or cur.rest
+        cur.seatRaw, cur.approachRaw = cur.seat, cur.approachT
+        cur.seat, cur.approachT = tuning.seat(cur.seat, cur.approachT)
+    end
     if breakAct then
         cur.breakAction = { phase = "complete", clip0 = clip or 0, spare0 = spareAmmo(pawn, weapon), t0 = os.clock(), pending = 0 }
         -- PoolSize is the capacity (GetMissingAmmo = PoolSize - count): at the current count the native refill adds
@@ -1318,7 +1449,16 @@ local function grabFromPouch()
 end
 
 -- the copy's pose on the hand bone: item in hand frame = grip^-1
-local function heldTarget(p) return compPose(p, inv(cur.grip), cur.rest) end
+local function heldTarget(p) return compPose(p, tuning.hold(inv(cur.grip)), cur.rest) end
+
+tuning.onSeat = function()
+    if state == S_IDLE or cur == nil or cur.seatRaw == nil then return end
+    cur.seat, cur.approachT = tuning.seat(cur.seatRaw, cur.approachRaw or cur.seatRaw)
+    local p = cur.seated
+    if p ~= nil and p.comp ~= nil and state ~= S_INSERT then
+        pcall(function() setRelative(p.comp, compPose(p, cur.seat, cur.rest)) end)
+    end
+end
 
 local function updateHeld()
     local p = cur.held
@@ -1345,19 +1485,148 @@ local function dropHeld()
     log("magazine let go - dropped")
 end
 
--- the held magazine vs the start of the learned insert stroke, world cm
--- distance to the learned insert path (approach -> seat segment): a push from any side counts once the item is near any
--- point of the stroke (2026-11-19, Holographic Repeating Rifle: rounds go in at the side gate and slide forward)
-local function wellDistance()
-    local item = itemWorldOf(cur.held, cur.rest)
+-- The seat zone (2026-11-25, Borderlands 4 "well dot" port, used as the insert trigger here): a sphere (or, per gun, a
+-- cube in the gun's frame) at the seat - the magazine's seated pose, the current chamber, or the prop's dock - plus the
+-- per-gun offset. The held item goes in once its reference point (the item bone at its seated pose = the same point the
+-- seat describes) is inside it. It replaces the "within N cm of the insert stroke" radii, so the zone the player sees
+-- is the zone that counts, and per-gun size / offset tune both.
+do
+local function seatZoneCenterGun()
+    local ox, oy, oz = tuning.vec("ml")
+    return addV((cur.seat or cur.rest).loc, { X = ox, Y = oy, Z = oz })
+end
+inSeatZone = function()
+    local item = itemWorldOf(cur.held, cur.rest).loc
     local gunW = worldOf(cur.gun)
-    local a = compose(gunW, cur.approachT or fromProfile(cur.profile.item.approach) or cur.rest).loc
-    local b = compose(gunW, cur.seat or cur.rest).loc
-    local ab = subV(b, a)
-    local L2 = dotV(ab, ab)
-    local t = L2 > 1e-6 and math.max(0, math.min(1, dotV(subV(item.loc, a), ab) / L2)) or 0
-    local q = addV(a, mulV(ab, t))
-    return lenV(subV(item.loc, q))
+    local c = compose(gunW, { loc = seatZoneCenterGun(), q = IDENT.q }).loc
+    local shape, size = tuning.zone()
+    local h = size * 0.5
+    local d = subV(item, c)
+    if shape == 2 then
+        local l = qrot(qconj(gunW.q), d)
+        return math.abs(l.X) <= h and math.abs(l.Y) <= h and math.abs(l.Z) <= h
+    end
+    return lenV(d) <= h
+end
+
+-- Drawn as an engine sphere / cube (100 cm) with Widget3DPassThrough (unlit, translucent: TintColorAndOpacity alpha =
+-- opacity), attached to the FPV gun so it moves with it. Shown while the item waits at the hip or is in the hand.
+local MARKER_MESHES = { [1] = "StaticMesh /Engine/BasicShapes/Sphere.Sphere", [2] = "StaticMesh /Engine/BasicShapes/Cube.Cube" }
+local markerMeshObj = {}
+local MARKER_MATERIAL = "Material /Engine/EngineMaterials/Widget3DPassThrough.Widget3DPassThrough"
+local MARKER_TEXTURE = "Texture2D /Engine/EngineResources/WhiteSquareTexture.WhiteSquareTexture"
+local marker = nil   -- { comp, mid, parent, tint, loc, size, shape, shown }
+local marker_failLogged = false
+
+local function markerColor()
+    local v = configui.getValue("mr_marker_color") or "#1CF400FF"
+    local hex = type(v) == "string" and v or uevrUtils.intToHexString(v)
+    local r = (tonumber(string.sub(hex, 2, 3), 16) or 28) / 255
+    local g = (tonumber(string.sub(hex, 4, 5), 16) or 244) / 255
+    local b = (tonumber(string.sub(hex, 6, 7), 16) or 0) / 255
+    return r, g, b
+end
+
+markerDestroy = function()
+    if marker ~= nil and marker.comp ~= nil then pcall(function() uevrUtils.destroyComponent(marker.comp, true, false) end) end
+    marker = nil
+end
+markerForget = function() marker = nil end   -- level change: the component went with the world
+
+markerHide = function()
+    if marker == nil or not marker.shown then return end
+    marker.shown = false
+    if exists(marker.comp) then pcall(function() marker.comp:SetVisibility(false, false) end) end
+end
+
+local function markerEnsure()
+    if marker ~= nil and exists(marker.comp) then return marker end
+    marker = nil
+    local comp = uevrUtils.createStaticMeshComponent(MARKER_MESHES[1], { visible = false, collisionEnabled = false })
+    if comp == nil then
+        if not marker_failLogged then marker_failLogged = true info("seat marker: could not create the sphere component (mesh " .. MARKER_MESHES[1] .. ")") end
+        return nil
+    end
+    pcall(function() comp:SetCastShadow(false) end)
+    pcall(function() comp:SetGenerateOverlapEvents(false) end)
+    pcall(function() comp:SetCollisionEnabled(0) end)
+    local mid = nil
+    pcall(function()
+        local template = uevrUtils.find_instance_of("Class /Script/Engine.Material", MARKER_MATERIAL)
+        if template == nil then return end
+        mid = comp:CreateDynamicMaterialInstance(0, template, fname("ow2_mr_seat"))
+        local white = uevrUtils.find_instance_of("Class /Script/Engine.Texture2D", MARKER_TEXTURE)
+        if mid ~= nil and white ~= nil then mid:SetTextureParameterValue(fname("SlateUI"), white) end
+    end)
+    marker = { comp = comp, mid = mid, shown = false, shape = 1 }
+    return marker
+end
+
+local function markerShow()
+    local m = markerEnsure()
+    if m == nil then return end
+    local c, gun = m.comp, cur.gun
+    -- the marker's REAL parent, not a cached one (2026-11-26, Designator <-> Incendiary Burst AR swaps): the game destroys
+    -- the FPV gun mesh when a weapon is put away and UE detaches its children - MCP found the marker with AttachParent
+    -- nil, hidden, with no world transform. The re-equipped gun's new mesh can sit at the old address, so a cached
+    -- "same gun" check never re-attached it. Off the current gun: a fresh component, attached to it.
+    local onGun = false
+    pcall(function() local p = c.AttachParent onGun = p ~= nil and addr(p) == addr(gun) end)
+    if not onGun then
+        if m.parent ~= nil then
+            markerDestroy()
+            m = markerEnsure()
+            if m == nil then return end
+            c = m.comp
+        end
+        pcall(function() c:K2_AttachToComponent(gun, fname(""), 0, 0, 0, false) end)
+        m.parent, m.loc, m.size, m.shown = gun, nil, nil, false
+    end
+    local loc = seatZoneCenterGun()
+    if m.loc == nil or lenV(subV(loc, m.loc)) > 1e-3 then
+        pcall(function() c:K2_SetRelativeLocationAndRotation(vec(loc.X, loc.Y, loc.Z), uevrUtils.rotator(0, 0, 0), false, reusable_hit_result, true) end)
+        m.loc = loc
+    end
+    local shape, size = tuning.zone()
+    if shape ~= m.shape then
+        local mesh = markerMeshObj[shape]
+        if mesh == nil then
+            mesh = uevrUtils.find_instance_of("Class /Script/Engine.StaticMesh", MARKER_MESHES[shape])
+            markerMeshObj[shape] = mesh
+        end
+        if mesh ~= nil then
+            pcall(function() c:SetStaticMesh(mesh) end)
+            if m.mid ~= nil then pcall(function() c:SetMaterial(0, m.mid) end) end
+        end
+        m.shape = shape
+    end
+    if size ~= m.size then
+        local k = size / 100.0
+        pcall(function() c:SetRelativeScale3D(vec(k, k, k)) end)
+        m.size = size
+    end
+    if m.mid ~= nil then
+        local r, g, b = markerColor()
+        local k = cfgNum("mr_marker_brightness", 5.0)
+        local a = cfgNum("mr_marker_opacity", 0.54)
+        local tint = string.format("%.3f %.3f %.3f %.3f %.3f", r, g, b, k, a)
+        if tint ~= m.tint then
+            pcall(function() m.mid:SetVectorParameterValue(fname("TintColorAndOpacity"), uevrUtils.color_from_rgba(r * k, g * k, b * k, a)) end)
+            m.tint = tint
+        end
+    end
+    if not m.shown then
+        m.shown = true
+        pcall(function() c:SetVisibility(true, false) end)
+    end
+end
+
+-- per frame: the seat shows while the item waits at the hip or is in the hand, and goes as it is pushed in
+markerTick = function()
+    local want = configui.getValue("mr_marker") ~= false and (state == S_AWAIT or state == S_HOLD)
+        and cur ~= nil and cur.gun ~= nil and exists(cur.gun) and (cur.seat ~= nil or cur.rest ~= nil)
+    if want then markerShow() else markerHide() end
+end
 end
 
 -- -------------------------------------------------------------------------------------------------------------------
@@ -2086,6 +2355,11 @@ local function tickBody(now, dt, pressed, released)
     pcall(function() weapon = pawn:GetCurrentWeapon() end)
     pcall(function() gun = weapon.FPVWeaponMesh end)
     local profile = (weapon ~= nil and _G.ow2ReloadAnalyzer ~= nil) and _G.ow2ReloadAnalyzer.getProfile(weapon) or nil
+    do
+        local a = _G.ow2ReloadAnalyzer
+        local key = (weapon ~= nil and a ~= nil and a.keyFor ~= nil) and a.keyFor(weapon) or nil
+        if key ~= tuning.key() then tuning.load(key) end
+    end
     local enabled = configui.getValue("mr_enabled") ~= false
     local reason = blocked()
 
@@ -2155,6 +2429,10 @@ local function tickBody(now, dt, pressed, released)
     if state == S_IDLE then
         tryIntercept(pawn, weapon, gun, profile)
     end
+    do
+        local okM, errM = pcall(markerTick)
+        if not okM and tostring(errM) ~= markerLastErr then markerLastErr = tostring(errM) info("seat marker: " .. markerLastErr) end
+    end
     local spare = spareAmmo(pawn, weapon) or 0
     if spare > 0 and (state == S_IDLE or state == S_AWAIT) and ok then updatePouch(gun, profile) else destroyPouch() end
 
@@ -2173,7 +2451,7 @@ local function tickBody(now, dt, pressed, released)
         elseif released or not gripDown then
             dropHeld()
             enter(S_AWAIT)
-        elseif wellDistance() <= (cur.profile.style == "rounds" and cfgNum("mr_round_insert_radius", 12.0) or cfgNum("mr_insert_radius", 7.0)) then
+        elseif inSeatZone() then
             startInsert()
         end
     elseif state == S_INSERT then
@@ -2385,6 +2663,7 @@ uevr.sdk.callbacks.on_script_reset(function()
     pcall(restoreBreakPoolSize)
     pcall(function() if state ~= S_IDLE then cleanup(true, "script reset") end end)
     pcall(destroyPouch)
+    pcall(markerDestroy)
     for i = #proxies, 1, -1 do pcall(destroyProxy, proxies[i]) end
     proxies, fallers = {}, {}
     pcall(restoreFingerLocals, fingers)
@@ -2399,6 +2678,7 @@ end)
 uevrUtils.registerPreLevelChangeCallback(function()
     -- everything belonged to the old world: forget without touching it
     proxies, fallers, pouch = {}, {}, nil
+    pcall(markerForget)
     fingers = {}
     lockLeftInput(false)
     rackHand = nil

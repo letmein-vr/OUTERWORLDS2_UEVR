@@ -1,0 +1,235 @@
+{
+ "SK_MOD_ARS_ADD_AGG|-": {
+  "ms": 6.684000015258789,
+  "sl": [
+   2.4000000953674316,
+   -3.299999952316284,
+   1.5
+  ]
+ },
+ "W_OA_Unique_Oracle|SK_MOD_OA_Magazine": {
+  "mk": 2,
+  "ms": 7.1620001792907715,
+  "sl": [
+   -2.4000000953674316,
+   0.30000001192092896,
+   0.0
+  ]
+ },
+ "w_AC_AR_Mobility_Base|SK_MOD_ARM_AccelBurst_Bags": {
+  "mk": 2
+ },
+ "w_AC_AR_Mobility_Base|SK_MOD_ARM_AdvMag": {
+  "mk": 2,
+  "ms": 10.663000106811523
+ },
+ "w_AC_AR_Mobility_Base|SK_MOD_ARM_Mag": {
+  "mk": 2,
+  "ms": 10.821999549865723,
+  "sl": [
+   -1.5,
+   0.10000000149011612,
+   2.5
+  ]
+ },
+ "w_AC_AutoPistol_01|SK_MOD_ACP_AdvMag": {
+  "mk": 2,
+  "ms": 5.570000171661377
+ },
+ "w_AC_AutoPistol_01|SK_MOD_AC_Magazine_001": {
+  "mk": 2,
+  "ms": 6.285999774932861,
+  "sl": [
+   0.0,
+   0.0,
+   -1.2000000476837158
+  ]
+ },
+ "w_AC_Boarst_Blaster_01|MOD_AC_BB_Mag": {
+  "mk": 2,
+  "ms": 12.572999954223633,
+  "sl": [
+   -2.0999999046325684,
+   -1.0,
+   -5.5
+  ]
+ },
+ "w_AC_GooPistol_01|SK_MOD_AC_AccelBurst_Bags": {
+  "ms": 6.922999858856201,
+  "sl": [
+   0.0,
+   -0.699999988079071,
+   0.0
+  ]
+ },
+ "w_AC_MachinePistol_01|SK_MOD_ACMP_Magazine_Adv": {
+  "mk": 2,
+  "ms": 6.047999858856201,
+  "sl": [
+   -0.5,
+   0.0,
+   -4.5
+  ]
+ },
+ "w_AC_MachinePistol_01|SK_MOD_ACMP_Magazine_Base": {
+  "mk": 2,
+  "ms": 7.321000099182129,
+  "sl": [
+   0.0,
+   0.0,
+   -2.5
+  ]
+ },
+ "w_AC_Triple_Shotgun_01_base|-": {
+  "ms": 8.116999626159668
+ },
+ "w_AR_Standard_Base_01|-": {
+  "ml": [
+   0.0,
+   -0.10000000149011612,
+   0.0
+  ],
+  "ms": 6.75,
+  "sl": [
+   3.0999999046325684,
+   -7.900000095367432,
+   0.699999988079071
+  ]
+ },
+ "w_ED_LightPistol|SK_MOD_AC_Magazine_001": {
+  "mk": 2,
+  "ms": 6.126999855041504
+ },
+ "w_LMG_FastHeat_01|MOD_FH_Magazine": {
+  "ms": 17.347000122070313
+ },
+ "w_LMG_LightBurst_Base_01|SM_MOD_OA_Mag_Stock": {
+  "mk": 2,
+  "ms": 7.002999782562256,
+  "sl": [
+   -3.200000047683716,
+   0.0,
+   0.0
+  ]
+ },
+ "w_LMG_LightBurst_Base_01|SM_MOD_P_Adv_Mag": {
+  "mk": 2,
+  "ms": 7.559999942779541,
+  "sl": [
+   -1.5,
+   0.0,
+   0.0
+  ]
+ },
+ "w_LNCH_PitchBall_001|MOD_PB_Magazine": {
+  "mk": 2,
+  "ms": 9.548999786376953,
+  "sl": [
+   -1.100000023841858,
+   0.0,
+   -7.599999904632568
+  ]
+ },
+ "w_MR_CC|SK_MOD_FL_CC_Magazine": {
+  "mk": 2,
+  "ms": 8.911999702453613
+ },
+ "w_MR_Frontline_Base_01|SK_MOD_FL_Magazine": {
+  "mk": 2,
+  "ms": 7.718999862670898
+ },
+ "w_MR_Frontline_Base_01|SK_MOD_FL_Magazine_Adv": {
+  "mk": 2,
+  "ms": 8.116999626159668
+ },
+ "w_MR_Standard_001|-": {
+  "mk": 2,
+  "ml": [
+   1.7000000476837158,
+   0.30000001192092896,
+   0.0
+  ],
+  "ms": 5.811999797821045,
+  "sl": [
+   0.6000000238418579,
+   -0.8999999761581421,
+   0.0
+  ]
+ },
+ "w_OA_Bolter_Pistol_01|-": {
+  "ms": 6.763999938964844
+ },
+ "w_OA_LongBurst_01|SK_MOD_OA_Magazine": {
+  "mk": 2,
+  "ml": [
+   -1.899999976158142,
+   0.0,
+   0.0
+  ],
+  "ms": 6.526000022888184
+ },
+ "w_PI_LongShot_Base_01|-": {
+  "ms": 5.410999774932861
+ },
+ "w_PI_Rocket_Base_01|MOD_P_Breech_Base": {
+  "ms": 10.902000427246094,
+  "sl": [
+   -10.699999809265137,
+   1.100000023841858,
+   -0.8999999761581421
+  ]
+ },
+ "w_PI_Rocket_LR_01|MOD_P_LR_Breech_Base": {
+  "ms": 10.902000427246094,
+  "sl": [
+   -10.600000381469727,
+   0.0,
+   0.0
+  ]
+ },
+ "w_P_HRifle_01|-": {
+  "sl": [
+   0.0,
+   0.0,
+   6.400000095367432
+  ]
+ },
+ "w_P_HRifle_RD|-": {
+  "sl": [
+   0.0,
+   0.0,
+   5.400000095367432
+  ]
+ },
+ "w_P_LMG_01|MOD_U_Agatha_Mag_Stock": {
+  "ms": 17.108999252319336
+ },
+ "w_P_LightRevolver_01|SK_MOD_P_Cylinder_Base": {
+  "ml": [
+   -0.20000000298023224,
+   0.6000000238418579,
+   0.0
+  ],
+  "ms": 5.570000171661377
+ },
+ "w_SCI_LNCH_Armaggedon_01|-": {
+  "mk": 2,
+  "ms": 11.777000427246094,
+  "sl": [
+   0.0,
+   0.0,
+   -5.699999809265137
+  ]
+ },
+ "w_SR_A_DeVries|-": {
+  "sl": [
+   0.0,
+   0.0,
+   6.5
+  ]
+ },
+ "w_S_ShrinkGun_FP|Battery": {
+  "mk": 2,
+  "ms": 5.888999938964844
+ }
+}

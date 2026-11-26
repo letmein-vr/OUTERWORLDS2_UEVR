@@ -35,6 +35,9 @@
     "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_Slowbeam/Base/SightData_LMG_Slowbeam.SightData_LMG_Slowbeam": {
         "AimingFOVMagnification": 1.149999976158142
     },
+    "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_Slowbeam/Base/SightData_LMG_Slowbeam_MicroReflex.SightData_LMG_Slowbeam_MicroReflex": {
+        "AimingFOVMagnification": 1.5
+    },
     "SightData /Game/Blueprints/WEAP/Class_LMG/LMG_Slowbeam/Base/SightData_LMG_Slowbeam_Telescopic.SightData_LMG_Slowbeam_Telescopic": {
         "AimingFOVMagnification": 2.5
     },
@@ -64,6 +67,9 @@
     },
     "SightData /Game/Blueprints/WEAP/Class_MR/Tactical/Base/SightData_MR_Tactical_Hologram.SightData_MR_Tactical_Hologram": {
         "AimingFOVMagnification": 1.25
+    },
+    "SightData /Game/Blueprints/WEAP/Class_MR/Tactical/Base/SightData_MR_Tactical_Prism.SightData_MR_Tactical_Prism": {
+        "AimingFOVMagnification": 2.0
     },
     "SightData /Game/Blueprints/WEAP/Class_PI/Burst/Base/SightData_PI_Burst.SightData_PI_Burst": {
         "AimingFOVMagnification": 1.0499999523162842
